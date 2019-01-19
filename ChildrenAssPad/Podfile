@@ -1,0 +1,39 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+use_frameworks!
+
+target 'ChildrenAssPad' do
+    
+    pod 'SwiftyJSON', '~> 4.2.0'
+    pod 'RxSwift', '~> 4.4.0'
+    pod 'SnapKit', '~> 4.2.0'
+    pod 'Alamofire', '~> 4.8.0'
+    pod 'RxAlamofire', '~> 4.2.0'
+    pod 'RxDataSources', '~> 3.1.0'
+    pod 'RxCocoa', '~> 4.4.0'
+    pod 'NSObject+Rx', '~> 4.3.0'
+    pod 'RxGesture', '~> 2.1.0'
+    pod 'IQKeyboardManager', '~> 6.0.5'
+    
+    pod 'ReachabilitySwift', '~> 4.1.0'
+#    pod 'Then', '~> 2.3.0'
+#    pod 'Validator', '~> 3.0.2'
+    pod 'Moya/RxSwift', '~> 12.0.1'
+    pod 'RxSwiftExt', '~> 3.3.0'
+    pod 'lottie-ios', '~> 2.5.0'
+
+pod 'MBProgressHUD', '~> 1.1.0'
+pod 'Kingfisher', '~> 4.8.0'
+pod 'SDWebImage', '~> 4.4.1'
+pod 'MJRefresh', '~> 3.1.15.3'
+
+pod 'UMCCommon', '~> 1.5.1'
+pod 'UMCAnalytics', '~> 5.5.0'
+pod 'UMCSecurityPlugins', '~> 1.0.6'
+
+pod 'CocoaLumberjack/Swift'
+
+end

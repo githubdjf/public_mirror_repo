@@ -1,0 +1,350 @@
+{
+    "id": 10,
+    "paperList": [
+        {
+            "id": 1,
+            "name": "paper1",
+            "examId": 10,
+            "branchList": [
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": null,
+                            "audio": null,
+                            "parten": 1,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "是福建省大房间里放假啊冷风机圣诞节防守反击爱了就爱附近的杀戮空间防腐剂了附加费建安费接发就附件啊山东矿机发附件啊发链接放假阿达手机发冷风机",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "否防静电困死了就发附近的时空裂缝建安费接发就发了骄傲了附加费辣椒粉富家大室拉法基埃弗拉加防腐剂爱福家爱福家",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "否防静电困死FDSAKFJALFJSAJFADLKSJFASDLFJAFJAf发顺丰就按附件打飞机打飞机大书法家阿法事件发送到建安费就撒附件了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": null,
+                            "audio": null,
+                            "parten": 2,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 927,
+                                    "type": "A",
+                                    "text": "是",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "B",
+                                    "text": "否头发的说法",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 929,
+                                    "type": "C",
+                                    "text": "否发的说法多发发发发发方法",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 930,
+                                    "type": "D",
+                                    "text": "否发到付发的",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 931,
+                                    "type": "E",
+                                    "text": "否发的",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 932,
+                                    "type": "F",
+                                    "text": "否费大幅度",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 933,
+                                    "type": "G",
+                                    "text": "否给个非官方",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                },
+                                {
+                                    "id": 934,
+                                    "type": "H",
+                                    "text": "否冻豆腐",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 179
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": null,
+                            "audio": null,
+                            "parten": 1,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 929,
+                                    "type": "A",
+                                    "text": "是",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 180
+                                },
+                                {
+                                    "id": 930,
+                                    "type": "B",
+                                    "text": "否",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 180
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": null,
+                            "audio": null,
+                            "parten": 2,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 931,
+                                    "type": "A",
+                                    "text": "是",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 181
+                                },
+                                {
+                                    "id": 932,
+                                    "type": "B",
+                                    "text": "否",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 181
+                                }
+                            ]
+                        },
+                        {
+                            "id": 182,
+                            "title": "五、宝宝不听话时，我通常会忍不住大声呵斥（吼）他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": null,
+                            "parten": 21,
+                            "branchId": 10,
+                            "selId": null,
+                            "subCaseList": [
+                                {
+                                    "id": 925,
+                                    "title": "1、发生的发掘附件啊圣诞快乐发放建安费垃圾啊丽枫酒店萨克拉法法律大口径放大镜法第三方就按发就发”。",
+                                    "type": 4,
+                                    "image": null,
+                                    "vedio": null,
+                                    "audio": null,
+                                    "parten": 2,
+                                    "branchId": 10,
+                                    "selId": null,
+                                    "selectionList": [
+                                        {
+                                            "id": 927,
+                                            "type": "A",
+                                            "text": "是",
+                                            "dimen": "亲子互动",
+                                            "score": 1,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 928,
+                                            "type": "B",
+                                            "text": "否头发的法师法说法",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 929,
+                                            "type": "C",
+                                            "text": "否发的说法多发的说法散发发发发发发方法",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 930,
+                                            "type": "D",
+                                            "text": "否发到付发的",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 931,
+                                            "type": "E",
+                                            "text": "否发的",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 932,
+                                            "type": "F",
+                                            "text": "否费大幅度",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 933,
+                                            "type": "G",
+                                            "text": "否给个非官方",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        },
+                                        {
+                                            "id": 934,
+                                            "type": "H",
+                                            "text": "否冻豆腐",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 179
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 180,
+                                    "title": "2、发的附件阿里加富防守打法发大水发放赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                                    "type": 4,
+                                    "image": null,
+                                    "vedio": null,
+                                    "audio": null,
+                                    "parten": 1,
+                                    "branchId": 10,
+                                    "selId": null,
+                                    "selectionList": [
+                                        {
+                                            "id": 929,
+                                            "type": "A",
+                                            "text": "是",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 180
+                                        },
+                                        {
+                                            "id": 930,
+                                            "type": "B",
+                                            "text": "否",
+                                            "dimen": "亲子互动",
+                                            "score": 1,
+                                            "caseId": 180
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": 181,
+                                    "title": "3、法师法会和他玩儿互动游发的说法戏，如为他读书或陪他玩儿积木。",
+                                    "type": 4,
+                                    "image": null,
+                                    "vedio": null,
+                                    "audio": null,
+                                    "parten": 2,
+                                    "branchId": 10,
+                                    "selId": null,
+                                    "selectionList": [
+                                        {
+                                            "id": 931,
+                                            "type": "A",
+                                            "text": "是",
+                                            "dimen": "亲子互动",
+                                            "score": 0,
+                                            "caseId": 181
+                                        },
+                                        {
+                                            "id": 932,
+                                            "type": "B",
+                                            "text": "否",
+                                            "dimen": "亲子互动",
+                                            "score": 1,
+                                            "caseId": 181
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    
+}

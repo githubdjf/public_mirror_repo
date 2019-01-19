@@ -1,0 +1,112 @@
+/* 
+  LocalizedString.strings
+  FirstEducation
+
+  Created by Jaffer on 2018/9/29.
+  Copyright © 2018年 yitai. All rights reserved.
+*/
+
+
+//==============
+//Alert message
+//==============
+
+//Common
+"message_data_loading" = "加载中...";
+"message_net_unreachable" = "目前无网路，请检查网络是否连接";
+"message_net_unreachable_retry" = "目前无网路，请检查网络是否连接。\n点击页面刷新";
+"message_no_data" = "暂无数据";
+"message_status_code_error" = "数据异常，请稍后重试";
+
+"select_image_alert_sheet_take_photo" = "拍照";
+"select_image_alert_sheet_library" = "从相册选取";
+"select_image_alert_sheet_cancel" = "取消";
+
+// Net Module
+
+// RxNetLayer
+"app_busi_appDataError" = "数据格式错误";
+"app_busi_appSessionInvalidError" = "登录失效，请重新登录";
+"app_busi_appProgramError" = "程序内部错误";
+"app_busi_appParamsValidError" = "请求参数错误";
+"app_busi_appUndefinedError" = "未知错误";
+
+//RecruitStudentAssesmentViewController
+"recruit_student_user_suffix" = "老师";
+"recruit_student_underlying_ass_prefix" = "正在测评：";
+"recruit_student_switch_role_student" = "学生";
+"recruit_student_switch_role_teacher" = "教师";
+"recruit_student_switch_role_parent" = "家长";
+"recruit_student_ass_commit_button_title" = "提交";
+"recruit_student_submit_invalid_base_case_empty" = "抱歉，基础信息数据未配置，无法完成本次测评";
+"recruit_student_submit_invalid_case_invalid" = "第 %d 题未作答";
+"recruit_student_submit_success" = "提交成功";
+
+//RecruitStudentAssesmentInfoViewController
+"recurit_student_ass_info_title" = "定义解答";
+
+//弹窗提示
+"individual_center_operation_exception" = "操作异常，失败";
+"successful_secede" = "成功退出";
+
+
+
+//登录页面
+"secede_tip_mesg" = "退出";
+"secede_account_tip" = "是否要退出账号";
+"alert_cancel" = "取消";
+"alert_confirm" = "确定";
+"forget_password" = "忘记密码";
+"revise_password" = "修改密码";
+"sign_in_account" = "账号：";
+"please_input_account" = "请输入账号";
+"sign_in_password" = "密码：";
+"please_input_password" = "请输入密码";
+"sign_in_title" = "登录";
+"phone_number" = "手机号：";
+"please_input_phone_number" = "请输入手机号";
+"send_verification_code" = "发送验证码";
+"verification_code" = "验证码：";
+"please_input_verification_code" = "请输入验证码";
+"new_password" = "新密码：";
+"please_input_new_password" = "请输入新密码";
+"after_second_resend" = "s后重发";
+
+
+//主页功能模块
+"homepage_enable_tip" = "启用";
+"recruit_evaluation_title" = "招生测评";
+
+"recruit_evaluation_bady_name" = "宝贝姓名：";
+"recruit_evaluation_bady_birthday" = "宝贝生日：";
+"recruit_evaluation_parent_name" = "家长姓名：";
+"recruit_evaluation_parent_phone" = "家长电话：";
+"please_input_bady_name" = "请输入宝宝姓名";
+"please_input_bady_birthday" = "请输入宝宝生日";
+"please_input_parent_name" = "请输入宝宝家长姓名";
+"please_input_parent_phone" = "请输入宝宝家长电话";
+"boy_title" = "男孩";
+"girl_title" = "女孩";
+"begin_evaluation" = "开始测评";
+"baby_name_dont_blank" = "宝贝姓名不能为空";
+"baby_birthday_dont_blank" = "宝贝生日不能为空";
+"parent_name_dont_blank" = "家长姓名不能为空";
+"parent_phone_dont_blank" = "家长电话不能为空";
+"please_input_correct_phone" = "请输入正确的手机号";
+
+//RecruitEvaluationRecordController
+"recruit_eval_record_nav_title" = "招生测评记录";
+"recruit_eval_record_total_count_format" = "共%d条";
+
+//TrialGuideViewController
+"trial_guide_ready" = "准备好了吗？";
+"trial_guide_start" = "开始探索";
+
+//StudentTrialViewController
+"student_trial_next" = "下一题";
+
+//TeacherTrialViewController
+"teacher_trial_nav_info_format_for_tec_eval" = "正在为%@测评-教师评价";
+"teacher_trial_nav_info_format_for_tec_observe" = "正在为%@观测";
+"teacher_trial_submit_button_title" = "提交";
+
