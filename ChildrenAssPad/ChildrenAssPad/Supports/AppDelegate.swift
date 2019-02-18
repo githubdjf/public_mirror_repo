@@ -32,7 +32,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherObserve, students: ["张三", "李四"])
         
 //        window?.rootViewController = trialVC
-
+        
+        let vc = RecruitStudentAssesmentViewController()
+        vc.curExamId = "111"
+        vc.curStudentId = "111"
+        vc.curStudentName = "张三四"
+        window?.rootViewController = vc
+        
         return true
     }
     

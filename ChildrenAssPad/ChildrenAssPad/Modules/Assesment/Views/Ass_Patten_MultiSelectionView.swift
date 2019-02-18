@@ -18,6 +18,7 @@ class MultiSelectionItemView: UIView {
     let maxWidth: CGFloat
     var curAssCaseOption: AssCaseOption?
     
+    var roundedTitleBgView: UIView!
     var optionTitleLabel: UILabel!
     var selectIndicator: UIImageView!
     var actionButton: UIButton!
@@ -50,18 +51,26 @@ class MultiSelectionItemView: UIView {
             itemSize.height = self.frame.height
         }
         
-        let selectImage = UIImage(named: "recruit_student_ass_selected_answer")!
+        let titleBgRect = CGRect(x: 0, y: 4, width: itemSize.width - 5, height: itemSize.height - 4)
+        roundedTitleBgView = UIView(frame: titleBgRect)
+        roundedTitleBgView.layer.cornerRadius = (itemSize.height - 4.0) / 2.0
+        roundedTitleBgView.backgroundColor = UIColor.red
+        addSubview(roundedTitleBgView)
         
-        let titleRect = CGRect(x: 10, y: 0, width: itemSize.width - 10 - selectImage.size.width, height: itemSize.height)
+        let titleX = inset.left
+        let titleW = itemSize.width - inset.left - inset.right
+        let titleRect = CGRect(x: titleX, y: 0, width: titleW, height: titleBgRect.height)
         optionTitleLabel = UILabel()
         optionTitleLabel.frame = titleRect
         optionTitleLabel.font = UIFont.systemFont(ofSize: 16)
-        optionTitleLabel.textColor = UIColor.colorWithHexString(hex: "#555555")
+        optionTitleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
+        optionTitleLabel.textAlignment = .center
         optionTitleLabel.numberOfLines = 1
         optionTitleLabel.text = title
-        addSubview(optionTitleLabel)
+        roundedTitleBgView.addSubview(optionTitleLabel)
         
-        let imageRect = CGRect(x: itemSize.width - selectImage.size.width, y: 0, width: selectImage.size.width, height: selectImage.size.height)
+        let selectImage = UIImage(named: "recruit_student_multiple_option_selected")!
+        let imageRect = CGRect(x: itemSize.width - selectImage.size.width, y: 0, width: 24, height: 24)
         selectIndicator = UIImageView(image: selectImage)
         selectIndicator.frame = imageRect
         addSubview(selectIndicator)
@@ -84,13 +93,15 @@ class MultiSelectionItemView: UIView {
         curAssCaseOption?.isSelected = isSelected
 
         if isSelected {
-            optionTitleLabel.textColor = UIColor.colorWithHexString(hex: "#ffffff")
-            backgroundColor = UIColor.mainColor
-            layer.borderColor = UIColor.mainColor.cgColor
+            optionTitleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
+            roundedTitleBgView.backgroundColor = UIColor.colorFromRGBA(254, 228, 98)
+            roundedTitleBgView.layer.borderWidth = 0
+            roundedTitleBgView.layer.borderColor = nil
         } else {
-            optionTitleLabel.textColor = UIColor.colorWithHexString(hex: "#555555")
-            backgroundColor = UIColor.colorWithHexString(hex: "#ffffff")
-            layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
+            optionTitleLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
+            roundedTitleBgView.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+            roundedTitleBgView.layer.borderWidth = 1
+            roundedTitleBgView.layer.borderColor = UIColor.colorFromRGBA(187, 185, 174).cgColor
         }
     }
     
@@ -162,11 +173,6 @@ class MultiSelectionContainerView: UIView {
             }
             
             itemView.frame = lastRect
-            itemView.layer.borderColor = borderColor?.cgColor
-            itemView.layer.borderWidth = borderWidth
-            itemView.layer.cornerRadius = radius
-            itemView.layer.masksToBounds = true
-            
             addSubview(itemView)
             itemViewsArray.append(itemView)
         }
@@ -199,8 +205,10 @@ import UIKit
 
 class Ass_Patten_MultiSelectionView: Ass_Patten_View {
     
+    var contentBgView: UIView!
+    var headerView: UIView!
     var titleLabel: UILabel!
-    let containerDefaultHeight: CGFloat = 40
+    let containerDefaultHeight: CGFloat = 48
     var caseOptionContainerView: MultiSelectionContainerView!
     var containerSize = CGSize.zero
     
@@ -216,35 +224,61 @@ class Ass_Patten_MultiSelectionView: Ass_Patten_View {
     
     override func initViews() {
         
+        //bg view
+        contentBgView = UIView()
+        contentBgView.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+        contentBgView.layer.cornerRadius = 16
+        contentBgView.layer.masksToBounds = true
+        addSubview(contentBgView)
+        
+        //header view
+        headerView = UIView()
+        headerView.backgroundColor = UIColor.colorFromRGBA(255, 244, 198)
+        contentBgView.addSubview(headerView)
+        
         //title label
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
-        titleLabel.textColor = UIColor.colorWithHexString(hex: "#222222")
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
+        titleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
         titleLabel.numberOfLines = 0
         titleLabel.setContentHuggingPriority(.required, for: .vertical)
         titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-        addSubview(titleLabel)
+        headerView.addSubview(titleLabel)
         
         //option view
-        caseOptionContainerView = MultiSelectionContainerView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: containerDefaultHeight))
-        addSubview(caseOptionContainerView)
+        caseOptionContainerView = MultiSelectionContainerView(frame: CGRect(x: 0, y: 0, width: self.frame.width - 20 * 2, height: containerDefaultHeight))
+        contentBgView.addSubview(caseOptionContainerView)
     }
     
     override func layoutViews() {
         
-        //title label
-        titleLabel.snp.remakeConstraints { (make) in
+        //content bg view
+        contentBgView.snp.remakeConstraints { (make) in
+            make.top.equalTo(self)
             make.left.equalTo(self).offset(20)
             make.right.equalTo(self).offset(-20)
-            make.top.equalTo(self)
+            make.bottom.equalTo(self)
+        }
+        
+        //header view
+        headerView.snp.remakeConstraints { (make) in
+            make.top.left.right.equalTo(self.contentBgView)
+        }
+        
+        //title label
+        titleLabel.snp.remakeConstraints { (make) in
+            make.left.equalTo(self.headerView).offset(30)
+            make.right.equalTo(self.headerView).offset(-30)
+            make.top.equalTo(self.headerView).offset(12)
+            make.bottom.equalTo(self.headerView).offset(-12)
         }
         
         //option view
         caseOptionContainerView.snp.remakeConstraints { (make) in
-            make.left.right.equalTo(self)
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(10)
+            make.left.right.equalTo(self.contentBgView)
+            make.top.equalTo(self.headerView.snp.bottom).offset(10)
             make.height.equalTo(containerSize.height > 0 ? containerSize.height : containerDefaultHeight)
-            make.bottom.equalTo(self).offset(-10)
+            make.bottom.equalTo(self.contentBgView).offset(-10)
         }
     }
     
@@ -260,13 +294,13 @@ class Ass_Patten_MultiSelectionView: Ass_Patten_View {
         //固定列宽方式排版
         let titleFont = UIFont.systemFont(ofSize: 16)
         let textColor = UIColor.colorWithHexString(hex: "#555555")
-        let containerInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        let itemInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        let containerInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
+        let itemInset = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 22)
         let spaceX: CGFloat = 20.0
         let spaceY: CGFloat = 10.0
         
         let colCount = 4
-        let fixedWidth = (screenWidth - containerInset.left - containerInset.right - CGFloat(colCount - 1) * spaceX) / CGFloat(colCount)
+        let fixedWidth = (self.frame.width - 20 * 2 - containerInset.left - containerInset.right - CGFloat(colCount - 1) * spaceX) / CGFloat(colCount)
         let fixedHeight: CGFloat = 40
         
         let tempSize = caseOptionContainerView.initialize(withAssCase: caseData, titleFont: titleFont, titleColor: textColor, fixedHeight: fixedHeight, fixedWidth: fixedWidth, containerInset: containerInset, itemInset: itemInset, spaceX: spaceX, spaceY: spaceY, borderColor: UIColor.colorWithHexString(hex: "#d8d8d8"), borderWidth: 1, radius: 5, compactable: false)
@@ -298,7 +332,7 @@ class AssPattenMultiSelectionCell: AssPattenCell {
     
     override func initViews() {
         
-        caseView = Ass_Patten_MultiSelectionView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 0))
+        caseView = Ass_Patten_MultiSelectionView(frame: CGRect(x: 0, y: 0, width: screenWidth - 39 * 2, height: 0))
         contentView.addSubview(caseView)
     }
     

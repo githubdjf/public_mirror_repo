@@ -42,18 +42,19 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         case invalid(Int?, String?)
     }
     
+    //bg view
+    var bgImageView: UIImageView!
     
-    //nav
-    var navBar: UIView!
-    var loginUserButton: UIButton!
-
     //header
     var headerView: UIView!
-    var studentIconImageView: UIImageView!
+    var backButton: UIButton!
     var studentNameLabel: UILabel!
     var baseInfoTabButton: UIButton!
     var observeInfoTabButton: UIButton!
     var disclosureInfoButton: UIButton!
+    
+    //rounded bg container view
+    var roundedBgView: UIView!
     
     //content
     var assesmentScrollView: UIScrollView!
@@ -119,7 +120,8 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         layoutViews()
         bindViews()
         
-        loadData()
+//        loadData()
+        loadFakeData()
     }
     
     //MARK: Bind views
@@ -129,12 +131,6 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     }
     
     //MARK: Actions
-    
-    @objc func gotoUserCenter() {
-        
-        let personVC = PersonalCenterController()
-        navigationController?.pushViewController(personVC, animated: true)
-    }
     
     @objc func baseInfoTabClicked(button: UIButton) {
         
@@ -368,6 +364,31 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         }
         
         loadBranchData(withUserId: userId, examId: examId)
+    }
+    
+    func loadFakeData() {
+        
+        let paperArr = FileLoader.loadRecuritStuPapersData(fromFile: "recruit_student_papers")!
+        tabPaperArray.removeAll()
+        tabPaperArray.append(contentsOf: paperArr)
+
+        let baseBranchArr = FileLoader.loadRecuritStudentPaperBranchesData(fromFile: "recruit_student_base_trial")!
+        let teacherBranchArr = FileLoader.loadRecuritStudentPaperBranchesData(fromFile: "recruit_student_observe_trial_teacher")!
+        let parentBranchArr = FileLoader.loadRecuritStudentPaperBranchesData(fromFile: "recruit_student_observe_trial_parent")!
+        
+        //清空数据
+        cleanBranchData()
+        
+        //保存数据
+        saveBranchData(base: baseBranchArr, teacher: teacherBranchArr, parent: parentBranchArr)
+        
+        //刷新数据
+        
+        //tab 页签
+        updateViews()
+        
+        refreshBaseInfoData()
+        refreshObserveInfoData()
     }
     
     
@@ -644,76 +665,87 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     
     func layoutViews() {
         
-        //nav bar
-        loginUserButton.snp.makeConstraints { (make) in
-            make.right.equalTo(self.navBar)
-            make.centerY.equalTo(self.navBar).offset(10)
-            make.height.equalTo(50)
+        //bg view
+        bgImageView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
         }
         
         //header view
         headerView.snp.makeConstraints { (make) in
-            make.left.right.equalTo(self.navBar)
-            make.top.equalTo(self.navBar.snp.bottom)
-            make.height.equalTo(40)
+            make.left.right.top.equalTo(self.view)
+            make.height.equalTo(110)
         }
         
-        studentIconImageView.snp.makeConstraints { (make) in
-            make.left.equalTo(self.navBar).offset(20)
-            make.centerY.equalTo(self.headerView)
-            make.width.height.equalTo(18)
+        //back button
+        backButton.snp.makeConstraints { (make) in
+            make.width.height.equalTo(76)
+            make.centerY.equalTo(self.headerView).offset(20)
+            make.left.equalTo(self.view).offset(22)
         }
         
+        //student name
         studentNameLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(self.studentIconImageView)
-            make.left.equalTo(self.studentIconImageView.snp.right).offset(15)
-            make.right.lessThanOrEqualTo(self.baseInfoTabButton.snp.left).offset(-15)
+            make.left.equalTo(self.backButton.snp.right)
             make.height.equalTo(22)
+            make.centerY.equalTo(self.backButton)
         }
         
-        let tabWidth: CGFloat = 160
-        let tabSpace: CGFloat = 40
+        let tabWidth: CGFloat = 236
+        let tabHeight: CGFloat = 70
+        let tabSpace: CGFloat = 20
+        //base info tab
         baseInfoTabButton.snp.makeConstraints { (make) in
-            make.top.bottom.equalTo(self.headerView)
+            make.bottom.equalTo(self.headerView)
+            make.height.equalTo(tabHeight)
             make.centerX.equalTo(self.headerView).offset(-(tabWidth + tabSpace)/2)
             make.width.equalTo(tabWidth)
         }
         
+        //observe info tab
         observeInfoTabButton.snp.makeConstraints { (make) in
-            make.top.bottom.equalTo(self.headerView)
+            make.top.bottom.width.equalTo(self.baseInfoTabButton)
             make.centerX.equalTo(self.headerView).offset((tabWidth + tabSpace)/2)
-            make.width.equalTo(tabWidth)
         }
         
+        //disclosure info button
         disclosureInfoButton.snp.makeConstraints { (make) in
-            make.top.bottom.right.equalTo(self.headerView)
-            make.width.equalTo(70)
+            make.width.height.equalTo(76)
+            make.centerY.equalTo(self.backButton)
+            make.right.equalTo(self.view).offset(-22)
         }
         
         headerView.layoutIfNeeded()
-        baseInfoTabButton.layer.mask = generateRoundedPathLayer(withBounds: baseInfoTabButton.bounds, radius: 4)
-        observeInfoTabButton.layer.mask = generateRoundedPathLayer(withBounds: baseInfoTabButton.bounds, radius: 4)
+        baseInfoTabButton.layer.mask = generateRoundedPathLayer(withBounds: baseInfoTabButton.bounds, radius: 7)
+        observeInfoTabButton.layer.mask = generateRoundedPathLayer(withBounds: baseInfoTabButton.bounds, radius: 7)
+        
+        //rounded bg view
+        roundedBgView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.headerView.snp.bottom)
+            make.bottom.equalTo(self.view).offset(-38)
+            make.left.equalTo(self.view).offset(39)
+            make.right.equalTo(self.view).offset(-39)
+        }
         
         //scroll view
         assesmentScrollView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.assesmentContainerView)
-            make.top.equalTo(self.headerView.snp.bottom)
-            make.left.equalTo(self.headerView)
-            make.width.equalTo(screenWidth)
-            make.bottom.equalTo(self.view)
+            make.top.equalTo(self.roundedBgView)
+            make.left.equalTo(self.roundedBgView)
+            make.width.equalTo(screenWidth - 39 * 2)
+            make.bottom.equalTo(self.roundedBgView)
         }
         
         //container view
         assesmentContainerView.snp.makeConstraints { (make) in
-            make.height.equalTo(screenHeight - 74 - 40)
-            make.left.equalTo(self.baseInfoTableView)
-            make.right.equalTo(self.observerInfoTableView)
+            make.height.equalTo(screenHeight - 110 - 38)
+            make.left.equalTo(self.baseInfoBgView)
+            make.right.equalTo(self.observerBgView)
         }
         
         //base info bg view
         baseInfoBgView.snp.makeConstraints { (make) in
             make.top.left.bottom.equalTo(self.assesmentContainerView)
-            make.width.equalTo(screenWidth)
+            make.width.equalTo(screenWidth - 39 * 2)
         }
         
         //base info table view
@@ -761,7 +793,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         
         //mask view
         maskView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.navBar.snp.bottom)
+            make.top.equalTo(self.headerView.snp.bottom)
             make.left.right.bottom.equalTo(self.view)
         }
         
@@ -809,72 +841,85 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     
     func initViews() {
         
-        //nav bar
-        navBar = addNavByTitle(title: "")
-        addBackButtonForNavigationBar()
-        
-        loginUserButton = UIButton()
-        loginUserButton.setContentCompressionResistancePriority(.required, for: .horizontal)
-        loginUserButton.setContentHuggingPriority(.required, for: .horizontal)
-        loginUserButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        loginUserButton.setTitleColor(UIColor.white, for: .normal)
-        let user = "\(LoginManager.default.curUser?.userName ?? "张及及")\(localStringForKey(key: "recruit_student_user_suffix"))"
-        loginUserButton.setTitle(user, for: .normal)
-        loginUserButton.setImage(UIImage(named: "icon_user"), for: .normal)
-        loginUserButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
-        loginUserButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
-        loginUserButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
-        loginUserButton.addTarget(self, action: #selector(gotoUserCenter), for: .touchUpInside)
-        navBar.addSubview(loginUserButton)
-        
+        //bg view
+        bgImageView = UIImageView()
+        bgImageView.image = UIImage(named: "recruit_student_bg")
+        view.addSubview(bgImageView)
+
         //header view
         headerView = UIView()
-        headerView.backgroundColor = UIColor.mainColor
         view.addSubview(headerView)
         
-        studentIconImageView = UIImageView(image: UIImage(named: "recruit_student_stu_name"))
-        headerView.addSubview(studentIconImageView)
+        //back button
+        backButton = UIButton()
+        backButton.setImage(UIImage(named: "common_back"), for: .normal)
+        backButton.addTarget(self, action: #selector(backbuttonTapped), for: .touchUpInside)
+        backButton.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        headerView.addSubview(backButton)
         
+        //student name
         studentNameLabel = UILabel()
         studentNameLabel.font = UIFont.systemFont(ofSize: 16)
-        studentNameLabel.textColor = UIColor.white
+        studentNameLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
         studentNameLabel.numberOfLines = 1
-        let student = "\(localStringForKey(key: ""))\(curStudentName ?? "")"
+        let student = "\(localStringForKey(key: "recruit_student_underlying_ass_prefix"))\(curStudentName ?? "")"
         studentNameLabel.text = student
         studentNameLabel.setContentHuggingPriority(.required, for: .horizontal)
         studentNameLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         headerView.addSubview(studentNameLabel)
         
-        let tabSize = CGSize(width: 160, height: 40)
+        let tabSize = CGSize(width: 236, height: 70)
         
+        //base info tab
         baseInfoTabButton = UIButton()
         baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: .selected)
-        baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.mainColor, imageSize: tabSize), for: .normal)
-        baseInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        baseInfoTabButton.setTitleColor(UIColor.white, for: .normal)
-        baseInfoTabButton.setTitleColor(UIColor.colorWithHexString(hex: "#353535"), for: .selected)
+        baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.colorFromRGBA(255, 238, 159), imageSize: tabSize), for: .normal)
+        baseInfoTabButton.setImage(UIImage(named: "recruit_student_base_info_unselected"), for: .normal)
+        baseInfoTabButton.setImage(UIImage(named: "recruit_student_base_info_selected"), for: .selected)
+        baseInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        baseInfoTabButton.setTitleColor(UIColor.colorFromRGBA(153, 153, 153), for: .normal)
+        baseInfoTabButton.setTitleColor(UIColor.colorFromRGBA(34, 34, 34), for: .selected)
+        baseInfoTabButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
+        baseInfoTabButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
         baseInfoTabButton.addTarget(self, action: #selector(baseInfoTabClicked(button:)), for: .touchUpInside)
         baseInfoTabButton.isSelected = true
         headerView.addSubview(baseInfoTabButton)
         
+        //observe info tab
         observeInfoTabButton = UIButton()
         observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: .selected)
-        observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.mainColor, imageSize: tabSize), for: .normal)
-        observeInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        observeInfoTabButton.setTitleColor(UIColor.white, for: .normal)
-        observeInfoTabButton.setTitleColor(UIColor.colorWithHexString(hex: "#353535"), for: .selected)
+        observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.colorFromRGBA(255, 238, 159), imageSize: tabSize), for: .normal)
+        observeInfoTabButton.setImage(UIImage(named: "recruit_student_observe_info_unselected"), for: .normal)
+        observeInfoTabButton.setImage(UIImage(named: "recruit_student_observe_info_selected"), for: .selected)
+        observeInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        observeInfoTabButton.setTitleColor(UIColor.colorFromRGBA(153, 153, 153), for: .normal)
+        observeInfoTabButton.setTitleColor(UIColor.colorFromRGBA(34, 34, 34), for: .selected)
+        observeInfoTabButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 5)
+        observeInfoTabButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: -5)
         observeInfoTabButton.addTarget(self, action: #selector(observeInfoTabClicked(button:)), for: .touchUpInside)
         observeInfoTabButton.isSelected = false
         headerView.addSubview(observeInfoTabButton)
 
+        //disclosure
         disclosureInfoButton = UIButton()
-        disclosureInfoButton.setImage(UIImage(named: "recruit_student_question_mark"), for: .normal)
-        disclosureInfoButton.imageEdgeInsets = UIEdgeInsets(top: 9, left: 28, bottom: 9, right: 20)
+        disclosureInfoButton.setImage(UIImage(named: "common_question_icon"), for: .normal)
+        disclosureInfoButton.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         disclosureInfoButton.addTarget(self, action: #selector(disclosureInfoButtonClicked(button:)), for: .touchUpInside)
         headerView.addSubview(disclosureInfoButton)
         
+        //rounded bg view
+        roundedBgView = UIView()
+        roundedBgView.backgroundColor = UIColor.white
+        roundedBgView.layer.cornerRadius = 20
+        roundedBgView.layer.shadowOpacity = 1
+        roundedBgView.layer.shadowOffset = CGSize(width: 0, height: 10)
+        roundedBgView.layer.shadowColor = UIColor.colorFromRGBA(255, 173, 0, alpha: 0.5).cgColor
+        view.addSubview(roundedBgView)
+        
         //scroll view
         assesmentScrollView = UIScrollView()
+        assesmentScrollView.layer.cornerRadius = 20
+        assesmentScrollView.layer.masksToBounds = true
         assesmentScrollView.bounces = true
         assesmentScrollView.delegate = self
         assesmentScrollView.isPagingEnabled = true
@@ -883,7 +928,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         } else {
             self.automaticallyAdjustsScrollViewInsets = false
         }
-        view.addSubview(assesmentScrollView)
+        roundedBgView.addSubview(assesmentScrollView)
         
         //container view
         assesmentContainerView = UIView()
@@ -973,17 +1018,14 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         //switchOptionBgImageView
         switchOptionBgImageView = UIImageView(image: UIImage(named: "recruit_student_switch_role_bubble"))
         switchOptionBgImageView.isUserInteractionEnabled = true
-//        switchOptionBgImageView.backgroundColor = UIColor.green
         maskView.addSubview(switchOptionBgImageView)
         
         //switchArrowImageView
         switchArrowImageView = UIImageView(image: UIImage(named: "recruit_student_switch_role_bubble_arrow"))
-//        switchArrowImageView.backgroundColor = UIColor.black
         maskView.addSubview(switchArrowImageView)
         
         //parentRoleButton
         parentRoleButton = UIButton()
-//        parentRoleButton.backgroundColor = UIColor.red
         parentRoleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         parentRoleButton.setTitle(AssRole.parent.roleName, for: .normal)
         parentRoleButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
@@ -999,7 +1041,6 @@ class RecruitStudentAssesmentViewController: BaseViewController {
 
         //teacherRoleButton
         teacherRoleButton = UIButton()
-//        teacherRoleButton.backgroundColor = UIColor.red
         teacherRoleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         teacherRoleButton.setTitle(AssRole.teacher.roleName, for: .normal)
         teacherRoleButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)

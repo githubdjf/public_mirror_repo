@@ -1,0 +1,306 @@
+
+{
+    "data" : [
+        {
+            "paperCaseList" : [
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 966,
+                            "caseId" : 186,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 975,
+                            "caseId" : 186,
+                            "dimen" : "认知发展"
+                        }
+                    ],
+                    "id" : 186,
+                    "title" : "1、\"教师将3块积木垒高，然后对儿童说，“我做了一个楼房，请你做一个比这个高的楼房。“观察儿童完成情况。标准：儿童垒4块及以上为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 967,
+                            "caseId" : 187,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 976,
+                            "caseId" : 187,
+                            "dimen" : "认知发展"
+                        }
+                    ],
+                    "id" : 187,
+                    "title" : "2、\"给儿童10个形状颜色大小一样的积木，分别请儿童拿出1个、3个、5个积木递给老师，观察其完成情况。标准：3次都做对为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 968,
+                            "caseId" : 188,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 977,
+                            "caseId" : 188,
+                            "dimen" : "认知发展"
+                        }
+                    ],
+                    "id" : 188,
+                    "title" : "3、\"教师给儿童一块积木，让他把积木放在杯子的前面、后面、里面，再把杯子倒过来扣在桌子上，让儿童把积木放在杯子上面。观察其完成情况。标准：做对2个以上为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 969,
+                            "caseId" : 189,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 978,
+                            "caseId" : 189,
+                            "dimen" : "认知发展"
+                        }
+                    ],
+                    "id" : 189,
+                    "title" : "4、\"教师请儿童回答问题：什么在水里游？什么在天上飞？什么穿在脚上？\n标准：答对2个以上为通过。参考答案：水里游-鱼，虾，海豚，海马，鲨鱼……天上飞-鸟，飞机，风筝，无人机，云……穿脚上-鞋，袜子……如果儿童的答案老师没听过，在鼓励儿童多说几个答案，再做判断，只要儿童的回答符合逻辑、符合事实，即为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 970,
+                            "caseId" : 190,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 979,
+                            "caseId" : 190,
+                            "dimen" : "认知发展"
+                        }
+                    ],
+                    "id" : 190,
+                    "title" : "5、\"教师请儿童复述一段话”鸟在天上飞，鱼在水里游，小兔子在地上跑“，观察儿童完成情况。\n标准：准确复述2句为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 971,
+                            "caseId" : 191,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 980,
+                            "caseId" : 191,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 191,
+                    "title" : "6、\"教师手拿一个玩具，问儿童”如果你想要这个玩具，你会怎么做？“\n标准：回答沟通、找家长、交换为通过，回答不知道、不要了、抢走为不通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 972,
+                            "caseId" : 192,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 981,
+                            "caseId" : 192,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 192,
+                    "title" : "7、\"教师问儿童”如果你看到妈妈正在哭泣，你会怎么做？“\n标准：回答安慰、帮助寻找、告诉爸爸为通过，回答不知道、不管、在一边看着为不通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 973,
+                            "caseId" : 193,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 982,
+                            "caseId" : 193,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 193,
+                    "title" : "8、\"上述第2题，教师请儿童递积木，儿童是否配合？\n标准：态度积极配合为通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 974,
+                            "caseId" : 194,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 983,
+                            "caseId" : 194,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 194,
+                    "title" : "9、\"观察儿童和教师做上述互动时，儿童是否出现哭闹、纠缠、扔玩具、有攻击行为、尿裤子等表现。\n标准：出现1条即为未通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "通过",
+                            "score" : 1,
+                            "id" : 984,
+                            "caseId" : 195,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "不通过",
+                            "score" : 0,
+                            "id" : 985,
+                            "caseId" : 195,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 195,
+                    "title" : "10、\"观察儿童和教师做上述互动时，儿童能否在任务过程中保持专注，未出现眼神四处游移，随意拿取教具，起身离开座位等行为。标准：出现1条即为未通过。\"",
+                    "vedio" : null,
+                    "branchId" : 5,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 3
+                }
+            ],
+            "type" : 1,
+            "name" : "观测信息教师",
+            "id" : 5,
+            "paperId" : 2,
+            "isFinished" : 0
+        }
+    ],
+    "message" : "请求成功",
+    "code" : 200
+}

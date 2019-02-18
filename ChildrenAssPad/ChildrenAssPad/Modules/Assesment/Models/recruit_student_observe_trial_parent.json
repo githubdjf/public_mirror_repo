@@ -1,0 +1,109 @@
+
+{
+    "data" : [
+        {
+            "paperCaseList" : [
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "区分物体长短、多少",
+                            "score" : 1,
+                            "id" : 935,
+                            "caseId" : 216,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "准确点数5个物体",
+                            "score" : 1,
+                            "id" : 936,
+                            "caseId" : 216,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "C",
+                            "text" : "正确使用数量词",
+                            "score" : 1,
+                            "id" : 937,
+                            "caseId" : 216,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "D",
+                            "text" : "听懂儿歌或故事",
+                            "score" : 1,
+                            "id" : 938,
+                            "caseId" : 216,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "E",
+                            "text" : "复述儿歌或短故事",
+                            "score" : 1,
+                            "id" : 939,
+                            "caseId" : 216,
+                            "dimen" : "认知发展"
+                        },
+                        {
+                            "type" : "F",
+                            "text" : "适应陌生人较慢",
+                            "score" : 1,
+                            "id" : 940,
+                            "caseId" : 216,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "G",
+                            "text" : "识别他人情绪",
+                            "score" : 1,
+                            "id" : 941,
+                            "caseId" : 216,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "H",
+                            "text" : "不打扰别人",
+                            "score" : 1,
+                            "id" : 942,
+                            "caseId" : 216,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "I",
+                            "text" : "听从成人劝解",
+                            "score" : 1,
+                            "id" : 943,
+                            "caseId" : 216,
+                            "dimen" : "情绪和社会性发展"
+                        },
+                        {
+                            "type" : "J",
+                            "text" : "和同龄人一同看书或玩玩具",
+                            "score" : 1,
+                            "id" : 944,
+                            "caseId" : 216,
+                            "dimen" : "情绪和社会性发展"
+                        }
+                    ],
+                    "id" : 216,
+                    "title" : "您的孩子有以下哪些特征?请选择",
+                    "vedio" : "",
+                    "branchId" : 6,
+                    "audio" : "",
+                    "image" : "",
+                    "type" : 2
+                }
+            ],
+            "type" : 2,
+            "name" : "观测信息家长",
+            "id" : 6,
+            "paperId" : 2,
+            "isFinished" : 0
+        }
+    ],
+    "message" : "请求成功",
+    "code" : 200
+}
