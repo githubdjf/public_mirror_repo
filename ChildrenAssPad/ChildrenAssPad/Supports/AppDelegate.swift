@@ -25,13 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //        let navType: Navigator.NavigateType = LoginManager.default.curUser != nil ? .homePage : .loginPage
         //        Navigator.shared.navigate(to: navType)
         
-        //        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
+//                let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
         
         //        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
         
-        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherObserve, students: ["张三", "李四"])
+//        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherObserve, students: ["张三", "李四"])
         
-        window?.rootViewController = trialVC
+//        window?.rootViewController = trialVC
 
         return true
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1CEBDD329CB10182D41814A4 /* Pods_ChildrenAssPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5086864EDF9AE4F649DCF85 /* Pods_ChildrenAssPad.framework */; };
+		207DBD69221A5FC800D181D2 /* recruit_student_base_trial.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD67221A5FC800D181D2 /* recruit_student_base_trial.json */; };
+		207DBD6A221A5FC800D181D2 /* recruit_student_observe_trial.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD68221A5FC800D181D2 /* recruit_student_observe_trial.json */; };
 		20D48E2621F3007F00C7F845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48E2521F3007F00C7F845 /* AppDelegate.swift */; };
 		20D48E2D21F3008100C7F845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E2C21F3008100C7F845 /* Assets.xcassets */; };
 		20D48F2021F30A2900C7F845 /* icon_exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E4221F30A2700C7F845 /* icon_exit@2x.png */; };
@@ -197,6 +199,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207DBD67221A5FC800D181D2 /* recruit_student_base_trial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_base_trial.json; sourceTree = "<group>"; };
+		207DBD68221A5FC800D181D2 /* recruit_student_observe_trial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_observe_trial.json; sourceTree = "<group>"; };
 		20D48E2221F3007F00C7F845 /* ChildrenAssPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChildrenAssPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D48E2521F3007F00C7F845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D48E2C21F3008100C7F845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -603,6 +607,7 @@
 		20D48E9121F30A2800C7F845 /* Assesment */ = {
 			isa = PBXGroup;
 			children = (
+				20D48E9F21F30A2800C7F845 /* Views */,
 				20D48E9221F30A2800C7F845 /* Models */,
 			);
 			path = Assesment;
@@ -623,8 +628,9 @@
 				20D48E9C21F30A2800C7F845 /* AssExam.swift */,
 				20D48E9D21F30A2800C7F845 /* AssPaper.swift */,
 				20D48E9E21F30A2800C7F845 /* AssCaseOption.swift */,
-				20D48E9F21F30A2800C7F845 /* Views */,
 				20D48EB521F30A2800C7F845 /* first_trial_json1.json */,
+				207DBD67221A5FC800D181D2 /* recruit_student_base_trial.json */,
+				207DBD68221A5FC800D181D2 /* recruit_student_observe_trial.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,13 +638,13 @@
 		20D48E9F21F30A2800C7F845 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20D48EA621F30A2800C7F845 /* ItemView */,
 				20D48EA021F30A2800C7F845 /* Ass_Patten_PassThroughView.swift */,
 				20D48EA121F30A2800C7F845 /* Ass_Patten_View.swift */,
 				20D48EA221F30A2800C7F845 /* Ass_Patten_Style1_View.swift */,
 				20D48EA321F30A2800C7F845 /* Ass_Patten_Style4_View.swift */,
 				20D48EA421F30A2800C7F845 /* OptionViewByText.swift */,
 				20D48EA521F30A2800C7F845 /* Ass_Patten_Style9_View.swift */,
-				20D48EA621F30A2800C7F845 /* ItemView */,
 				20D48EAB21F30A2800C7F845 /* Ass_Patten_Style10_View.swift */,
 				20D48EAC21F30A2800C7F845 /* Ass_Patten_Style3_View.swift */,
 				20D48EAD21F30A2800C7F845 /* Ass_Patten_Style6_View.swift */,
@@ -997,6 +1003,7 @@
 				20D48FAA21F30A2900C7F845 /* evaluation_girl_default@2x.png in Resources */,
 				20D48F4121F30A2900C7F845 /* recruit_student_question_mark@2x.png in Resources */,
 				20D48F2921F30A2900C7F845 /* common_empty@2x.png in Resources */,
+				207DBD69221A5FC800D181D2 /* recruit_student_base_trial.json in Resources */,
 				20D48FA821F30A2900C7F845 /* evaluation_boy_hight.png in Resources */,
 				20D48F4621F30A2900C7F845 /* recruit_student_stu_name@2x.png in Resources */,
 				20D48F4221F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png in Resources */,
@@ -1027,6 +1034,7 @@
 				20D48F9521F30A2900C7F845 /* animation.gif in Resources */,
 				20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */,
 				20D48F2F21F30A2900C7F845 /* right_arrow@2x.png in Resources */,
+				207DBD6A221A5FC800D181D2 /* recruit_student_observe_trial.json in Resources */,
 				20D48F5E21F30A2900C7F845 /* home_clarifying_question@2x.png in Resources */,
 				20D48F4521F30A2900C7F845 /* recruit_student_switch_arrow_down@1x.png in Resources */,
 				20D48F3721F30A2900C7F845 /* recruit_student_switch_arrow_down@2x.png in Resources */,
