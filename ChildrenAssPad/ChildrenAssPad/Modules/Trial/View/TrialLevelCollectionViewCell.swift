@@ -22,7 +22,7 @@ class TrialLevelCollectionViewCell: UICollectionViewCell {
         imageView = UIImageView()
         self.contentView.addSubview(imageView)
 
-        let animationView = LOTAnimationView(name: "data")
+        let animationView = LOTAnimationView(name: "button")
         animationView.loopAnimation = true
         animationView.play()
 

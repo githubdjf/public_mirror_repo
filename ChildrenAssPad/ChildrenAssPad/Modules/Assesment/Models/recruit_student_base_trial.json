@@ -1,0 +1,254 @@
+
+{
+    "data" : [
+        {
+            "paperCaseList" : [
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "能双脚连续向前跳",
+                            "score" : 1,
+                            "id" : 875,
+                            "caseId" : 165,
+                            "dimen" : "生理发展"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "能单脚跳15厘米",
+                            "score" : 1,
+                            "id" : 876,
+                            "caseId" : 165,
+                            "dimen" : "生理发展"
+                        },
+                        {
+                            "type" : "C",
+                            "text" : "能双手向上抛球",
+                            "score" : 1,
+                            "id" : 877,
+                            "caseId" : 165,
+                            "dimen" : "生理发展"
+                        },
+                        {
+                            "type" : "D",
+                            "text" : "沿直线剪纸",
+                            "score" : 1,
+                            "id" : 878,
+                            "caseId" : 165,
+                            "dimen" : "生理发展"
+                        },
+                        {
+                            "type" : "E",
+                            "text" : "独立解纽扣",
+                            "score" : 1,
+                            "id" : 879,
+                            "caseId" : 165,
+                            "dimen" : "生理发展"
+                        },
+                        {
+                            "type" : "F",
+                            "text" : "睡眠时间规律",
+                            "score" : 1,
+                            "id" : 880,
+                            "caseId" : 165,
+                            "dimen" : "行为习惯"
+                        },
+                        {
+                            "type" : "G",
+                            "text" : "和陌生人打招呼",
+                            "score" : 1,
+                            "id" : 881,
+                            "caseId" : 165,
+                            "dimen" : "行为习惯"
+                        },
+                        {
+                            "type" : "H",
+                            "text" : "遵守公共秩序",
+                            "score" : 1,
+                            "id" : 882,
+                            "caseId" : 165,
+                            "dimen" : "行为习惯"
+                        },
+                        {
+                            "type" : "I",
+                            "text" : "打断别人的谈",
+                            "score" : 1,
+                            "id" : 883,
+                            "caseId" : 165,
+                            "dimen" : "行为习惯"
+                        },
+                        {
+                            "type" : "J",
+                            "text" : "主动拒绝陌生人的东西",
+                            "score" : 1,
+                            "id" : 884,
+                            "caseId" : 165,
+                            "dimen" : "行为习惯"
+                        }
+                    ],
+                    "id" : 165,
+                    "title" : "1、您的孩子有以下哪些特征?请选择",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 2
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "是",
+                            "score" : 0,
+                            "id" : 885,
+                            "caseId" : 166,
+                            "dimen" : "亲子互动"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "否",
+                            "score" : 1,
+                            "id" : 886,
+                            "caseId" : 166,
+                            "dimen" : "亲子互动"
+                        }
+                    ],
+                    "id" : 166,
+                    "title" : "2、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你”。",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 1
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "是",
+                            "score" : 1,
+                            "id" : 887,
+                            "caseId" : 167,
+                            "dimen" : "亲子互动"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "否",
+                            "score" : 0,
+                            "id" : 888,
+                            "caseId" : 167,
+                            "dimen" : "亲子互动"
+                        }
+                    ],
+                    "id" : 167,
+                    "title" : "3、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 1
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "是",
+                            "score" : 0,
+                            "id" : 889,
+                            "caseId" : 168,
+                            "dimen" : "亲子互动"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "否",
+                            "score" : 1,
+                            "id" : 890,
+                            "caseId" : 168,
+                            "dimen" : "亲子互动"
+                        }
+                    ],
+                    "id" : 168,
+                    "title" : "4、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 1
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "是",
+                            "score" : 0,
+                            "id" : 891,
+                            "caseId" : 169,
+                            "dimen" : "亲子互动"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "否",
+                            "score" : 1,
+                            "id" : 892,
+                            "caseId" : 169,
+                            "dimen" : "亲子互动"
+                        }
+                    ],
+                    "id" : 169,
+                    "title" : "5、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 1
+                },
+                {
+                    "selId" : null,
+                    "parten" : 0,
+                    "selectionList" : [
+                        {
+                            "type" : "A",
+                            "text" : "是",
+                            "score" : 0,
+                            "id" : 893,
+                            "caseId" : 170,
+                            "dimen" : "亲子互动"
+                        },
+                        {
+                            "type" : "B",
+                            "text" : "否",
+                            "score" : 1,
+                            "id" : 894,
+                            "caseId" : 170,
+                            "dimen" : "亲子互动"
+                        }
+                    ],
+                    "id" : 170,
+                    "title" : "6、宝宝不听话时，我通常会忍不住大声呵斥（吼）他。",
+                    "vedio" : null,
+                    "branchId" : 4,
+                    "audio" : null,
+                    "image" : null,
+                    "type" : 1
+                }
+            ],
+            "type" : 0,
+            "name" : "基础信息",
+            "id" : 4,
+            "paperId" : 1,
+            "isFinished" : 0
+        }
+    ],
+    "message" : "请求成功",
+    "code" : 200
+}
