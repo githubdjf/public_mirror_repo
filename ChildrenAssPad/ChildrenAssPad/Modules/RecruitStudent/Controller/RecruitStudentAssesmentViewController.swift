@@ -141,7 +141,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     @objc func observeInfoTabClicked(button: UIButton) {
         
         switchTabTo(tabType: .observer)
-        scrollTo(infoView: screenWidth)
+        scrollTo(infoView: screenWidth - 39 * 2)
     }
     
     @objc func disclosureInfoButtonClicked(button: UIButton) {
@@ -785,8 +785,8 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         commitButton.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.commitFooterView)
             make.top.equalTo(self.switchRoleButton)
-            make.width.equalTo(440)
-            make.height.equalTo(50)
+            make.width.equalTo(620)
+            make.height.equalTo(56)
         }
         
         //switch
@@ -799,8 +799,8 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         
         //switchOptionBgImageView
         switchOptionBgImageView.snp.makeConstraints { (make) in
-            make.left.equalTo(self.maskView).offset(10)
-            make.bottom.equalTo(self.maskView).offset(-80)
+            make.left.equalTo(self.maskView).offset(50)
+            make.bottom.equalTo(self.maskView).offset(-100)
             make.width.equalTo(120)
             make.height.equalTo(110)
         }
@@ -808,7 +808,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         //switchArrowImageView
         switchArrowImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(self.switchOptionBgImageView)
-            make.bottom.equalTo(self.maskView).offset(-81)
+            make.bottom.equalTo(self.maskView).offset(-101)
             make.width.equalTo(20)
             make.height.equalTo(10)
         }
@@ -874,6 +874,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         baseInfoTabButton = UIButton()
         baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: .selected)
         baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.colorFromRGBA(255, 238, 159), imageSize: tabSize), for: .normal)
+        baseInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: [.selected, .highlighted])
         baseInfoTabButton.setImage(UIImage(named: "recruit_student_base_info_unselected"), for: .normal)
         baseInfoTabButton.setImage(UIImage(named: "recruit_student_base_info_selected"), for: .selected)
         baseInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
@@ -889,6 +890,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         observeInfoTabButton = UIButton()
         observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: .selected)
         observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: UIColor.colorFromRGBA(255, 238, 159), imageSize: tabSize), for: .normal)
+        observeInfoTabButton.setBackgroundImage(UIImage.imageFromColor(fillColor: .white, imageSize: tabSize), for: [.selected, .highlighted])
         observeInfoTabButton.setImage(UIImage(named: "recruit_student_observe_info_unselected"), for: .normal)
         observeInfoTabButton.setImage(UIImage(named: "recruit_student_observe_info_selected"), for: .selected)
         observeInfoTabButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
@@ -987,9 +989,8 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         
         //switch button
         switchRoleButton = ReverseButton(frame: .zero, spaceX: 5)
-        switchRoleButton.backgroundColor = UIColor.colorWithHexString(hex: "#f7f9fa")
         switchRoleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        switchRoleButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
+        switchRoleButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
         switchRoleButton.setTitle(AssRole.teacher.roleName, for: .normal)
         switchRoleButton.setImage(UIImage(named: "recruit_student_switch_arrow_up"), for: .normal)
         switchRoleButton.setImage(UIImage(named: "recruit_student_switch_arrow_down"), for: .selected)
@@ -999,11 +1000,11 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         
         //commit button
         commitButton = UIButton()
-        commitButton.backgroundColor = UIColor.mainColor
-        commitButton.layer.cornerRadius = 5
+        commitButton.backgroundColor = UIColor.colorFromRGBA(254, 228, 98)
+        commitButton.layer.cornerRadius = 28
         commitButton.layer.masksToBounds = true
         commitButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        commitButton.setTitleColor(UIColor.white, for: .normal)
+        commitButton.setTitleColor(UIColor.colorFromRGBA(34, 34, 34), for: .normal)
         commitButton.setTitle(localStringForKey(key: "recruit_student_ass_commit_button_title"), for: .normal)
         commitButton.addTarget(self, action: #selector(commitButtonClicked(button:)), for: .touchUpInside)
         commitFooterView.addSubview(commitButton)
@@ -1028,23 +1029,23 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         parentRoleButton = UIButton()
         parentRoleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         parentRoleButton.setTitle(AssRole.parent.roleName, for: .normal)
-        parentRoleButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
-        parentRoleButton.setTitleColor(UIColor.mainColor, for: .selected)
+        parentRoleButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
+        parentRoleButton.setTitleColor(UIColor.colorFromRGBA(255, 162, 0), for: .selected)
         parentRoleButton.addTarget(self, action: #selector(parentRoleSwitcherClicked(button:)), for: .touchUpInside)
         parentRoleButton.isSelected = false
         switchOptionBgImageView.addSubview(parentRoleButton)
         
         //switchSepLine
         switchSepLine = UIView()
-        switchSepLine.backgroundColor = UIColor.colorWithHexString(hex: "#f7f9fa")
+        switchSepLine.backgroundColor = UIColor.colorFromRGBA(240, 240, 240)
         switchOptionBgImageView.addSubview(switchSepLine)
 
         //teacherRoleButton
         teacherRoleButton = UIButton()
         teacherRoleButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         teacherRoleButton.setTitle(AssRole.teacher.roleName, for: .normal)
-        teacherRoleButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
-        teacherRoleButton.setTitleColor(UIColor.mainColor, for: .selected)
+        teacherRoleButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
+        teacherRoleButton.setTitleColor(UIColor.colorFromRGBA(255, 162, 0), for: .selected)
         teacherRoleButton.addTarget(self, action: #selector(teacherRoleSwitcherClicked(button:)), for: .touchUpInside)
         teacherRoleButton.isSelected = true
         switchOptionBgImageView.addSubview(teacherRoleButton)

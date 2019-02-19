@@ -12,22 +12,18 @@
 		207DBD6D221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD6B221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json */; };
 		207DBD6E221A66FB00D181D2 /* recruit_student_observe_trial_parent.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD6C221A66FB00D181D2 /* recruit_student_observe_trial_parent.json */; };
 		207DBD70221A6BBD00D181D2 /* recruit_student_papers.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD6F221A6BBD00D181D2 /* recruit_student_papers.json */; };
-		207DBD76221A8ED400D181D2 /* common_question_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD72221A8ED400D181D2 /* common_question_icon.png */; };
-		207DBD77221A8ED400D181D2 /* common_question_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD73221A8ED400D181D2 /* common_question_icon@2x.png */; };
-		207DBD78221A8ED400D181D2 /* common_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD74221A8ED400D181D2 /* common_close.png */; };
-		207DBD79221A8ED400D181D2 /* common_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD75221A8ED400D181D2 /* common_close@2x.png */; };
-		207DBD84221A8F1900D181D2 /* recruit_student_base_info_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7A221A8F1700D181D2 /* recruit_student_base_info_unselected.png */; };
-		207DBD85221A8F1900D181D2 /* recruit_student_multiple_option_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7B221A8F1700D181D2 /* recruit_student_multiple_option_selected.png */; };
-		207DBD86221A8F1900D181D2 /* recruit_student_observe_info_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7C221A8F1700D181D2 /* recruit_student_observe_info_unselected.png */; };
 		207DBD87221A8F1900D181D2 /* recruit_student_observe_info_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7D221A8F1800D181D2 /* recruit_student_observe_info_unselected@2x.png */; };
 		207DBD88221A8F1900D181D2 /* recruit_student_base_info_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7E221A8F1800D181D2 /* recruit_student_base_info_unselected@2x.png */; };
-		207DBD89221A8F1900D181D2 /* recruit_student_base_info_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD7F221A8F1800D181D2 /* recruit_student_base_info_selected.png */; };
 		207DBD8A221A8F1900D181D2 /* recruit_student_observe_info_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD80221A8F1800D181D2 /* recruit_student_observe_info_selected@2x.png */; };
 		207DBD8B221A8F1900D181D2 /* recruit_student_base_info_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */; };
 		207DBD8C221A8F1900D181D2 /* recruit_student_multiple_option_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */; };
-		207DBD8D221A8F1900D181D2 /* recruit_student_observe_info_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD83221A8F1800D181D2 /* recruit_student_observe_info_selected.png */; };
-		207DBD90221A905600D181D2 /* recruit_student_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD8E221A905500D181D2 /* recruit_student_bg.png */; };
 		207DBD91221A905600D181D2 /* recruit_student_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */; };
+		207DBDA3221BDA0900D181D2 /* common_question_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */; };
+		207DBDA4221BDA0900D181D2 /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9E221BDA0900D181D2 /* common_back@2x.png */; };
+		207DBDA5221BDA0900D181D2 /* common_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9F221BDA0900D181D2 /* common_close@2x.png */; };
+		207DBDA7221BDD5100D181D2 /* recruit_student_answer_info.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBDA6221BDD5000D181D2 /* recruit_student_answer_info.json */; };
+		207DBDAA221BE31400D181D2 /* recruit_student_question_info_header_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBDA8221BE31300D181D2 /* recruit_student_question_info_header_right@2x.png */; };
+		207DBDAB221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBDA9221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png */; };
 		20D48E2621F3007F00C7F845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48E2521F3007F00C7F845 /* AppDelegate.swift */; };
 		20D48E2D21F3008100C7F845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E2C21F3008100C7F845 /* Assets.xcassets */; };
 		20D48F2021F30A2900C7F845 /* icon_exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E4221F30A2700C7F845 /* icon_exit@2x.png */; };
@@ -46,30 +42,18 @@
 		20D48F2D21F30A2900C7F845 /* icon_version_code.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E4F21F30A2700C7F845 /* icon_version_code.png */; };
 		20D48F2E21F30A2900C7F845 /* operation_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5021F30A2700C7F845 /* operation_success@2x.png */; };
 		20D48F2F21F30A2900C7F845 /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5121F30A2700C7F845 /* right_arrow@2x.png */; };
-		20D48F3021F30A2900C7F845 /* common_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5221F30A2700C7F845 /* common_back.png */; };
 		20D48F3121F30A2900C7F845 /* icon_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5321F30A2700C7F845 /* icon_user.png */; };
 		20D48F3221F30A2900C7F845 /* operation_exception@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5421F30A2700C7F845 /* operation_exception@2x.png */; };
 		20D48F3321F30A2900C7F845 /* operation_exception.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5521F30A2700C7F845 /* operation_exception.png */; };
 		20D48F3421F30A2900C7F845 /* icon_modify_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5621F30A2700C7F845 /* icon_modify_password.png */; };
-		20D48F3521F30A2900C7F845 /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5721F30A2700C7F845 /* common_back@2x.png */; };
 		20D48F3621F30A2900C7F845 /* recruit_student_switch_role_bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5921F30A2700C7F845 /* recruit_student_switch_role_bubble@2x.png */; };
 		20D48F3721F30A2900C7F845 /* recruit_student_switch_arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5A21F30A2700C7F845 /* recruit_student_switch_arrow_down@2x.png */; };
-		20D48F3821F30A2900C7F845 /* recruit_student_stu_name@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5B21F30A2700C7F845 /* recruit_student_stu_name@1x.png */; };
-		20D48F3921F30A2900C7F845 /* recruit_student_ass_info_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5C21F30A2700C7F845 /* recruit_student_ass_info_icon@2x.png */; };
-		20D48F3A21F30A2900C7F845 /* recruit_student_ass_info_close@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5D21F30A2700C7F845 /* recruit_student_ass_info_close@1x.png */; };
 		20D48F3B21F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5E21F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@1x.png */; };
-		20D48F3C21F30A2900C7F845 /* recruit_student_ass_selected_answer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E5F21F30A2700C7F845 /* recruit_student_ass_selected_answer@2x.png */; };
-		20D48F3D21F30A2900C7F845 /* recruit_student_question_mark@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6021F30A2700C7F845 /* recruit_student_question_mark@1x.png */; };
 		20D48F3E21F30A2900C7F845 /* recruit_student_switch_arrow_up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6121F30A2700C7F845 /* recruit_student_switch_arrow_up@2x.png */; };
 		20D48F3F21F30A2900C7F845 /* recruit_student_switch_arrow_up@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6221F30A2700C7F845 /* recruit_student_switch_arrow_up@1x.png */; };
-		20D48F4021F30A2900C7F845 /* recruit_student_ass_selected_answer@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6321F30A2700C7F845 /* recruit_student_ass_selected_answer@1x.png */; };
-		20D48F4121F30A2900C7F845 /* recruit_student_question_mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6421F30A2700C7F845 /* recruit_student_question_mark@2x.png */; };
 		20D48F4221F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6521F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png */; };
-		20D48F4321F30A2900C7F845 /* recruit_student_ass_info_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6621F30A2700C7F845 /* recruit_student_ass_info_close@2x.png */; };
 		20D48F4421F30A2900C7F845 /* recruit_student_switch_role_bubble@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6721F30A2700C7F845 /* recruit_student_switch_role_bubble@1x.png */; };
 		20D48F4521F30A2900C7F845 /* recruit_student_switch_arrow_down@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6821F30A2700C7F845 /* recruit_student_switch_arrow_down@1x.png */; };
-		20D48F4621F30A2900C7F845 /* recruit_student_stu_name@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6921F30A2700C7F845 /* recruit_student_stu_name@2x.png */; };
-		20D48F4721F30A2900C7F845 /* recruit_student_ass_info_icon@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6A21F30A2700C7F845 /* recruit_student_ass_info_icon@1x.png */; };
 		20D48F4821F30A2900C7F845 /* icon_recruit_evaluation.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6B21F30A2700C7F845 /* icon_recruit_evaluation.png */; };
 		20D48F4921F30A2900C7F845 /* icon_recruit_evaluation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48E6C21F30A2700C7F845 /* icon_recruit_evaluation@2x.png */; };
 		20D48F4A21F30A2900C7F845 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48E6E21F30A2700C7F845 /* Format.swift */; };
@@ -221,22 +205,18 @@
 		207DBD6B221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_observe_trial_teacher.json; sourceTree = "<group>"; };
 		207DBD6C221A66FB00D181D2 /* recruit_student_observe_trial_parent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_observe_trial_parent.json; sourceTree = "<group>"; };
 		207DBD6F221A6BBD00D181D2 /* recruit_student_papers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_papers.json; sourceTree = "<group>"; };
-		207DBD72221A8ED400D181D2 /* common_question_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_question_icon.png; sourceTree = "<group>"; };
-		207DBD73221A8ED400D181D2 /* common_question_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_question_icon@2x.png"; sourceTree = "<group>"; };
-		207DBD74221A8ED400D181D2 /* common_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_close.png; sourceTree = "<group>"; };
-		207DBD75221A8ED400D181D2 /* common_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_close@2x.png"; sourceTree = "<group>"; };
-		207DBD7A221A8F1700D181D2 /* recruit_student_base_info_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_base_info_unselected.png; sourceTree = "<group>"; };
-		207DBD7B221A8F1700D181D2 /* recruit_student_multiple_option_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_multiple_option_selected.png; sourceTree = "<group>"; };
-		207DBD7C221A8F1700D181D2 /* recruit_student_observe_info_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_observe_info_unselected.png; sourceTree = "<group>"; };
 		207DBD7D221A8F1800D181D2 /* recruit_student_observe_info_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_observe_info_unselected@2x.png"; sourceTree = "<group>"; };
 		207DBD7E221A8F1800D181D2 /* recruit_student_base_info_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_base_info_unselected@2x.png"; sourceTree = "<group>"; };
-		207DBD7F221A8F1800D181D2 /* recruit_student_base_info_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_base_info_selected.png; sourceTree = "<group>"; };
 		207DBD80221A8F1800D181D2 /* recruit_student_observe_info_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_observe_info_selected@2x.png"; sourceTree = "<group>"; };
 		207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_base_info_selected@2x.png"; sourceTree = "<group>"; };
 		207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_multiple_option_selected@2x.png"; sourceTree = "<group>"; };
-		207DBD83221A8F1800D181D2 /* recruit_student_observe_info_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_observe_info_selected.png; sourceTree = "<group>"; };
-		207DBD8E221A905500D181D2 /* recruit_student_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recruit_student_bg.png; sourceTree = "<group>"; };
 		207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_bg@2x.png"; sourceTree = "<group>"; };
+		207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_question_icon@2x.png"; sourceTree = "<group>"; };
+		207DBD9E221BDA0900D181D2 /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
+		207DBD9F221BDA0900D181D2 /* common_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_close@2x.png"; sourceTree = "<group>"; };
+		207DBDA6221BDD5000D181D2 /* recruit_student_answer_info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_answer_info.json; sourceTree = "<group>"; };
+		207DBDA8221BE31300D181D2 /* recruit_student_question_info_header_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_question_info_header_right@2x.png"; sourceTree = "<group>"; };
+		207DBDA9221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_question_info_header_left@2x.png"; sourceTree = "<group>"; };
 		20D48E2221F3007F00C7F845 /* ChildrenAssPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChildrenAssPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D48E2521F3007F00C7F845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20D48E2C21F3008100C7F845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -258,30 +238,18 @@
 		20D48E4F21F30A2700C7F845 /* icon_version_code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_version_code.png; sourceTree = "<group>"; };
 		20D48E5021F30A2700C7F845 /* operation_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operation_success@2x.png"; sourceTree = "<group>"; };
 		20D48E5121F30A2700C7F845 /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
-		20D48E5221F30A2700C7F845 /* common_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_back.png; sourceTree = "<group>"; };
 		20D48E5321F30A2700C7F845 /* icon_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_user.png; sourceTree = "<group>"; };
 		20D48E5421F30A2700C7F845 /* operation_exception@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "operation_exception@2x.png"; sourceTree = "<group>"; };
 		20D48E5521F30A2700C7F845 /* operation_exception.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = operation_exception.png; sourceTree = "<group>"; };
 		20D48E5621F30A2700C7F845 /* icon_modify_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_modify_password.png; sourceTree = "<group>"; };
-		20D48E5721F30A2700C7F845 /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
 		20D48E5921F30A2700C7F845 /* recruit_student_switch_role_bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_role_bubble@2x.png"; sourceTree = "<group>"; };
 		20D48E5A21F30A2700C7F845 /* recruit_student_switch_arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_arrow_down@2x.png"; sourceTree = "<group>"; };
-		20D48E5B21F30A2700C7F845 /* recruit_student_stu_name@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_stu_name@1x.png"; sourceTree = "<group>"; };
-		20D48E5C21F30A2700C7F845 /* recruit_student_ass_info_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_info_icon@2x.png"; sourceTree = "<group>"; };
-		20D48E5D21F30A2700C7F845 /* recruit_student_ass_info_close@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_info_close@1x.png"; sourceTree = "<group>"; };
 		20D48E5E21F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_role_bubble_arrow@1x.png"; sourceTree = "<group>"; };
-		20D48E5F21F30A2700C7F845 /* recruit_student_ass_selected_answer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_selected_answer@2x.png"; sourceTree = "<group>"; };
-		20D48E6021F30A2700C7F845 /* recruit_student_question_mark@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_question_mark@1x.png"; sourceTree = "<group>"; };
 		20D48E6121F30A2700C7F845 /* recruit_student_switch_arrow_up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_arrow_up@2x.png"; sourceTree = "<group>"; };
 		20D48E6221F30A2700C7F845 /* recruit_student_switch_arrow_up@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_arrow_up@1x.png"; sourceTree = "<group>"; };
-		20D48E6321F30A2700C7F845 /* recruit_student_ass_selected_answer@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_selected_answer@1x.png"; sourceTree = "<group>"; };
-		20D48E6421F30A2700C7F845 /* recruit_student_question_mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_question_mark@2x.png"; sourceTree = "<group>"; };
 		20D48E6521F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_role_bubble_arrow@2x.png"; sourceTree = "<group>"; };
-		20D48E6621F30A2700C7F845 /* recruit_student_ass_info_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_info_close@2x.png"; sourceTree = "<group>"; };
 		20D48E6721F30A2700C7F845 /* recruit_student_switch_role_bubble@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_role_bubble@1x.png"; sourceTree = "<group>"; };
 		20D48E6821F30A2700C7F845 /* recruit_student_switch_arrow_down@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_switch_arrow_down@1x.png"; sourceTree = "<group>"; };
-		20D48E6921F30A2700C7F845 /* recruit_student_stu_name@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_stu_name@2x.png"; sourceTree = "<group>"; };
-		20D48E6A21F30A2700C7F845 /* recruit_student_ass_info_icon@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_ass_info_icon@1x.png"; sourceTree = "<group>"; };
 		20D48E6B21F30A2700C7F845 /* icon_recruit_evaluation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_recruit_evaluation.png; sourceTree = "<group>"; };
 		20D48E6C21F30A2700C7F845 /* icon_recruit_evaluation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_recruit_evaluation@2x.png"; sourceTree = "<group>"; };
 		20D48E6E21F30A2700C7F845 /* Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
@@ -461,12 +429,9 @@
 				20D48E4E21F30A2700C7F845 /* common_empty.png */,
 				20D48E4421F30A2700C7F845 /* common_net_unreachable.png */,
 				20D48E4621F30A2700C7F845 /* common_net_unreachable@2x.png */,
-				20D48E5221F30A2700C7F845 /* common_back.png */,
-				20D48E5721F30A2700C7F845 /* common_back@2x.png */,
-				207DBD74221A8ED400D181D2 /* common_close.png */,
-				207DBD75221A8ED400D181D2 /* common_close@2x.png */,
-				207DBD72221A8ED400D181D2 /* common_question_icon.png */,
-				207DBD73221A8ED400D181D2 /* common_question_icon@2x.png */,
+				207DBD9E221BDA0900D181D2 /* common_back@2x.png */,
+				207DBD9F221BDA0900D181D2 /* common_close@2x.png */,
+				207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -537,9 +502,9 @@
 				20D48E5421F30A2700C7F845 /* operation_exception@2x.png */,
 				20D48E5521F30A2700C7F845 /* operation_exception.png */,
 				20D48E5621F30A2700C7F845 /* icon_modify_password.png */,
-				20D48E5821F30A2700C7F845 /* RecruitStudent */,
 				20D48E6B21F30A2700C7F845 /* icon_recruit_evaluation.png */,
 				20D48E6C21F30A2700C7F845 /* icon_recruit_evaluation@2x.png */,
+				20D48E5821F30A2700C7F845 /* RecruitStudent */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -547,36 +512,22 @@
 		20D48E5821F30A2700C7F845 /* RecruitStudent */ = {
 			isa = PBXGroup;
 			children = (
-				207DBD7F221A8F1800D181D2 /* recruit_student_base_info_selected.png */,
-				207DBD8E221A905500D181D2 /* recruit_student_bg.png */,
 				207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */,
 				207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */,
-				207DBD7A221A8F1700D181D2 /* recruit_student_base_info_unselected.png */,
 				207DBD7E221A8F1800D181D2 /* recruit_student_base_info_unselected@2x.png */,
-				207DBD7B221A8F1700D181D2 /* recruit_student_multiple_option_selected.png */,
 				207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */,
-				207DBD83221A8F1800D181D2 /* recruit_student_observe_info_selected.png */,
 				207DBD80221A8F1800D181D2 /* recruit_student_observe_info_selected@2x.png */,
-				207DBD7C221A8F1700D181D2 /* recruit_student_observe_info_unselected.png */,
 				207DBD7D221A8F1800D181D2 /* recruit_student_observe_info_unselected@2x.png */,
 				20D48E5921F30A2700C7F845 /* recruit_student_switch_role_bubble@2x.png */,
 				20D48E5A21F30A2700C7F845 /* recruit_student_switch_arrow_down@2x.png */,
-				20D48E5B21F30A2700C7F845 /* recruit_student_stu_name@1x.png */,
-				20D48E5C21F30A2700C7F845 /* recruit_student_ass_info_icon@2x.png */,
-				20D48E5D21F30A2700C7F845 /* recruit_student_ass_info_close@1x.png */,
 				20D48E5E21F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@1x.png */,
-				20D48E5F21F30A2700C7F845 /* recruit_student_ass_selected_answer@2x.png */,
-				20D48E6021F30A2700C7F845 /* recruit_student_question_mark@1x.png */,
 				20D48E6121F30A2700C7F845 /* recruit_student_switch_arrow_up@2x.png */,
 				20D48E6221F30A2700C7F845 /* recruit_student_switch_arrow_up@1x.png */,
-				20D48E6321F30A2700C7F845 /* recruit_student_ass_selected_answer@1x.png */,
-				20D48E6421F30A2700C7F845 /* recruit_student_question_mark@2x.png */,
 				20D48E6521F30A2700C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png */,
-				20D48E6621F30A2700C7F845 /* recruit_student_ass_info_close@2x.png */,
 				20D48E6721F30A2700C7F845 /* recruit_student_switch_role_bubble@1x.png */,
 				20D48E6821F30A2700C7F845 /* recruit_student_switch_arrow_down@1x.png */,
-				20D48E6921F30A2700C7F845 /* recruit_student_stu_name@2x.png */,
-				20D48E6A21F30A2700C7F845 /* recruit_student_ass_info_icon@1x.png */,
+				207DBDA9221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png */,
+				207DBDA8221BE31300D181D2 /* recruit_student_question_info_header_right@2x.png */,
 			);
 			path = RecruitStudent;
 			sourceTree = "<group>";
@@ -693,6 +644,7 @@
 				207DBD6C221A66FB00D181D2 /* recruit_student_observe_trial_parent.json */,
 				207DBD6B221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json */,
 				207DBD6F221A6BBD00D181D2 /* recruit_student_papers.json */,
+				207DBDA6221BDD5000D181D2 /* recruit_student_answer_info.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1021,8 +973,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207DBD89221A8F1900D181D2 /* recruit_student_base_info_selected.png in Resources */,
-				20D48F4721F30A2900C7F845 /* recruit_student_ass_info_icon@1x.png in Resources */,
 				20D48F2121F30A2900C7F845 /* icon_version_code@2x.png in Resources */,
 				207DBD70221A6BBD00D181D2 /* recruit_student_papers.json in Resources */,
 				20D48F2821F30A2900C7F845 /* operation_success@1x.png in Resources */,
@@ -1033,14 +983,12 @@
 				20D48F6A21F30A2900C7F845 /* first_trial_json3.json in Resources */,
 				20D48F6021F30A2900C7F845 /* home_critical_thinking@2x.png in Resources */,
 				20D48F2221F30A2900C7F845 /* common_net_unreachable.png in Resources */,
-				20D48F3021F30A2900C7F845 /* common_back.png in Resources */,
+				207DBDA3221BDA0900D181D2 /* common_question_icon@2x.png in Resources */,
 				20D48F2B21F30A2900C7F845 /* data.json in Resources */,
 				20D48FA421F30A2900C7F845 /* evaluation_base_icon@2x.png in Resources */,
 				20D48F6421F30A2900C7F845 /* home_shadow@2x.png in Resources */,
 				20D48F3E21F30A2900C7F845 /* recruit_student_switch_arrow_up@2x.png in Resources */,
 				20D48FA621F30A2900C7F845 /* evaluation_base_icon.png in Resources */,
-				20D48F3C21F30A2900C7F845 /* recruit_student_ass_selected_answer@2x.png in Resources */,
-				20D48F3821F30A2900C7F845 /* recruit_student_stu_name@1x.png in Resources */,
 				207DBD6E221A66FB00D181D2 /* recruit_student_observe_trial_parent.json in Resources */,
 				20D48FB321F30A2900C7F845 /* password_default_image.png in Resources */,
 				20D48F8B21F30A2900C7F845 /* icon_date.png in Resources */,
@@ -1056,11 +1004,11 @@
 				20D48F6221F30A2900C7F845 /* home_recruit_evaluation@2x.png in Resources */,
 				20D48F2421F30A2900C7F845 /* common_net_unreachable@2x.png in Resources */,
 				20D48F9621F30A2900C7F845 /* trial_select_image.png in Resources */,
+				207DBDA4221BDA0900D181D2 /* common_back@2x.png in Resources */,
 				207DBD8B221A8F1900D181D2 /* recruit_student_base_info_selected@2x.png in Resources */,
-				20D48F3521F30A2900C7F845 /* common_back@2x.png in Resources */,
+				207DBDAA221BE31400D181D2 /* recruit_student_question_info_header_right@2x.png in Resources */,
 				20D48FB221F30A2900C7F845 /* forget_password_close@2x.png in Resources */,
 				20D48F3321F30A2900C7F845 /* operation_exception.png in Resources */,
-				207DBD8D221A8F1900D181D2 /* recruit_student_observe_info_selected.png in Resources */,
 				20D48F8E21F30A2900C7F845 /* icon_date@2x.png in Resources */,
 				20D48F9021F30A2900C7F845 /* trial_play.png in Resources */,
 				20D48E2D21F3008100C7F845 /* Assets.xcassets in Resources */,
@@ -1070,17 +1018,15 @@
 				20D48F2021F30A2900C7F845 /* icon_exit@2x.png in Resources */,
 				20D48FAA21F30A2900C7F845 /* evaluation_girl_default@2x.png in Resources */,
 				207DBD8A221A8F1900D181D2 /* recruit_student_observe_info_selected@2x.png in Resources */,
-				20D48F4121F30A2900C7F845 /* recruit_student_question_mark@2x.png in Resources */,
 				20D48F2921F30A2900C7F845 /* common_empty@2x.png in Resources */,
 				207DBD8C221A8F1900D181D2 /* recruit_student_multiple_option_selected@2x.png in Resources */,
 				207DBD69221A5FC800D181D2 /* recruit_student_base_trial.json in Resources */,
 				20D48FA821F30A2900C7F845 /* evaluation_boy_hight.png in Resources */,
-				20D48F4621F30A2900C7F845 /* recruit_student_stu_name@2x.png in Resources */,
 				20D48F4221F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png in Resources */,
 				20D48F6121F30A2900C7F845 /* home_recruit_evaluation.png in Resources */,
+				207DBDA7221BDD5100D181D2 /* recruit_student_answer_info.json in Resources */,
 				20D48F2721F30A2900C7F845 /* icon_user@2x.png in Resources */,
 				20D48F9721F30A2900C7F845 /* trial_select_text.png in Resources */,
-				20D48F3D21F30A2900C7F845 /* recruit_student_question_mark@1x.png in Resources */,
 				20D48FA721F30A2900C7F845 /* evaluation_boy_default.png in Resources */,
 				20D48F4421F30A2900C7F845 /* recruit_student_switch_role_bubble@1x.png in Resources */,
 				207DBD87221A8F1900D181D2 /* recruit_student_observe_info_unselected@2x.png in Resources */,
@@ -1092,43 +1038,33 @@
 				20D48F4921F30A2900C7F845 /* icon_recruit_evaluation@2x.png in Resources */,
 				20D48F2521F30A2900C7F845 /* right_arrow.png in Resources */,
 				20D48FAD21F30A2900C7F845 /* loginAnimationFirst.json in Resources */,
-				20D48F3921F30A2900C7F845 /* recruit_student_ass_info_icon@2x.png in Resources */,
+				207DBDA5221BDA0900D181D2 /* common_close@2x.png in Resources */,
 				20D48F2A21F30A2900C7F845 /* icon_exit.png in Resources */,
-				207DBD78221A8ED400D181D2 /* common_close.png in Resources */,
 				20D48F5B21F30A2900C7F845 /* home_critical_thinking.png in Resources */,
 				20D48F2E21F30A2900C7F845 /* operation_success@2x.png in Resources */,
 				20D48F5C21F30A2900C7F845 /* home_shadow.png in Resources */,
 				20D48F6321F30A2900C7F845 /* home_children_overall_development.png in Resources */,
 				20D48F3421F30A2900C7F845 /* icon_modify_password.png in Resources */,
-				20D48F4021F30A2900C7F845 /* recruit_student_ass_selected_answer@1x.png in Resources */,
-				207DBD76221A8ED400D181D2 /* common_question_icon.png in Resources */,
 				20D48F8721F30A2900C7F845 /* first_trial_json1.json in Resources */,
-				207DBD90221A905600D181D2 /* recruit_student_bg.png in Resources */,
 				20D48F4821F30A2900C7F845 /* icon_recruit_evaluation.png in Resources */,
 				20D48F6C21F30A2900C7F845 /* first_trial_json4.json in Resources */,
 				20D48F2321F30A2900C7F845 /* loading.json in Resources */,
-				207DBD86221A8F1900D181D2 /* recruit_student_observe_info_unselected.png in Resources */,
 				20D48F9521F30A2900C7F845 /* animation.gif in Resources */,
 				20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */,
 				20D48F2F21F30A2900C7F845 /* right_arrow@2x.png in Resources */,
-				207DBD79221A8ED400D181D2 /* common_close@2x.png in Resources */,
-				207DBD84221A8F1900D181D2 /* recruit_student_base_info_unselected.png in Resources */,
 				20D48F5E21F30A2900C7F845 /* home_clarifying_question@2x.png in Resources */,
 				20D48F4521F30A2900C7F845 /* recruit_student_switch_arrow_down@1x.png in Resources */,
 				20D48F3721F30A2900C7F845 /* recruit_student_switch_arrow_down@2x.png in Resources */,
 				20D48FAB21F30A2900C7F845 /* evaluation_girl_default.png in Resources */,
 				20D48F3F21F30A2900C7F845 /* recruit_student_switch_arrow_up@1x.png in Resources */,
-				20D48F4321F30A2900C7F845 /* recruit_student_ass_info_close@2x.png in Resources */,
 				20D48FB421F30A2900C7F845 /* password_default_image@2x.png in Resources */,
 				20D48F6721F30A2900C7F845 /* first_trial_json2.json in Resources */,
-				207DBD85221A8F1900D181D2 /* recruit_student_multiple_option_selected.png in Resources */,
 				20D48FA521F30A2900C7F845 /* evaluation_boy_hight@2x.png in Resources */,
 				20D48FA321F30A2900C7F845 /* evaluation_boy_default@2x.png in Resources */,
-				207DBD77221A8ED400D181D2 /* common_question_icon@2x.png in Resources */,
 				20D48F3621F30A2900C7F845 /* recruit_student_switch_role_bubble@2x.png in Resources */,
-				20D48F3A21F30A2900C7F845 /* recruit_student_ass_info_close@1x.png in Resources */,
 				20D48F9121F30A2900C7F845 /* trial_play@2x.png in Resources */,
 				20D48F6621F30A2900C7F845 /* home_clarifying_question.png in Resources */,
+				207DBDAB221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png in Resources */,
 				20D48F8C21F30A2900C7F845 /* clear_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

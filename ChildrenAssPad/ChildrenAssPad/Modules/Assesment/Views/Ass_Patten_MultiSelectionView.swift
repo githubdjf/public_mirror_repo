@@ -293,7 +293,7 @@ class Ass_Patten_MultiSelectionView: Ass_Patten_View {
         //options
         //固定列宽方式排版
         let titleFont = UIFont.systemFont(ofSize: 16)
-        let textColor = UIColor.colorWithHexString(hex: "#555555")
+        let textColor = UIColor.colorFromRGBA(85, 85, 85)
         let containerInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 30)
         let itemInset = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 22)
         let spaceX: CGFloat = 20.0
@@ -301,9 +301,9 @@ class Ass_Patten_MultiSelectionView: Ass_Patten_View {
         
         let colCount = 4
         let fixedWidth = (self.frame.width - 20 * 2 - containerInset.left - containerInset.right - CGFloat(colCount - 1) * spaceX) / CGFloat(colCount)
-        let fixedHeight: CGFloat = 40
+        let fixedHeight: CGFloat = 48
         
-        let tempSize = caseOptionContainerView.initialize(withAssCase: caseData, titleFont: titleFont, titleColor: textColor, fixedHeight: fixedHeight, fixedWidth: fixedWidth, containerInset: containerInset, itemInset: itemInset, spaceX: spaceX, spaceY: spaceY, borderColor: UIColor.colorWithHexString(hex: "#d8d8d8"), borderWidth: 1, radius: 5, compactable: false)
+        let tempSize = caseOptionContainerView.initialize(withAssCase: caseData, titleFont: titleFont, titleColor: textColor, fixedHeight: fixedHeight, fixedWidth: fixedWidth, containerInset: containerInset, itemInset: itemInset, spaceX: spaceX, spaceY: spaceY, borderColor: UIColor.colorFromRGBA(187, 185, 174), borderWidth: 1, radius: 0, compactable: false)
         
         let emptySize = CGSize(width: tempSize.width, height: containerDefaultHeight)
         

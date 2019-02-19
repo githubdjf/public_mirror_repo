@@ -27,7 +27,6 @@ class RecruitStudentAssAnswerCell: UITableViewCell {
         //answer label
         answerLabel = UILabel()
         answerLabel.font = UIFont.systemFont(ofSize: 16)
-        answerLabel.textColor = UIColor.colorWithHexString(hex: "#222222")
         answerLabel.numberOfLines = 0
         answerLabel.setContentHuggingPriority(.required, for: .vertical)
         answerLabel.setContentCompressionResistancePriority(.required, for: .vertical)
