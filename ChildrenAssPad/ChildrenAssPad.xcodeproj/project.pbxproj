@@ -214,6 +214,14 @@
 		20D48FD921F30A2900C7F845 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1E21F30A2800C7F845 /* LoginService.swift */; };
 		20D48FDA21F30A2900C7F845 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1F21F30A2800C7F845 /* HomeService.swift */; };
 		20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D48FDB21F30B7F00C7F845 /* LocalizedString.strings */; };
+		D56CE1FC221BE2350003E866 /* login_default_background@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FA221BE2350003E866 /* login_default_background@1x.png */; };
+		D56CE1FD221BE2350003E866 /* login_default_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FB221BE2350003E866 /* login_default_background@2x.png */; };
+		D56CE202221BE8820003E866 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FE221BE8820003E866 /* password.png */; };
+		D56CE203221BE8820003E866 /* account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FF221BE8820003E866 /* account@2x.png */; };
+		D56CE204221BE8820003E866 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE200221BE8820003E866 /* account.png */; };
+		D56CE205221BE8820003E866 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE201221BE8820003E866 /* password@2x.png */; };
+		D56CE208221BEBFD0003E866 /* revise_password.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE206221BEBFD0003E866 /* revise_password.png */; };
+		D56CE209221BEBFD0003E866 /* revise_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE207221BEBFD0003E866 /* revise_password@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -430,6 +438,14 @@
 		20D48FDE21F30BDB00C7F845 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedString.strings; sourceTree = "<group>"; };
 		4643E236B16BD989788B3FB3 /* Pods-ChildrenAssPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.debug.xcconfig"; sourceTree = "<group>"; };
 		BE4D7DC1F04F5FD4D4C8400E /* Pods-ChildrenAssPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.release.xcconfig"; sourceTree = "<group>"; };
+		D56CE1FA221BE2350003E866 /* login_default_background@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_default_background@1x.png"; sourceTree = "<group>"; };
+		D56CE1FB221BE2350003E866 /* login_default_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_default_background@2x.png"; sourceTree = "<group>"; };
+		D56CE1FE221BE8820003E866 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		D56CE1FF221BE8820003E866 /* account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account@2x.png"; sourceTree = "<group>"; };
+		D56CE200221BE8820003E866 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		D56CE201221BE8820003E866 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
+		D56CE206221BEBFD0003E866 /* revise_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revise_password.png; sourceTree = "<group>"; };
+		D56CE207221BEBFD0003E866 /* revise_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "revise_password@2x.png"; sourceTree = "<group>"; };
 		E5086864EDF9AE4F649DCF85 /* Pods_ChildrenAssPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChildrenAssPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -862,6 +878,14 @@
 		20D48EEA21F30A2800C7F845 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D56CE206221BEBFD0003E866 /* revise_password.png */,
+				D56CE207221BEBFD0003E866 /* revise_password@2x.png */,
+				D56CE200221BE8820003E866 /* account.png */,
+				D56CE1FF221BE8820003E866 /* account@2x.png */,
+				D56CE1FE221BE8820003E866 /* password.png */,
+				D56CE201221BE8820003E866 /* password@2x.png */,
+				D56CE1FA221BE2350003E866 /* login_default_background@1x.png */,
+				D56CE1FB221BE2350003E866 /* login_default_background@2x.png */,
 				20D48EEB21F30A2800C7F845 /* forget_password_close.png */,
 				20D48EEC21F30A2800C7F845 /* forget_password_close@2x.png */,
 				20D48EED21F30A2800C7F845 /* password_default_image.png */,
@@ -1042,9 +1066,11 @@
 				20D48F3C21F30A2900C7F845 /* recruit_student_ass_selected_answer@2x.png in Resources */,
 				20D48F3821F30A2900C7F845 /* recruit_student_stu_name@1x.png in Resources */,
 				207DBD6E221A66FB00D181D2 /* recruit_student_observe_trial_parent.json in Resources */,
+				D56CE1FD221BE2350003E866 /* login_default_background@2x.png in Resources */,
 				20D48FB321F30A2900C7F845 /* password_default_image.png in Resources */,
 				20D48F8B21F30A2900C7F845 /* icon_date.png in Resources */,
 				20D48FB521F30A2900C7F845 /* loginAnimationLast.json in Resources */,
+				D56CE204221BE8820003E866 /* account.png in Resources */,
 				20D48FAC21F30A2900C7F845 /* evaluation_girl_hight.png in Resources */,
 				20D48F2C21F30A2900C7F845 /* common_empty.png in Resources */,
 				20D48F9221F30A2900C7F845 /* trial_start@2x.png in Resources */,
@@ -1077,19 +1103,24 @@
 				20D48FA821F30A2900C7F845 /* evaluation_boy_hight.png in Resources */,
 				20D48F4621F30A2900C7F845 /* recruit_student_stu_name@2x.png in Resources */,
 				20D48F4221F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png in Resources */,
+				D56CE203221BE8820003E866 /* account@2x.png in Resources */,
 				20D48F6121F30A2900C7F845 /* home_recruit_evaluation.png in Resources */,
 				20D48F2721F30A2900C7F845 /* icon_user@2x.png in Resources */,
 				20D48F9721F30A2900C7F845 /* trial_select_text.png in Resources */,
+				D56CE208221BEBFD0003E866 /* revise_password.png in Resources */,
 				20D48F3D21F30A2900C7F845 /* recruit_student_question_mark@1x.png in Resources */,
 				20D48FA721F30A2900C7F845 /* evaluation_boy_default.png in Resources */,
 				20D48F4421F30A2900C7F845 /* recruit_student_switch_role_bubble@1x.png in Resources */,
 				207DBD87221A8F1900D181D2 /* recruit_student_observe_info_unselected@2x.png in Resources */,
+				D56CE209221BEBFD0003E866 /* revise_password@2x.png in Resources */,
 				20D48F3121F30A2900C7F845 /* icon_user.png in Resources */,
 				20D48F9321F30A2900C7F845 /* trial_select_text@2x.png in Resources */,
 				20D48F2D21F30A2900C7F845 /* icon_version_code.png in Resources */,
+				D56CE205221BE8820003E866 /* password@2x.png in Resources */,
 				207DBD88221A8F1900D181D2 /* recruit_student_base_info_unselected@2x.png in Resources */,
 				207DBD6D221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json in Resources */,
 				20D48F4921F30A2900C7F845 /* icon_recruit_evaluation@2x.png in Resources */,
+				D56CE1FC221BE2350003E866 /* login_default_background@1x.png in Resources */,
 				20D48F2521F30A2900C7F845 /* right_arrow.png in Resources */,
 				20D48FAD21F30A2900C7F845 /* loginAnimationFirst.json in Resources */,
 				20D48F3921F30A2900C7F845 /* recruit_student_ass_info_icon@2x.png in Resources */,
@@ -1117,6 +1148,7 @@
 				20D48F4521F30A2900C7F845 /* recruit_student_switch_arrow_down@1x.png in Resources */,
 				20D48F3721F30A2900C7F845 /* recruit_student_switch_arrow_down@2x.png in Resources */,
 				20D48FAB21F30A2900C7F845 /* evaluation_girl_default.png in Resources */,
+				D56CE202221BE8820003E866 /* password.png in Resources */,
 				20D48F3F21F30A2900C7F845 /* recruit_student_switch_arrow_up@1x.png in Resources */,
 				20D48F4321F30A2900C7F845 /* recruit_student_ass_info_close@2x.png in Resources */,
 				20D48FB421F30A2900C7F845 /* password_default_image@2x.png in Resources */,
