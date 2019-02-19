@@ -21,9 +21,9 @@ class SignInViewController: BaseViewController{
     
     var confirmBtn: UIButton!
     
-    var animationViewLast: LOTAnimationView!
-    var animationView: LOTAnimationView!
-    var containView: UIView!
+//    var animationViewLast: LOTAnimationView!
+//    var animationView: LOTAnimationView!
+//    var containView: UIView!
     
 
     override func viewDidLoad() {
@@ -32,45 +32,51 @@ class SignInViewController: BaseViewController{
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
         
-        NotificationCenter.default.addObserver(self, selector: #selector(resignActive), name: UIApplication.willResignActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.willEnterForegroundNotification, object: nil)
-        
         self.createUI()
     }
     
     func createUI() -> Void {
         
-        animationViewLast = LOTAnimationView(name: "loginAnimationLast")
-        self.view.addSubview(animationViewLast)
-        animationViewLast.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        animationViewLast.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
+        let backImage = UIImageView()
+        self.view.addSubview(backImage)
+        backImage.image = UIImage(named: "login_default_background")
+        backImage.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
-        animationViewLast.contentMode = .scaleAspectFit
-        animationViewLast.clipsToBounds = true
-        animationViewLast.loopAnimation = true
         
-        animationView = LOTAnimationView.init(name: "loginAnimationFirst")
-        self.view.addSubview(animationView)
-        animationView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view)
-        }
-        animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        animationView.contentMode = .scaleAspectFit
-        animationView.clipsToBounds = true
+        self.createInputView()
         
-        
-        animationView.play(toProgress: 0.1) { (finished) in
-            if finished {
-                self.createInputView()
-                self.animationView.play(fromProgress: 0.1, toProgress: 1.0) { (finished) in
-                    if finished {
-                        self.animationView.removeFromSuperview()
-                        self.animationViewLast.play()
-                    }
-                }
-            }
-        }
+//        animationViewLast = LOTAnimationView(name: "loginAnimationLast")
+//        self.view.addSubview(animationViewLast)
+//        animationViewLast.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        animationViewLast.snp.makeConstraints { (make) in
+//            make.edges.equalTo(self.view)
+//        }
+//        animationViewLast.contentMode = .scaleAspectFit
+//        animationViewLast.clipsToBounds = true
+//        animationViewLast.loopAnimation = true
+//
+//        animationView = LOTAnimationView.init(name: "loginAnimationFirst")
+//        self.view.addSubview(animationView)
+//        animationView.snp.makeConstraints { (make) in
+//            make.edges.equalTo(self.view)
+//        }
+//        animationView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        animationView.contentMode = .scaleAspectFit
+//        animationView.clipsToBounds = true
+//
+//
+//        animationView.play(toProgress: 0.1) { (finished) in
+//            if finished {
+//                self.createInputView()
+//                self.animationView.play(fromProgress: 0.1, toProgress: 1.0) { (finished) in
+//                    if finished {
+//                        self.animationView.removeFromSuperview()
+//                        self.animationViewLast.play()
+//                    }
+//                }
+//            }
+//        }
         
         
         
@@ -92,97 +98,101 @@ class SignInViewController: BaseViewController{
     }
     
     func createInputView() -> Void {
-        if let _ = containView {
-            return
-        }
-        containView = UIView()
-        self.view.addSubview(containView)
-        containView.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview().offset(23)
-            make.centerX.equalToSuperview()
-        }
-        
         let titleL = UILabel()
-        containView.addSubview(titleL)
-        titleL.font = UIFont.systemFont(ofSize: 18)
-        titleL.text = "第一教育  MOMA KIDS 摩码幼儿园成长中心"
-        titleL.textColor = UIColor.colorWithHexString(hex: "222222")
+        self.view.addSubview(titleL)
+        titleL.font = UIFont.systemFont(ofSize: 50)
+        titleL.text = "幼儿成长测评服务"
+        titleL.textColor = UIColor.white
         titleL.textAlignment = .center
         titleL.snp.makeConstraints { (make) in
-            make.top.equalTo(0)
-            make.centerX.equalTo(containView)
-            make.width.equalTo(440)
+            make.top.equalTo(101)
+            make.left.equalTo(50)
+            make.height.equalTo(35)
         }
         
         
-        
-        let placeHoldAttr = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(hex: "999999")]
         accountTF = UITextField()
-        containView.addSubview(accountTF)
-        accountTF.attributedPlaceholder = NSAttributedString(string: localStringForKey(key: "please_input_account"), attributes: placeHoldAttr)
+        self.view.addSubview(accountTF)
         accountTF.font = UIFont.systemFont(ofSize: 16)
         accountTF.leftViewMode = .always
-        accountTF.leftView = self.createLeftView(tip: localStringForKey(key: "sign_in_account"))
+        accountTF.attributedPlaceholder = NSAttributedString(string: localStringForKey(key: "please_input_account"), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.colorFromRGBA(85, 85, 85)])
+        accountTF.leftView = self.createLeftView(tip: "account")
         accountTF.clearButtonMode = .whileEditing
-        accountTF.layer.borderWidth = 1
-        accountTF.layer.borderColor = UIColor.colorWithHexString(hex: "d8d8d8").cgColor
-        accountTF.layer.cornerRadius = 2
         accountTF.keyboardType = .asciiCapable
         accountTF.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
         accountTF.snp.makeConstraints { (make) in
-            make.top.equalTo(titleL.snp.bottom).offset(20)
-            make.left.right.equalTo(0)
-            make.size.equalTo(CGSize(width: 440, height: 46))
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(titleL.snp.bottom).offset(30)
+            make.left.equalTo(titleL)
+            make.size.equalTo(CGSize(width: 360, height: 24))
         }
 
+        let accountLine = UIView()
+        self.view.addSubview(accountLine)
+        accountLine.backgroundColor = UIColor.colorFromRGBA(246, 196, 0)
+        accountLine.snp.makeConstraints { (make) in
+            make.top.equalTo(accountTF.snp.bottom).offset(8)
+            make.left.right.equalTo(accountTF)
+            make.height.equalTo(2)
+        }
         
         passwordTF = UITextField()
-        containView.addSubview(passwordTF)
-        passwordTF.attributedPlaceholder = NSAttributedString(string: localStringForKey(key: "please_input_password"), attributes: placeHoldAttr)
+        self.view.addSubview(passwordTF)
         passwordTF.font = UIFont.systemFont(ofSize: 16)
         passwordTF.leftViewMode = .always
-        passwordTF.leftView = self.createLeftView(tip: localStringForKey(key: "sign_in_password"))
+        passwordTF.leftView = self.createLeftView(tip: "password")
+        passwordTF.attributedPlaceholder = NSAttributedString(string: localStringForKey(key: "please_input_password"), attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.colorFromRGBA(85, 85, 85)])
         passwordTF.isSecureTextEntry = true
         passwordTF.clearButtonMode = .whileEditing
-        passwordTF.layer.borderWidth = 1
-        passwordTF.layer.borderColor = UIColor.colorWithHexString(hex: "d8d8d8").cgColor
-        passwordTF.layer.cornerRadius = 2
         passwordTF.addTarget(self, action: #selector(textDidChange(sender:)), for: .editingChanged)
         passwordTF.keyboardType = .asciiCapable
         passwordTF.snp.makeConstraints { (make) in
-            make.top.equalTo(accountTF.snp.bottom).offset(20)
-            make.size.equalTo(CGSize(width: 440, height: 46))
-            make.centerX.equalTo(self.view)
+            make.top.equalTo(accountTF.snp.bottom).offset(26)
+            make.left.size.equalTo(accountTF)
+        }
+        
+        let passwordLine = UIView()
+        self.view.addSubview(passwordLine)
+        passwordLine.backgroundColor = UIColor.colorFromRGBA(246, 196, 0)
+        passwordLine.snp.makeConstraints { (make) in
+            make.top.equalTo(passwordTF.snp.bottom).offset(8)
+            make.left.right.equalTo(accountTF)
+            make.height.equalTo(2)
         }
         
         confirmBtn = UIButton(type: .custom)
-        containView.addSubview(confirmBtn)
-        confirmBtn.backgroundColor = UIColor.colorWithHexString(hex: "d8d8d8")
+        self.view.addSubview(confirmBtn)
+        confirmBtn.backgroundColor = UIColor.colorFromRGBA(255, 162, 0)
         confirmBtn.isEnabled = false
         confirmBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        confirmBtn.setTitleColor(UIColor.colorWithHexString(hex: "ffffff"), for: .normal)
+        confirmBtn.setTitleColor(UIColor.colorFromRGBA(255, 255, 255, alpha: 0.4), for: .disabled)
+        confirmBtn.setTitleColor(UIColor.colorFromRGBA(255, 255, 255), for: .highlighted)
         confirmBtn.setTitle(localStringForKey(key: "sign_in_title"), for: .normal)
-        confirmBtn.layer.cornerRadius = 4
-        confirmBtn.layer.masksToBounds = true
         confirmBtn.addTarget(self, action: #selector(confirmBtnClick), for: .touchUpInside)
         confirmBtn.snp.makeConstraints { (make) in
-            make.top.equalTo(passwordTF.snp.bottom).offset(19)
+            make.top.equalTo(passwordLine.snp.bottom).offset(30)
             make.centerX.equalTo(passwordTF)
-            make.size.equalTo(CGSize(width: 440, height: 50))
+            make.size.equalTo(CGSize(width: 360, height: 56))
         }
+        confirmBtn.layer.cornerRadius = 28
+        confirmBtn.clipsToBounds = true
+        
         
         let forgetBtn = UIButton(type: .custom)
-        containView.addSubview(forgetBtn)
+        self.view.addSubview(forgetBtn)
         forgetBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        forgetBtn.setTitleColor(UIColor.colorWithHexString(hex: "555555"), for: .normal)
+        forgetBtn.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
         forgetBtn.setTitle(localStringForKey(key: "forget_password"), for: .normal)
+        forgetBtn.setImage(UIImage(named: "revise_password"), for: .normal)
         forgetBtn.addTarget(self, action: #selector(forgetBtnClick), for: .touchUpInside)
         forgetBtn.snp.makeConstraints { (make) in
             make.top.equalTo(confirmBtn.snp.bottom).offset(20)
             make.centerX.equalTo(confirmBtn)
-            make.bottom.equalTo(0)
+            make.height.equalTo(24)
         }
+        let imgW = forgetBtn.imageView!.bounds.width
+        let titleW = forgetBtn.titleLabel!.bounds.width
+        forgetBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: titleW+10, bottom: 0, right: -titleW-10)
+        forgetBtn.titleEdgeInsets = UIEdgeInsets(top: 0, left: -imgW, bottom: 0, right: imgW)
     }
     
     
@@ -240,22 +250,21 @@ class SignInViewController: BaseViewController{
     }
 
     func createLeftView(tip: String) -> UIView {
-        let accountLeft = UIView()
-        accountLeft.snp.makeConstraints { (make) in
-            make.height.equalTo(46)
+        let leftView = UIView()
+        leftView.snp.makeConstraints { (make) in
+            make.width.equalTo(40)
+            make.height.equalTo(24)
         }
-        let accountL = UILabel()
-        accountLeft.addSubview(accountL)
-        accountL.font = UIFont.systemFont(ofSize: 16)
-        accountL.text = tip
-        accountL.textColor = UIColor.colorWithHexString(hex: "222222")
-        accountL.snp.makeConstraints { (make) in
-            make.left.equalTo(20)
-            make.right.equalTo(0)
-            make.centerY.equalTo(accountLeft)
-            make.height.equalTo(46)
+       
+        let leftImg = UIImageView()
+        leftView.addSubview(leftImg)
+        leftImg.image = UIImage(named: tip)
+        leftImg.snp.makeConstraints { (make) in
+            make.left.equalTo(3)
+            make.size.equalTo(CGSize(width: 24, height: 24))
+            make.centerY.equalToSuperview()
         }
-        return accountLeft
+        return leftView
     }
     
     @objc func textDidChange(sender: UITextField) -> Void {
@@ -278,43 +287,43 @@ class SignInViewController: BaseViewController{
         }
     }
     
-    @objc func resignActive() -> Void {
-        if animationView.animationProgress < 1.0 {
-            animationView.pause()
-        }
-        
-//        if animationViewLast.animationProgress < 1.0 {
-            animationViewLast.pause()
+//    @objc func resignActive() -> Void {
+//        if animationView.animationProgress < 1.0 {
+//            animationView.pause()
 //        }
-    }
-    
-    @objc func becomeActive() -> Void {
-        if animationView.animationProgress > 0.1 && animationView.animationProgress < 1.0 {
-            animationView.play { (finished) in
-                if finished {
-                    self.animationView.removeFromSuperview()
-                    self.animationViewLast.play()
-                }
-            }
-        } else if animationView.animationProgress >= 1.0 {
-            animationViewLast.play()
-        } else {
-            self.createInputView()
-            self.animationView.play(fromProgress: animationView.animationProgress, toProgress: 1.0) { (finished) in
-                if finished {
-                    self.animationView.removeFromSuperview()
-                    self.animationViewLast.play()
-                }
-            }
-        }
-        
-        if animationViewLast.animationProgress >= 0 && animationViewLast.animationProgress <= 1.0 {
-            if animationViewLast != nil {
-                animationViewLast.play()
-            }
-        }
-    }
-    
+//
+////        if animationViewLast.animationProgress < 1.0 {
+//            animationViewLast.pause()
+////        }
+//    }
+//
+//    @objc func becomeActive() -> Void {
+//        if animationView.animationProgress > 0.1 && animationView.animationProgress < 1.0 {
+//            animationView.play { (finished) in
+//                if finished {
+//                    self.animationView.removeFromSuperview()
+//                    self.animationViewLast.play()
+//                }
+//            }
+//        } else if animationView.animationProgress >= 1.0 {
+//            animationViewLast.play()
+//        } else {
+//            self.createInputView()
+//            self.animationView.play(fromProgress: animationView.animationProgress, toProgress: 1.0) { (finished) in
+//                if finished {
+//                    self.animationView.removeFromSuperview()
+//                    self.animationViewLast.play()
+//                }
+//            }
+//        }
+//
+//        if animationViewLast.animationProgress >= 0 && animationViewLast.animationProgress <= 1.0 {
+//            if animationViewLast != nil {
+//                animationViewLast.play()
+//            }
+//        }
+//    }
+//
     
     
     /*

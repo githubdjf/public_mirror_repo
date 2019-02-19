@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1CEBDD329CB10182D41814A4 /* Pods_ChildrenAssPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5086864EDF9AE4F649DCF85 /* Pods_ChildrenAssPad.framework */; };
+		1CFBBB3F221C060E00E9517E /* TrialLevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFBBB3E221C060E00E9517E /* TrialLevelCollectionViewCell.swift */; };
+		1CFBBB49221C063200E9517E /* trial_curLevel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB40221C063200E9517E /* trial_curLevel.png */; };
+		1CFBBB4A221C063200E9517E /* button.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB41221C063200E9517E /* button.json */; };
+		1CFBBB4B221C063200E9517E /* trial_pass.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB42221C063200E9517E /* trial_pass.png */; };
+		1CFBBB4C221C063200E9517E /* trial_cup_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB43221C063200E9517E /* trial_cup_normal.png */; };
+		1CFBBB4D221C063200E9517E /* trial_ cup.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB44221C063200E9517E /* trial_ cup.png */; };
+		1CFBBB4E221C063200E9517E /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB46221C063200E9517E /* img_0.png */; };
+		1CFBBB4F221C063200E9517E /* trial_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB47221C063200E9517E /* trial_bg.png */; };
+		1CFBBB50221C063200E9517E /* trial_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CFBBB48221C063200E9517E /* trial_lock.png */; };
 		207DBD69221A5FC800D181D2 /* recruit_student_base_trial.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD67221A5FC800D181D2 /* recruit_student_base_trial.json */; };
 		207DBD6D221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD6B221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json */; };
 		207DBD6E221A66FB00D181D2 /* recruit_student_observe_trial_parent.json in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD6C221A66FB00D181D2 /* recruit_student_observe_trial_parent.json */; };
@@ -125,15 +134,6 @@
 		20D48F8C21F30A2900C7F845 /* clear_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EBC21F30A2800C7F845 /* clear_icon.png */; };
 		20D48F8D21F30A2900C7F845 /* clear_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EBD21F30A2800C7F845 /* clear_icon@2x.png */; };
 		20D48F8E21F30A2900C7F845 /* icon_date@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EBE21F30A2800C7F845 /* icon_date@2x.png */; };
-		20D48F8F21F30A2900C7F845 /* trial_select_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC121F30A2800C7F845 /* trial_select_image@2x.png */; };
-		20D48F9021F30A2900C7F845 /* trial_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC221F30A2800C7F845 /* trial_play.png */; };
-		20D48F9121F30A2900C7F845 /* trial_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC321F30A2800C7F845 /* trial_play@2x.png */; };
-		20D48F9221F30A2900C7F845 /* trial_start@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC421F30A2800C7F845 /* trial_start@2x.png */; };
-		20D48F9321F30A2900C7F845 /* trial_select_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC521F30A2800C7F845 /* trial_select_text@2x.png */; };
-		20D48F9421F30A2900C7F845 /* trial_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC621F30A2800C7F845 /* trial_start.png */; };
-		20D48F9521F30A2900C7F845 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC721F30A2800C7F845 /* animation.gif */; };
-		20D48F9621F30A2900C7F845 /* trial_select_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC821F30A2800C7F845 /* trial_select_image.png */; };
-		20D48F9721F30A2900C7F845 /* trial_select_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D48EC921F30A2800C7F845 /* trial_select_text.png */; };
 		20D48F9821F30A2900C7F845 /* TrialGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48ECB21F30A2800C7F845 /* TrialGuideViewController.swift */; };
 		20D48F9921F30A2900C7F845 /* TeacherTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48ECC21F30A2800C7F845 /* TeacherTrialViewController.swift */; };
 		20D48F9A21F30A2900C7F845 /* StudentTrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48ECD21F30A2800C7F845 /* StudentTrialViewController.swift */; };
@@ -198,9 +198,26 @@
 		20D48FD921F30A2900C7F845 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1E21F30A2800C7F845 /* LoginService.swift */; };
 		20D48FDA21F30A2900C7F845 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1F21F30A2800C7F845 /* HomeService.swift */; };
 		20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D48FDB21F30B7F00C7F845 /* LocalizedString.strings */; };
+		D56CE1FC221BE2350003E866 /* login_default_background@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FA221BE2350003E866 /* login_default_background@1x.png */; };
+		D56CE1FD221BE2350003E866 /* login_default_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FB221BE2350003E866 /* login_default_background@2x.png */; };
+		D56CE202221BE8820003E866 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FE221BE8820003E866 /* password.png */; };
+		D56CE203221BE8820003E866 /* account@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FF221BE8820003E866 /* account@2x.png */; };
+		D56CE204221BE8820003E866 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE200221BE8820003E866 /* account.png */; };
+		D56CE205221BE8820003E866 /* password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE201221BE8820003E866 /* password@2x.png */; };
+		D56CE208221BEBFD0003E866 /* revise_password.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE206221BEBFD0003E866 /* revise_password.png */; };
+		D56CE209221BEBFD0003E866 /* revise_password@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE207221BEBFD0003E866 /* revise_password@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CFBBB3E221C060E00E9517E /* TrialLevelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialLevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		1CFBBB40221C063200E9517E /* trial_curLevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_curLevel.png; sourceTree = "<group>"; };
+		1CFBBB41221C063200E9517E /* button.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = button.json; sourceTree = "<group>"; };
+		1CFBBB42221C063200E9517E /* trial_pass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_pass.png; sourceTree = "<group>"; };
+		1CFBBB43221C063200E9517E /* trial_cup_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_cup_normal.png; sourceTree = "<group>"; };
+		1CFBBB44221C063200E9517E /* trial_ cup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trial_ cup.png"; sourceTree = "<group>"; };
+		1CFBBB46221C063200E9517E /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		1CFBBB47221C063200E9517E /* trial_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_bg.png; sourceTree = "<group>"; };
+		1CFBBB48221C063200E9517E /* trial_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_lock.png; sourceTree = "<group>"; };
 		207DBD67221A5FC800D181D2 /* recruit_student_base_trial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_base_trial.json; sourceTree = "<group>"; };
 		207DBD6B221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_observe_trial_teacher.json; sourceTree = "<group>"; };
 		207DBD6C221A66FB00D181D2 /* recruit_student_observe_trial_parent.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recruit_student_observe_trial_parent.json; sourceTree = "<group>"; };
@@ -322,15 +339,6 @@
 		20D48EBC21F30A2800C7F845 /* clear_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear_icon.png; sourceTree = "<group>"; };
 		20D48EBD21F30A2800C7F845 /* clear_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear_icon@2x.png"; sourceTree = "<group>"; };
 		20D48EBE21F30A2800C7F845 /* icon_date@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_date@2x.png"; sourceTree = "<group>"; };
-		20D48EC121F30A2800C7F845 /* trial_select_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trial_select_image@2x.png"; sourceTree = "<group>"; };
-		20D48EC221F30A2800C7F845 /* trial_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_play.png; sourceTree = "<group>"; };
-		20D48EC321F30A2800C7F845 /* trial_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trial_play@2x.png"; sourceTree = "<group>"; };
-		20D48EC421F30A2800C7F845 /* trial_start@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trial_start@2x.png"; sourceTree = "<group>"; };
-		20D48EC521F30A2800C7F845 /* trial_select_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trial_select_text@2x.png"; sourceTree = "<group>"; };
-		20D48EC621F30A2800C7F845 /* trial_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_start.png; sourceTree = "<group>"; };
-		20D48EC721F30A2800C7F845 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
-		20D48EC821F30A2800C7F845 /* trial_select_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_select_image.png; sourceTree = "<group>"; };
-		20D48EC921F30A2800C7F845 /* trial_select_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_select_text.png; sourceTree = "<group>"; };
 		20D48ECB21F30A2800C7F845 /* TrialGuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrialGuideViewController.swift; sourceTree = "<group>"; };
 		20D48ECC21F30A2800C7F845 /* TeacherTrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTrialViewController.swift; sourceTree = "<group>"; };
 		20D48ECD21F30A2800C7F845 /* StudentTrialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTrialViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +406,14 @@
 		20D48FDE21F30BDB00C7F845 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedString.strings; sourceTree = "<group>"; };
 		4643E236B16BD989788B3FB3 /* Pods-ChildrenAssPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.debug.xcconfig"; sourceTree = "<group>"; };
 		BE4D7DC1F04F5FD4D4C8400E /* Pods-ChildrenAssPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.release.xcconfig"; sourceTree = "<group>"; };
+		D56CE1FA221BE2350003E866 /* login_default_background@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_default_background@1x.png"; sourceTree = "<group>"; };
+		D56CE1FB221BE2350003E866 /* login_default_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_default_background@2x.png"; sourceTree = "<group>"; };
+		D56CE1FE221BE8820003E866 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		D56CE1FF221BE8820003E866 /* account@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account@2x.png"; sourceTree = "<group>"; };
+		D56CE200221BE8820003E866 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		D56CE201221BE8820003E866 /* password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password@2x.png"; sourceTree = "<group>"; };
+		D56CE206221BEBFD0003E866 /* revise_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = revise_password.png; sourceTree = "<group>"; };
+		D56CE207221BEBFD0003E866 /* revise_password@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "revise_password@2x.png"; sourceTree = "<group>"; };
 		E5086864EDF9AE4F649DCF85 /* Pods_ChildrenAssPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChildrenAssPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -420,6 +436,22 @@
 				BE4D7DC1F04F5FD4D4C8400E /* Pods-ChildrenAssPad.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1CFBBB3D221C060E00E9517E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CFBBB3E221C060E00E9517E /* TrialLevelCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1CFBBB45221C063200E9517E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1CFBBB46221C063200E9517E /* img_0.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		207DBD71221A8BCE00D181D2 /* Common */ = {
@@ -505,6 +537,14 @@
 				20D48E5621F30A2700C7F845 /* icon_modify_password.png */,
 				20D48E6B21F30A2700C7F845 /* icon_recruit_evaluation.png */,
 				20D48E6C21F30A2700C7F845 /* icon_recruit_evaluation@2x.png */,
+				1CFBBB41221C063200E9517E /* button.json */,
+				1CFBBB45221C063200E9517E /* images */,
+				1CFBBB44221C063200E9517E /* trial_ cup.png */,
+				1CFBBB47221C063200E9517E /* trial_bg.png */,
+				1CFBBB43221C063200E9517E /* trial_cup_normal.png */,
+				1CFBBB40221C063200E9517E /* trial_curLevel.png */,
+				1CFBBB48221C063200E9517E /* trial_lock.png */,
+				1CFBBB42221C063200E9517E /* trial_pass.png */,
 				20D48E5821F30A2700C7F845 /* RecruitStudent */,
 			);
 			path = Resource;
@@ -709,26 +749,10 @@
 		20D48EBF21F30A2800C7F845 /* Trial */ = {
 			isa = PBXGroup;
 			children = (
-				20D48EC021F30A2800C7F845 /* Resourse */,
+				1CFBBB3D221C060E00E9517E /* View */,
 				20D48ECA21F30A2800C7F845 /* Controller */,
 			);
 			path = Trial;
-			sourceTree = "<group>";
-		};
-		20D48EC021F30A2800C7F845 /* Resourse */ = {
-			isa = PBXGroup;
-			children = (
-				20D48EC121F30A2800C7F845 /* trial_select_image@2x.png */,
-				20D48EC221F30A2800C7F845 /* trial_play.png */,
-				20D48EC321F30A2800C7F845 /* trial_play@2x.png */,
-				20D48EC421F30A2800C7F845 /* trial_start@2x.png */,
-				20D48EC521F30A2800C7F845 /* trial_select_text@2x.png */,
-				20D48EC621F30A2800C7F845 /* trial_start.png */,
-				20D48EC721F30A2800C7F845 /* animation.gif */,
-				20D48EC821F30A2800C7F845 /* trial_select_image.png */,
-				20D48EC921F30A2800C7F845 /* trial_select_text.png */,
-			);
-			path = Resourse;
 			sourceTree = "<group>";
 		};
 		20D48ECA21F30A2800C7F845 /* Controller */ = {
@@ -814,6 +838,14 @@
 		20D48EEA21F30A2800C7F845 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D56CE206221BEBFD0003E866 /* revise_password.png */,
+				D56CE207221BEBFD0003E866 /* revise_password@2x.png */,
+				D56CE200221BE8820003E866 /* account.png */,
+				D56CE1FF221BE8820003E866 /* account@2x.png */,
+				D56CE1FE221BE8820003E866 /* password.png */,
+				D56CE201221BE8820003E866 /* password@2x.png */,
+				D56CE1FA221BE2350003E866 /* login_default_background@1x.png */,
+				D56CE1FB221BE2350003E866 /* login_default_background@2x.png */,
 				20D48EEB21F30A2800C7F845 /* forget_password_close.png */,
 				20D48EEC21F30A2800C7F845 /* forget_password_close@2x.png */,
 				20D48EED21F30A2800C7F845 /* password_default_image.png */,
@@ -990,27 +1022,28 @@
 				20D48F3E21F30A2900C7F845 /* recruit_student_switch_arrow_up@2x.png in Resources */,
 				20D48FA621F30A2900C7F845 /* evaluation_base_icon.png in Resources */,
 				207DBD6E221A66FB00D181D2 /* recruit_student_observe_trial_parent.json in Resources */,
+				1CFBBB4A221C063200E9517E /* button.json in Resources */,
+				D56CE1FD221BE2350003E866 /* login_default_background@2x.png in Resources */,
 				20D48FB321F30A2900C7F845 /* password_default_image.png in Resources */,
 				20D48F8B21F30A2900C7F845 /* icon_date.png in Resources */,
 				20D48FB521F30A2900C7F845 /* loginAnimationLast.json in Resources */,
+				D56CE204221BE8820003E866 /* account.png in Resources */,
 				20D48FAC21F30A2900C7F845 /* evaluation_girl_hight.png in Resources */,
 				20D48F2C21F30A2900C7F845 /* common_empty.png in Resources */,
-				20D48F9221F30A2900C7F845 /* trial_start@2x.png in Resources */,
-				20D48F9421F30A2900C7F845 /* trial_start.png in Resources */,
 				20D48F2621F30A2900C7F845 /* icon_modify_password@2x.png in Resources */,
 				20D48F8D21F30A2900C7F845 /* clear_icon@2x.png in Resources */,
+				1CFBBB4F221C063200E9517E /* trial_bg.png in Resources */,
 				20D48F3B21F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@1x.png in Resources */,
-				20D48F8F21F30A2900C7F845 /* trial_select_image@2x.png in Resources */,
 				20D48F6221F30A2900C7F845 /* home_recruit_evaluation@2x.png in Resources */,
+				1CFBBB4B221C063200E9517E /* trial_pass.png in Resources */,
+				1CFBBB4D221C063200E9517E /* trial_ cup.png in Resources */,
 				20D48F2421F30A2900C7F845 /* common_net_unreachable@2x.png in Resources */,
-				20D48F9621F30A2900C7F845 /* trial_select_image.png in Resources */,
 				207DBDA4221BDA0900D181D2 /* common_back@2x.png in Resources */,
 				207DBD8B221A8F1900D181D2 /* recruit_student_base_info_selected@2x.png in Resources */,
 				207DBDAA221BE31400D181D2 /* recruit_student_question_info_header_right@2x.png in Resources */,
 				20D48FB221F30A2900C7F845 /* forget_password_close@2x.png in Resources */,
 				20D48F3321F30A2900C7F845 /* operation_exception.png in Resources */,
 				20D48F8E21F30A2900C7F845 /* icon_date@2x.png in Resources */,
-				20D48F9021F30A2900C7F845 /* trial_play.png in Resources */,
 				20D48E2D21F3008100C7F845 /* Assets.xcassets in Resources */,
 				207DBD91221A905600D181D2 /* common_full_screen_bg@2x.png in Resources */,
 				20D48F5D21F30A2900C7F845 /* home_not_enable.png in Resources */,
@@ -1022,20 +1055,27 @@
 				207DBD8C221A8F1900D181D2 /* recruit_student_multiple_option_selected@2x.png in Resources */,
 				207DBD69221A5FC800D181D2 /* recruit_student_base_trial.json in Resources */,
 				20D48FA821F30A2900C7F845 /* evaluation_boy_hight.png in Resources */,
+				1CFBBB49221C063200E9517E /* trial_curLevel.png in Resources */,
 				20D48F4221F30A2900C7F845 /* recruit_student_switch_role_bubble_arrow@2x.png in Resources */,
+				D56CE203221BE8820003E866 /* account@2x.png in Resources */,
 				20D48F6121F30A2900C7F845 /* home_recruit_evaluation.png in Resources */,
 				207DBDA7221BDD5100D181D2 /* recruit_student_answer_info.json in Resources */,
 				20D48F2721F30A2900C7F845 /* icon_user@2x.png in Resources */,
 				20D48F9721F30A2900C7F845 /* trial_select_text.png in Resources */,
+				D56CE208221BEBFD0003E866 /* revise_password.png in Resources */,
+				20D48F3D21F30A2900C7F845 /* recruit_student_question_mark@1x.png in Resources */,
 				20D48FA721F30A2900C7F845 /* evaluation_boy_default.png in Resources */,
 				20D48F4421F30A2900C7F845 /* recruit_student_switch_role_bubble@1x.png in Resources */,
 				207DBD87221A8F1900D181D2 /* recruit_student_observe_info_unselected@2x.png in Resources */,
+				D56CE209221BEBFD0003E866 /* revise_password@2x.png in Resources */,
 				20D48F3121F30A2900C7F845 /* icon_user.png in Resources */,
-				20D48F9321F30A2900C7F845 /* trial_select_text@2x.png in Resources */,
 				20D48F2D21F30A2900C7F845 /* icon_version_code.png in Resources */,
+				D56CE205221BE8820003E866 /* password@2x.png in Resources */,
 				207DBD88221A8F1900D181D2 /* recruit_student_base_info_unselected@2x.png in Resources */,
 				207DBD6D221A66FB00D181D2 /* recruit_student_observe_trial_teacher.json in Resources */,
+				1CFBBB4C221C063200E9517E /* trial_cup_normal.png in Resources */,
 				20D48F4921F30A2900C7F845 /* icon_recruit_evaluation@2x.png in Resources */,
+				D56CE1FC221BE2350003E866 /* login_default_background@1x.png in Resources */,
 				20D48F2521F30A2900C7F845 /* right_arrow.png in Resources */,
 				20D48FAD21F30A2900C7F845 /* loginAnimationFirst.json in Resources */,
 				207DBDA5221BDA0900D181D2 /* common_close@2x.png in Resources */,
@@ -1049,21 +1089,22 @@
 				20D48F4821F30A2900C7F845 /* icon_recruit_evaluation.png in Resources */,
 				20D48F6C21F30A2900C7F845 /* first_trial_json4.json in Resources */,
 				20D48F2321F30A2900C7F845 /* loading.json in Resources */,
-				20D48F9521F30A2900C7F845 /* animation.gif in Resources */,
 				20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */,
 				20D48F2F21F30A2900C7F845 /* right_arrow@2x.png in Resources */,
 				20D48F5E21F30A2900C7F845 /* home_clarifying_question@2x.png in Resources */,
 				20D48F4521F30A2900C7F845 /* recruit_student_switch_arrow_down@1x.png in Resources */,
 				20D48F3721F30A2900C7F845 /* recruit_student_switch_arrow_down@2x.png in Resources */,
 				20D48FAB21F30A2900C7F845 /* evaluation_girl_default.png in Resources */,
+				1CFBBB4E221C063200E9517E /* img_0.png in Resources */,
+				D56CE202221BE8820003E866 /* password.png in Resources */,
 				20D48F3F21F30A2900C7F845 /* recruit_student_switch_arrow_up@1x.png in Resources */,
 				20D48FB421F30A2900C7F845 /* password_default_image@2x.png in Resources */,
 				20D48F6721F30A2900C7F845 /* first_trial_json2.json in Resources */,
 				20D48FA521F30A2900C7F845 /* evaluation_boy_hight@2x.png in Resources */,
 				20D48FA321F30A2900C7F845 /* evaluation_boy_default@2x.png in Resources */,
 				20D48F3621F30A2900C7F845 /* recruit_student_switch_role_bubble@2x.png in Resources */,
-				20D48F9121F30A2900C7F845 /* trial_play@2x.png in Resources */,
 				20D48F6621F30A2900C7F845 /* home_clarifying_question.png in Resources */,
+				1CFBBB50221C063200E9517E /* trial_lock.png in Resources */,
 				207DBDAB221BE31400D181D2 /* recruit_student_question_info_header_left@2x.png in Resources */,
 				20D48F8C21F30A2900C7F845 /* clear_icon.png in Resources */,
 			);
@@ -1177,6 +1218,7 @@
 				20D48F7421F30A2900C7F845 /* Ass_Patten_View.swift in Sources */,
 				20D48F8921F30A2900C7F845 /* RecruitEvaluationRecordController.swift in Sources */,
 				20D48FD621F30A2900C7F845 /* RecruitStudentService.swift in Sources */,
+				1CFBBB3F221C060E00E9517E /* TrialLevelCollectionViewCell.swift in Sources */,
 				20D48F7C21F30A2900C7F845 /* BaseItemView.swift in Sources */,
 				20D48F9B21F30A2900C7F845 /* TrialLevelViewController.swift in Sources */,
 				20D48FB021F30A2900C7F845 /* ForgetPasswordViewController.swift in Sources */,
