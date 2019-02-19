@@ -58,13 +58,14 @@ class Ass_Patten_PassThroughView: Ass_Patten_View {
         
         //content view
         contentBgView = UIView()
-        contentBgView.backgroundColor = UIColor.white
+        contentBgView.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+        contentBgView.layer.cornerRadius = 8
         addSubview(contentBgView)
         
         //title label
         titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 16)
-        titleLabel.textColor = UIColor.colorWithHexString(hex: "#222222")
+        titleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
         titleLabel.numberOfLines = 0
         titleLabel.setContentHuggingPriority(.required, for: .vertical)
         titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
@@ -72,14 +73,13 @@ class Ass_Patten_PassThroughView: Ass_Patten_View {
         
         //pass
         firstButton = UIButton()
-        firstButton.backgroundColor = UIColor.white
-        firstButton.layer.cornerRadius = 5
+        firstButton.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+        firstButton.layer.cornerRadius = 22
         firstButton.layer.borderWidth = 1
         firstButton.layer.masksToBounds = true
-        firstButton.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
+        firstButton.layer.borderColor = UIColor.colorFromRGBA(187, 185, 174).cgColor
         firstButton.titleLabel?.font = UIFont.systemFont(ofSize:16)
-        firstButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
-//        firstButton.setTitleColor(UIColor.colorWithHexString(hex: "#ffffff"), for: .selected)
+        firstButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
         firstButton.tag = passThroughItemBaseTag + 0
         firstButton.addTarget(self, action: #selector(caseOptionClicked(button:)), for: .touchUpInside)
         contentBgView.addSubview(firstButton)
@@ -88,12 +88,12 @@ class Ass_Patten_PassThroughView: Ass_Patten_View {
         //unpass
         secondButton = UIButton()
         secondButton.backgroundColor = UIColor.white
-        secondButton.layer.cornerRadius = 5
+        secondButton.layer.cornerRadius = 22
         secondButton.layer.borderWidth = 1
         secondButton.layer.masksToBounds = true
-        secondButton.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
+        secondButton.layer.borderColor = UIColor.colorFromRGBA(187, 185, 174).cgColor
         secondButton.titleLabel?.font = UIFont.systemFont(ofSize:16)
-        secondButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
+        secondButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
         secondButton.tag = passThroughItemBaseTag + 1
         secondButton.addTarget(self, action: #selector(caseOptionClicked(button:)), for: .touchUpInside)
         contentBgView.addSubview(secondButton)
@@ -104,29 +104,29 @@ class Ass_Patten_PassThroughView: Ass_Patten_View {
         
         //content view
         contentBgView.snp.remakeConstraints { (make) in
-            make.edges.equalTo(self)
-            make.bottom.greaterThanOrEqualTo(titleLabel)
-            make.bottom.greaterThanOrEqualTo(firstButton)
+            make.edges.equalTo(self).inset(UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 20))
+            make.bottom.greaterThanOrEqualTo(titleLabel).offset(10).priority(999)
+            make.bottom.greaterThanOrEqualTo(firstButton).offset(10).priority(999)
         }
         
         //title label
         titleLabel.snp.remakeConstraints { (make) in
             make.left.equalTo(self.contentBgView).offset(20)
-            make.top.equalTo(self.contentBgView).offset(5)
+            make.top.equalTo(self.contentBgView).offset(10)
         }
         
         //pass
         firstButton.snp.remakeConstraints { (make) in
             make.left.equalTo(self.titleLabel.snp.right).offset(30)
             make.top.equalTo(self.titleLabel)
-            make.width.equalTo(90)
-            make.height.equalTo(40)
+            make.width.equalTo(110)
+            make.height.equalTo(44)
         }
     
         //unpass
         secondButton.snp.remakeConstraints { (make) in
             make.left.equalTo(self.firstButton.snp.right).offset(10)
-            make.right.equalTo(self).offset(-20)
+            make.right.equalTo(self.contentBgView).offset(-20)
             make.top.width.height.equalTo(self.firstButton)
         }
     }
@@ -158,13 +158,15 @@ class Ass_Patten_PassThroughView: Ass_Patten_View {
         caseOption.isSelected = isSelected
         
         if isSelected {
-            itemButton.setTitleColor(UIColor.colorWithHexString(hex: "#ffffff"), for: .normal)
-            itemButton.backgroundColor = UIColor.mainColor
-            itemButton.layer.borderColor = UIColor.mainColor.cgColor
+            itemButton.setTitleColor(UIColor.colorFromRGBA(34, 34, 34), for: .normal)
+            itemButton.backgroundColor = UIColor.colorFromRGBA(254, 228, 98)
+            itemButton.layer.borderColor = nil
+            itemButton.layer.borderWidth = 0
         } else {
-            itemButton.setTitleColor(UIColor.colorWithHexString(hex: "#555555"), for: .normal)
-            itemButton.backgroundColor = UIColor.colorWithHexString(hex: "#ffffff")
-            itemButton.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
+            itemButton.setTitleColor(UIColor.colorFromRGBA(85, 85, 85), for: .normal)
+            itemButton.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+            itemButton.layer.borderColor = UIColor.colorFromRGBA(187, 185, 174).cgColor
+            itemButton.layer.borderWidth = 1
         }
     }
 }
@@ -187,7 +189,7 @@ class AssPattenPassThroughCell: AssPattenCell {
     
     override func initViews() {
         
-        caseView = Ass_Patten_PassThroughView()
+        caseView = Ass_Patten_PassThroughView(frame: CGRect(x: 0, y: 0, width: screenWidth - 39 * 2, height: 0))
         contentView.addSubview(caseView)
     }
     

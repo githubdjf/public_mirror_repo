@@ -20,8 +20,9 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
 
     var infoContainerView: UIView!
     var headerView: UIView!
+    var leftImageView: UIImageView!
     var titleLabel: UILabel!
-    var iconImageView: UIImageView!
+    var rightImageView: UIImageView!
     var closeButton: UIButton!
     var answerTableView: UITableView!
     
@@ -44,7 +45,8 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
         layoutViews()
         bindViews()
         
-        loadData()
+//        loadData()
+        loadFakeData()
     }
     
     //MARK: Bind views
@@ -103,6 +105,14 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
             .disposed(by: self.rx.disposeBag)
     }
     
+    //fake
+    func loadFakeData() {
+        
+        let infos = FileLoader.loadRecruitStuQuestionInfo(fromFile: "recruit_student_answer_info")!
+        answerArray.removeAll()
+        answerArray.append(contentsOf: infos)
+        answerTableView.reloadData()
+    }
     
     //MARK: Prompt view
     
@@ -160,35 +170,42 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
         
         //container
         infoContainerView.snp.makeConstraints { (make) in
-            make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 60, left: 60, bottom: 60, right: 60))
+            make.edges.equalTo(self.view).inset(UIEdgeInsets(top: 58, left: 62, bottom: 50, right: 62))
         }
         
         //header view
         headerView.snp.makeConstraints { (make) in
             make.top.left.right.equalTo(self.infoContainerView)
-            make.height.equalTo(45)
+            make.height.equalTo(72)
+        }
+        
+        //left image view
+        leftImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.headerView).offset(20)
+            make.width.equalTo(60)
+            make.height.equalTo(46)
+            make.right.equalTo(self.titleLabel.snp.left).offset(-20)
         }
       
         //title label
         titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self.headerView).offset(20)
-            make.top.bottom.equalTo(self.headerView)
-            make.right.lessThanOrEqualTo(self.iconImageView.snp.left).offset(-20)
+            make.centerX.equalTo(self.headerView)
+            make.top.bottom.equalTo(self.leftImageView)
+            let maxWidth = screenWidth - (62 * 2  + 20 * 2 + 20 * 2 + 60 * 2)
+            make.width.lessThanOrEqualTo(maxWidth)
         }
        
-        //icon
-        iconImageView.snp.makeConstraints { (make) in
-            make.right.equalTo(self.closeButton.snp.left).offset(-10)
-            make.top.equalTo(self.headerView)
-            make.width.equalTo(140)
-            make.height.equalTo(45)
+        //right image view
+        rightImageView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.titleLabel.snp.right).offset(20)
+            make.top.width.height.equalTo(self.leftImageView)
         }
         
         //close
         closeButton.snp.makeConstraints { (make) in
-            make.top.right.equalTo(self.headerView)
-            make.height.equalTo(45)
-            make.width.equalTo(60)
+            make.top.equalTo(self.view).offset(44)
+            make.right.equalTo(self.view).offset(-44)
+            make.height.width.equalTo(48)
         }
         
         //info table
@@ -210,34 +227,38 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
         //container
         infoContainerView = UIView()
         infoContainerView.backgroundColor = UIColor.white
-        infoContainerView.layer.cornerRadius = 5
+        infoContainerView.layer.cornerRadius = 20
         infoContainerView.layer.masksToBounds = true
         view.addSubview(infoContainerView)
         
         //header view
         headerView = UIView()
-        headerView.backgroundColor = UIColor.mainColor
+        headerView.backgroundColor = UIColor.white
         infoContainerView.addSubview(headerView)
+        
+        //left image view
+        leftImageView = UIImageView(image: UIImage(named: "recruit_student_question_info_header_left"))
+        headerView.addSubview(leftImageView)
         
         //title label
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
-        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel.textColor = UIColor.colorFromRGBA(254, 195, 0)
         titleLabel.numberOfLines = 1
         titleLabel.setContentHuggingPriority(.required, for: .horizontal)
         titleLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
         titleLabel.text = localStringForKey(key: "recurit_student_ass_info_title")
         headerView.addSubview(titleLabel)
         
-        //icon
-        iconImageView = UIImageView(image: UIImage(named: "recruit_student_ass_info_icon"))
-        headerView.addSubview(iconImageView)
+        //right image view
+        rightImageView = UIImageView(image: UIImage(named: "recruit_student_question_info_header_right"))
+        headerView.addSubview(rightImageView)
         
         //close
         closeButton = UIButton()
-        closeButton.setImage(UIImage(named: "recruit_student_ass_info_close"), for: .normal)
+        closeButton.setImage(UIImage(named: "common_close"), for: .normal)
         closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
-        headerView.addSubview(closeButton)
+        view.addSubview(closeButton)
         
         //info table
         answerTableView = UITableView()
@@ -270,7 +291,20 @@ extension RecruitStudentAssesmentInfoViewController: UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(RecruitStudentAssAnswerCell.self), for: indexPath) as! RecruitStudentAssAnswerCell
         
         let answer = answerArray[indexPath.row]
-        cell.answerLabel.text = answer.content
+        let colonRange = (answer.content as NSString).range(of: ":")
+        if colonRange.location != NSNotFound {
+            
+            //冒号前有文字
+            let attStr = NSMutableAttributedString(string: answer.content)
+            attStr.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16), range: NSRange(location: 0, length: answer.content.count))
+            attStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.colorFromRGBA(34, 34, 34), range: NSRange(location: 0, length: colonRange.location + 1))
+            attStr.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.colorFromRGBA(85, 85, 85), range: NSRange(location: colonRange.location + 1, length: answer.content.count - colonRange.location - 1))
+            cell.answerLabel.attributedText = attStr
+
+        } else {
+            cell.answerLabel.text = answer.content
+            cell.answerLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
+        }
         
         cell.selectionStyle = .none
         

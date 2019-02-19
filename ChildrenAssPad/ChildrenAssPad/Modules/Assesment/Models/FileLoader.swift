@@ -46,4 +46,17 @@ class FileLoader: NSObject {
         }
         return papersArray
     }
+    
+    static func loadRecruitStuQuestionInfo(fromFile name: String) -> [AssQuestionAnswer]? {
+        
+        var answersArray: [AssQuestionAnswer]?
+        if let filePath = Bundle.main.path(forResource: name, ofType: ".json") {
+            if let jsonData = try? JSON(data: Data(contentsOf: URL(fileURLWithPath: filePath))) {
+                if let infos = try? Mapper.mapToObjectArray(data: jsonData["data"].rawData(), type: AssQuestionAnswer.self) {
+                    answersArray = infos
+                }
+            }
+        }
+        return answersArray
+    }
 }
