@@ -17,7 +17,7 @@
 		207DBD8A221A8F1900D181D2 /* recruit_student_observe_info_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD80221A8F1800D181D2 /* recruit_student_observe_info_selected@2x.png */; };
 		207DBD8B221A8F1900D181D2 /* recruit_student_base_info_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */; };
 		207DBD8C221A8F1900D181D2 /* recruit_student_multiple_option_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */; };
-		207DBD91221A905600D181D2 /* recruit_student_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */; };
+		207DBD91221A905600D181D2 /* common_full_screen_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD8F221A905600D181D2 /* common_full_screen_bg@2x.png */; };
 		207DBDA3221BDA0900D181D2 /* common_question_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */; };
 		207DBDA4221BDA0900D181D2 /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9E221BDA0900D181D2 /* common_back@2x.png */; };
 		207DBDA5221BDA0900D181D2 /* common_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 207DBD9F221BDA0900D181D2 /* common_close@2x.png */; };
@@ -210,7 +210,7 @@
 		207DBD80221A8F1800D181D2 /* recruit_student_observe_info_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_observe_info_selected@2x.png"; sourceTree = "<group>"; };
 		207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_base_info_selected@2x.png"; sourceTree = "<group>"; };
 		207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_multiple_option_selected@2x.png"; sourceTree = "<group>"; };
-		207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recruit_student_bg@2x.png"; sourceTree = "<group>"; };
+		207DBD8F221A905600D181D2 /* common_full_screen_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_full_screen_bg@2x.png"; sourceTree = "<group>"; };
 		207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_question_icon@2x.png"; sourceTree = "<group>"; };
 		207DBD9E221BDA0900D181D2 /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
 		207DBD9F221BDA0900D181D2 /* common_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_close@2x.png"; sourceTree = "<group>"; };
@@ -432,6 +432,7 @@
 				207DBD9E221BDA0900D181D2 /* common_back@2x.png */,
 				207DBD9F221BDA0900D181D2 /* common_close@2x.png */,
 				207DBD9D221BDA0900D181D2 /* common_question_icon@2x.png */,
+				207DBD8F221A905600D181D2 /* common_full_screen_bg@2x.png */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -512,7 +513,6 @@
 		20D48E5821F30A2700C7F845 /* RecruitStudent */ = {
 			isa = PBXGroup;
 			children = (
-				207DBD8F221A905600D181D2 /* recruit_student_bg@2x.png */,
 				207DBD81221A8F1800D181D2 /* recruit_student_base_info_selected@2x.png */,
 				207DBD7E221A8F1800D181D2 /* recruit_student_base_info_unselected@2x.png */,
 				207DBD82221A8F1800D181D2 /* recruit_student_multiple_option_selected@2x.png */,
@@ -1012,7 +1012,7 @@
 				20D48F8E21F30A2900C7F845 /* icon_date@2x.png in Resources */,
 				20D48F9021F30A2900C7F845 /* trial_play.png in Resources */,
 				20D48E2D21F3008100C7F845 /* Assets.xcassets in Resources */,
-				207DBD91221A905600D181D2 /* recruit_student_bg@2x.png in Resources */,
+				207DBD91221A905600D181D2 /* common_full_screen_bg@2x.png in Resources */,
 				20D48F5D21F30A2900C7F845 /* home_not_enable.png in Resources */,
 				20D48F5F21F30A2900C7F845 /* home_not_enable@2x.png in Resources */,
 				20D48F2021F30A2900C7F845 /* icon_exit@2x.png in Resources */,

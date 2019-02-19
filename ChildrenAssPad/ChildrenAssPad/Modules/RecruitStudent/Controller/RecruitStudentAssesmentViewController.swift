@@ -843,7 +843,7 @@ class RecruitStudentAssesmentViewController: BaseViewController {
         
         //bg view
         bgImageView = UIImageView()
-        bgImageView.image = UIImage(named: "recruit_student_bg")
+        bgImageView.image = UIImage(named: "common_full_screen_bg")
         view.addSubview(bgImageView)
 
         //header view
