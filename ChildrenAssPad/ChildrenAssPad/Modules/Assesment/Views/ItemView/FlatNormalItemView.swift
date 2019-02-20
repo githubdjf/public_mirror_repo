@@ -72,6 +72,7 @@ class FlatNormalItemView: BaseItemView {
         titleLabel.numberOfLines = lineNumber
         titleLabel.lineBreakMode = breakMode
         titleLabel.text = title
+        titleLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
         addSubview(titleLabel)
         
         let actionRect = CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height)

@@ -27,23 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //                let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
         
-        //        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
+//                let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherEval, students: ["张三"])
         
-//        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherObserve, students: ["张三", "李四"])
+        let trialVC = TeacherTrialViewController(title: "2018秋季测评", entryMode: TeacherTrialViewController.TrialMode.teacherObserve, students: ["张三峰", "李四峰飞"])
+        window?.rootViewController = trialVC
         
-//        window?.rootViewController = trialVC
-        
-        let vc = RecruitStudentAssesmentViewController()
-        vc.curExamId = "111"
-        vc.curStudentId = "111"
-        vc.curStudentName = "张三四"
-        window?.rootViewController = vc
-        
+//        let vc = RecruitStudentAssesmentViewController()
+//        vc.curExamId = "111"
+//        vc.curStudentId = "111"
+//        vc.curStudentName = "张三四"
+//        window?.rootViewController = vc
+////
         return true
     }
     
     func setup() {
-        setupUM()
+//        setupUM()
         setupKeyBoard()
         setupSystemServices()
         setupLogService()

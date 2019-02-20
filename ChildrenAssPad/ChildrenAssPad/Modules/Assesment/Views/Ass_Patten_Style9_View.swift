@@ -104,7 +104,6 @@ class Ass_Patten_Style9_View: Ass_Patten_View {
                 make.left.width.equalTo(self)
                 make.height.equalTo(size.height)
             }
-
         }
     }
     
@@ -147,7 +146,7 @@ extension Ass_Patten_Style9_View: UITableViewDelegate, UITableViewDataSource {
                             style1Cell = Ass_Patten_Style1_Cell(style: .default, reuseIdentifier: style1CellId, parentWidth: frame.width)
                         }
                         var colCount: Int = 2, spaceX: CGFloat = 20, spaceY: CGFloat = 10
-                        var inset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+                        var inset = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 30)
                         if let layout = fetchStyle1CellLayoutParameterCallback?() {
                             colCount = layout.0; spaceX = layout.2; spaceY = layout.3
                             inset = layout.1
@@ -161,7 +160,7 @@ extension Ass_Patten_Style9_View: UITableViewDelegate, UITableViewDataSource {
                             style2Cell = Ass_Patten_Style2_Cell(style: .default, reuseIdentifier: style2CellId, parentWidth: frame.width)
                         }
                         var colCount: Int = 5, spaceX: CGFloat = 20, spaceY: CGFloat = 10
-                        var inset = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+                        var inset = UIEdgeInsets(top: 5, left: 30, bottom: 5, right: 30)
                         if let layout = fetchStyle2CellLayoutParameterCallback?() {
                             colCount = layout.0; spaceX = layout.2; spaceY = layout.3
                             inset = layout.1

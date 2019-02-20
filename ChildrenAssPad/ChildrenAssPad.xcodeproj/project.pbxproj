@@ -198,6 +198,8 @@
 		20D48FD921F30A2900C7F845 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1E21F30A2800C7F845 /* LoginService.swift */; };
 		20D48FDA21F30A2900C7F845 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F1F21F30A2800C7F845 /* HomeService.swift */; };
 		20D48FDD21F30B8000C7F845 /* LocalizedString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D48FDB21F30B7F00C7F845 /* LocalizedString.strings */; };
+		20DEB183221D031F00660A84 /* trial_calendar_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DEB182221D031F00660A84 /* trial_calendar_header.png */; };
+		20DEB185221D49CD00660A84 /* RectangleCenteredItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DEB184221D49CD00660A84 /* RectangleCenteredItemView.swift */; };
 		D56CE1FC221BE2350003E866 /* login_default_background@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FA221BE2350003E866 /* login_default_background@1x.png */; };
 		D56CE1FD221BE2350003E866 /* login_default_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FB221BE2350003E866 /* login_default_background@2x.png */; };
 		D56CE202221BE8820003E866 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = D56CE1FE221BE8820003E866 /* password.png */; };
@@ -404,6 +406,8 @@
 		20D48F1F21F30A2800C7F845 /* HomeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		20D48FDC21F30B7F00C7F845 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LocalizedString.strings"; sourceTree = "<group>"; };
 		20D48FDE21F30BDB00C7F845 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedString.strings; sourceTree = "<group>"; };
+		20DEB182221D031F00660A84 /* trial_calendar_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trial_calendar_header.png; sourceTree = "<group>"; };
+		20DEB184221D49CD00660A84 /* RectangleCenteredItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCenteredItemView.swift; sourceTree = "<group>"; };
 		4643E236B16BD989788B3FB3 /* Pods-ChildrenAssPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.debug.xcconfig"; sourceTree = "<group>"; };
 		BE4D7DC1F04F5FD4D4C8400E /* Pods-ChildrenAssPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildrenAssPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChildrenAssPad/Pods-ChildrenAssPad.release.xcconfig"; sourceTree = "<group>"; };
 		D56CE1FA221BE2350003E866 /* login_default_background@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_default_background@1x.png"; sourceTree = "<group>"; };
@@ -518,6 +522,7 @@
 		20D48E4121F30A2700C7F845 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				20DEB181221D02A500660A84 /* Trial */,
 				207DBD71221A8BCE00D181D2 /* Common */,
 				20D48E4221F30A2700C7F845 /* icon_exit@2x.png */,
 				20D48E4321F30A2700C7F845 /* icon_version_code@2x.png */,
@@ -539,12 +544,6 @@
 				20D48E6C21F30A2700C7F845 /* icon_recruit_evaluation@2x.png */,
 				1CFBBB41221C063200E9517E /* button.json */,
 				1CFBBB45221C063200E9517E /* images */,
-				1CFBBB44221C063200E9517E /* trial_ cup.png */,
-				1CFBBB47221C063200E9517E /* trial_bg.png */,
-				1CFBBB43221C063200E9517E /* trial_cup_normal.png */,
-				1CFBBB40221C063200E9517E /* trial_curLevel.png */,
-				1CFBBB48221C063200E9517E /* trial_lock.png */,
-				1CFBBB42221C063200E9517E /* trial_pass.png */,
 				20D48E5821F30A2700C7F845 /* RecruitStudent */,
 			);
 			path = Resource;
@@ -718,6 +717,7 @@
 			children = (
 				20D48EA721F30A2800C7F845 /* ItemContainerView.swift */,
 				20D48EA821F30A2800C7F845 /* RectangleNormaItemView.swift */,
+				20DEB184221D49CD00660A84 /* RectangleCenteredItemView.swift */,
 				20D48EA921F30A2800C7F845 /* FlatNormalItemView.swift */,
 				20D48EAA21F30A2800C7F845 /* BaseItemView.swift */,
 			);
@@ -936,6 +936,20 @@
 			path = BusiService;
 			sourceTree = "<group>";
 		};
+		20DEB181221D02A500660A84 /* Trial */ = {
+			isa = PBXGroup;
+			children = (
+				1CFBBB44221C063200E9517E /* trial_ cup.png */,
+				1CFBBB47221C063200E9517E /* trial_bg.png */,
+				1CFBBB43221C063200E9517E /* trial_cup_normal.png */,
+				1CFBBB40221C063200E9517E /* trial_curLevel.png */,
+				1CFBBB48221C063200E9517E /* trial_lock.png */,
+				1CFBBB42221C063200E9517E /* trial_pass.png */,
+				20DEB182221D031F00660A84 /* trial_calendar_header.png */,
+			);
+			path = Trial;
+			sourceTree = "<group>";
+		};
 		59141722B38D55362D313EBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1061,10 +1075,9 @@
 				20D48F6121F30A2900C7F845 /* home_recruit_evaluation.png in Resources */,
 				207DBDA7221BDD5100D181D2 /* recruit_student_answer_info.json in Resources */,
 				20D48F2721F30A2900C7F845 /* icon_user@2x.png in Resources */,
-				20D48F9721F30A2900C7F845 /* trial_select_text.png in Resources */,
 				D56CE208221BEBFD0003E866 /* revise_password.png in Resources */,
-				20D48F3D21F30A2900C7F845 /* recruit_student_question_mark@1x.png in Resources */,
 				20D48FA721F30A2900C7F845 /* evaluation_boy_default.png in Resources */,
+				20DEB183221D031F00660A84 /* trial_calendar_header.png in Resources */,
 				20D48F4421F30A2900C7F845 /* recruit_student_switch_role_bubble@1x.png in Resources */,
 				207DBD87221A8F1900D181D2 /* recruit_student_observe_info_unselected@2x.png in Resources */,
 				D56CE209221BEBFD0003E866 /* revise_password@2x.png in Resources */,
@@ -1224,6 +1237,7 @@
 				20D48FB021F30A2900C7F845 /* ForgetPasswordViewController.swift in Sources */,
 				20D48F7721F30A2900C7F845 /* OptionViewByText.swift in Sources */,
 				20D48FD721F30A2900C7F845 /* UserCenterService.swift in Sources */,
+				20DEB185221D49CD00660A84 /* RectangleCenteredItemView.swift in Sources */,
 				20D48FD921F30A2900C7F845 /* LoginService.swift in Sources */,
 				20D48FCA21F30A2900C7F845 /* User.swift in Sources */,
 				20D48F8121F30A2900C7F845 /* Ass_Patten_Style8_View.swift in Sources */,

@@ -22,12 +22,12 @@ class PersonOptionsCell: AssPatternStyleCell {
     var personLabel: UILabel!
     var optionContainerView: ItemContainerView!
     
-    let defaultContainerHeight: CGFloat = 50
-    let defaultOptionHeight: CGFloat = 40
+    let defaultContainerHeight: CGFloat = 54
+    let defaultOptionHeight: CGFloat = 44
     
     var curCase: AssCase?
     var optionsDataArray = [AssCaseOption]()
-    var optionsViewArray = [RectangleNormaItemView]()
+    var optionsViewArray = [RectangleCenteredItemView]()
     var curPerson: String?
 
     var didSelectOptionCallback: ((Int) -> Void)?
@@ -47,19 +47,23 @@ class PersonOptionsCell: AssPatternStyleCell {
         set {super.defaultPatternHeight = newValue}
     }
     
+    var personViewWidth: CGFloat {
+        return parentWidth - 20 * 2 - 28 * 2 - 90 - 5
+    }
+    
+    
     override func initViews() {
         
         //person label
         personLabel = UILabel()
         personLabel.font = UIFont.systemFont(ofSize: 16)
-        personLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
+        personLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
         personLabel.lineBreakMode = .byTruncatingTail
         personLabel.numberOfLines = 1
         contentView.addSubview(personLabel)
         
         //options view
-        let width = parentWidth - 20 - 60 - 20 - 20
-        optionContainerView = ItemContainerView(frame: CGRect(x: 0, y: 0, width: width, height: defaultContainerHeight))
+        optionContainerView = ItemContainerView(frame: CGRect(x: 0, y: 0, width: personViewWidth, height: defaultContainerHeight))
         contentView.addSubview(optionContainerView)
     }
     
@@ -68,19 +72,18 @@ class PersonOptionsCell: AssPatternStyleCell {
         //person label
         personLabel.snp.makeConstraints { (make) in
             make.top.equalTo(self.contentView).offset(15)
-            make.left.equalTo(self.contentView).offset(20)
-            make.width.equalTo(60)
+            make.left.equalTo(self.contentView).offset(28)
+            make.width.equalTo(90)
             make.height.equalTo(22)
         }
         
         //options view
-        let width = parentWidth - 20 - 60 - 20 - 20
         optionContainerView.snp.makeConstraints { (make) in
             make.top.equalTo(self.contentView).offset(5)
             make.height.equalTo(defaultContainerHeight)
             make.bottom.equalTo(self.contentView).offset(-5)
-            make.left.equalTo(self.personLabel.snp.right).offset(20)
-            make.width.equalTo(width)
+            make.left.equalTo(self.personLabel.snp.right).offset(5)
+            make.width.equalTo(personViewWidth)
         }
     }
     
@@ -97,7 +100,7 @@ class PersonOptionsCell: AssPatternStyleCell {
         
         let colCount = columnCount > 0 ? columnCount : 1
         
-        let width = parentWidth - 20 - 60 - 20 - 20
+        let width = personViewWidth
         
         //person
         personLabel.text = "\(person)："
@@ -111,8 +114,8 @@ class PersonOptionsCell: AssPatternStyleCell {
         for (idx, itemData) in optionsDataArray.enumerated() {
             
             let itemRect = CGRect(x: 0, y: 0, width: itemWidth, height: defaultOptionHeight)
-            let itemView = RectangleNormaItemView(frame: itemRect, index: idx, maxWidth: contentWidth)
-            let _ = itemView.initialize(withIndicatorTitle: "\(itemData.optionType). ", itemTitle: "", titleFont: itemFont, lineNumber: 1, breakMode: .byTruncatingTail, contentInset: itemInset, isFixWidth: true, fixedWidth: itemWidth, minWidth: 0, isFixHeight: true, fixedHeigth: defaultOptionHeight, minHeight: defaultOptionHeight)
+            let itemView = RectangleCenteredItemView(frame: itemRect, index: idx, maxWidth: contentWidth)
+            let _ = itemView.initialize(withTitle: itemData.optionType, titleFont: itemFont, lineNumber: 1, breakMode: .byTruncatingTail, contentInset: itemInset, isFixWidth: true, fixedWidth: itemWidth, minWidth: 0, isFixHeight: true, fixedHeigth: defaultOptionHeight, minHeight: defaultOptionHeight)
             itemView.actionButton.addTarget(self, action: #selector(didSelectOption(button:)), for: .touchUpInside)
             optionsViewArray.append(itemView)
             
@@ -125,14 +128,14 @@ class PersonOptionsCell: AssPatternStyleCell {
             make.top.equalTo(self.contentView).offset(5)
             make.height.equalTo(containerSize.height)
             make.bottom.equalTo(self.contentView).offset(-5)
-            make.left.equalTo(self.personLabel.snp.right).offset(20)
+            make.left.equalTo(self.personLabel.snp.right).offset(5)
             make.width.equalTo(width)
         }
     }
     
     @objc func didSelectOption(button: UIButton) {
         
-        let idx = button.tag - RectangleNormaItemView.rectangleNormaItemBaseTag
+        let idx = button.tag - RectangleCenteredItemView.rectangleCenteredItemBaseTag
         let selectedOptionView = optionsViewArray[idx]
         let selectedOption = optionsDataArray[idx]
         
@@ -159,6 +162,7 @@ class PersonOptionsCell: AssPatternStyleCell {
 
 class Ass_Patten_Style10_View: Ass_Patten_View {
 
+    var contentBgView: UIView! //圆角背景
     var questionView: Ass_Patten_Style3_View! //题干：title + option -> pattern3
     var personTableView: UITableView! //person的选项
     
@@ -190,10 +194,17 @@ class Ass_Patten_Style10_View: Ass_Patten_View {
     
     override func initViews() {
         
+        //bg view
+        contentBgView = UIView()
+        contentBgView.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+        contentBgView.layer.cornerRadius = 16
+        contentBgView.layer.masksToBounds = true
+        addSubview(contentBgView)
+
         //question view
-        let questionRect = CGRect(x: 0, y: 0, width: frame.width, height: defaultQuestionHeight)
+        let questionRect = CGRect(x: 0, y: 0, width: frame.width - 20 * 2, height: defaultQuestionHeight)
         questionView = Ass_Patten_Style3_View(frame: questionRect)
-        addSubview(questionView)
+        contentBgView.addSubview(questionView)
         
         //person view
         personTableView = UITableView()
@@ -207,29 +218,38 @@ class Ass_Patten_Style10_View: Ass_Patten_View {
         personTableView.showsHorizontalScrollIndicator = false
         personTableView.isScrollEnabled = false
         personTableView.addObserver(self, forKeyPath: "contentSize", options: [NSKeyValueObservingOptions.new], context: nil)
-        addSubview(personTableView)
+        contentBgView.addSubview(personTableView)
     }
     
     override func layoutViews() {
         
+        //content bg view
+        contentBgView.snp.makeConstraints { (make) in
+            make.top.equalTo(self)
+            make.left.equalTo(self).offset(20)
+            make.right.equalTo(self).offset(-20)
+            make.bottom.equalTo(self)
+        }
+        
         //question view
         questionView.snp.makeConstraints { (make) in
-            make.top.left.equalTo(self)
-            make.width.equalTo(frame.width)
+            make.top.left.equalTo(self.contentBgView)
+            make.width.equalTo(frame.width - 20 * 2)
         }
         
-        //persons
-        personTableView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.questionView.snp.bottom).offset(10)
-            make.width.left.equalTo(self.questionView)
-            make.height.equalTo(100)
-        }
+//        //persons
+//        personTableView.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.questionView.snp.bottom).offset(10)
+//            make.width.left.equalTo(self.questionView)
+//            make.height.equalTo(100)
+//            make.bottom.equalTo(self.contentBgView).priority(999)
+//        }
         
-        //self
-        self.snp.makeConstraints { (make) in
-            make.top.equalTo(self.questionView)
-            make.bottom.equalTo(self.personTableView)
-        }
+//        //self
+//        self.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.questionView)
+//            make.bottom.equalTo(self.personTableView)
+//        }
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -243,8 +263,9 @@ class Ass_Patten_Style10_View: Ass_Patten_View {
             //update table constraints
             personTableView.snp.remakeConstraints { (make) in
                 make.top.equalTo(self.questionView.snp.bottom).offset(10)
-                make.left.right.equalTo(self)
+                make.left.right.equalTo(self.contentBgView)
                 make.height.equalTo(size.height)
+                make.bottom.equalTo(self.contentBgView).priority(999)
             }
         }
     }
@@ -299,6 +320,8 @@ extension Ass_Patten_Style10_View: UITableViewDataSource, UITableViewDelegate {
         }
         
         personCell!.selectionStyle = .none
+        personCell!.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+
         return personCell!
     }
     
