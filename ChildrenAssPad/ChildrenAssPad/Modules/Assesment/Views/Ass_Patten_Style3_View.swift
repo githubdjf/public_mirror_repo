@@ -15,12 +15,14 @@ import UIKit
 
 class Ass_Patten_Style3_View: Ass_Patten_View {
 
+    var contentBgView: UIView!
+    var headerView: UIView!
     var titleLabel: UILabel!
-    var backView: UIView!
+    var horDashLine: UIView!
     var optionContainerView: ItemContainerView!
     
-    let defaultContainerHeight: CGFloat = 50
-    let defaultOptionHeight: CGFloat = 40
+    let defaultContainerHeight: CGFloat = 54
+    let defaultOptionHeight: CGFloat = 44
     
     var curCase: AssCase?
     var optionsDataArray = [AssCaseOption]()
@@ -40,54 +42,102 @@ class Ass_Patten_Style3_View: Ass_Patten_View {
     
     override func initViews() {
         
+        //bg view
+        contentBgView = UIView()
+        contentBgView.backgroundColor = UIColor.colorFromRGBA(255, 244, 198)
+        addSubview(contentBgView)
+        
+        //header view
+        headerView = UIView()
+        headerView.backgroundColor = UIColor.colorFromRGBA(255, 244, 198)
+        contentBgView.addSubview(headerView)
+        
         //title label
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
         titleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
         titleLabel.lineBreakMode = .byTruncatingTail
         titleLabel.numberOfLines = 0
         titleLabel.setContentHuggingPriority(.required, for: .vertical)
         titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-        addSubview(titleLabel)
+        headerView.addSubview(titleLabel)
         
-        //back view
-        backView = UIView()
-        backView.backgroundColor = UIColor.colorFromRGBA(247, 249, 250)
-        addSubview(backView)
+        //hor dash line
+        horDashLine = UIView()
+        headerView.addSubview(horDashLine)
         
         //container view
         optionContainerView = ItemContainerView(frame: CGRect(x: 0, y: 0, width: frame.width, height: defaultContainerHeight))
-        backView.addSubview(optionContainerView)
+        addSubview(optionContainerView)
     }
     
     override func layoutViews() {
         
+        //content bg view
+        contentBgView.snp.makeConstraints { (make) in
+            make.top.equalTo(self)
+            make.left.equalTo(self)
+            make.right.equalTo(self)
+            make.bottom.equalTo(self)
+        }
+        
+        //header view
+        headerView.snp.makeConstraints { (make) in
+            make.top.left.right.equalTo(self.contentBgView)
+        }
+        
         //title
         titleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(self)
-            make.left.equalTo(self).offset(20)
-            make.right.equalTo(self).offset(-20)
-            
+            make.left.equalTo(self.headerView).offset(30)
+            make.right.equalTo(self.headerView).offset(-30)
+            make.top.equalTo(self.headerView).offset(12)
+            make.bottom.equalTo(self.headerView).offset(-12)
         }
         
-        backView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(10)
-            make.left.equalTo(self).offset(20)
-            make.right.equalTo(self).offset(-20)
-            make.bottom.equalTo(self.optionContainerView)
+        //hor line
+        horDashLine.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.headerView)
+            make.left.equalTo(self.headerView).offset(33)
+            make.right.equalTo(self.headerView).offset(-33)
+            make.height.equalTo(2)
         }
-        
+
+        //options
         optionContainerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.backView).offset(5)
-            make.left.equalTo(self.backView).offset(5)
-            make.right.equalTo(self.backView).offset(-5)
+            make.top.equalTo(self.headerView.snp.bottom)
+            make.left.right.equalTo(self.contentBgView)
             make.height.equalTo(defaultContainerHeight)
+            make.bottom.equalTo(self.contentBgView).offset(-10)
         }
         
-        self.snp.makeConstraints { (make) in
-            make.top.equalTo(self.titleLabel)
-            make.bottom.equalTo(self.backView)
-        }
+        headerView.layoutIfNeeded()
+        
+        addDashLayer(forView: horDashLine, from: CGPoint(x: 0, y: 0), to: CGPoint(x: horDashLine.frame.size.width, y: 0))
+        
+//        self.snp.makeConstraints { (make) in
+//            make.top.equalTo(self.titleLabel)
+//            make.bottom.equalTo(self.backView)
+//        }
+    }
+    
+    func addDashLayer(forView view: UIView, from fromPoint: CGPoint, to toPoint: CGPoint) {
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.bounds = view.bounds
+        shapeLayer.position = CGPoint(x: view.frame.width / 2.0, y: view.frame.height / 2.0)
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.colorFromRGBA(255, 162, 0, alpha: 1).cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.lineJoin = CAShapeLayerLineJoin.round
+        shapeLayer.lineDashPhase = 0
+        shapeLayer.lineDashPattern = [3, 3]
+        
+        let path = CGMutablePath()
+        path.move(to: fromPoint)
+        path.addLine(to: toPoint)
+        shapeLayer.path = path
+        
+        view.layer.addSublayer(shapeLayer)
     }
     
     func reloadView(withData caseData: AssCase, containerInset: UIEdgeInsets, spaceX: CGFloat, spaceY: CGFloat) {
@@ -119,10 +169,10 @@ class Ass_Patten_Style3_View: Ass_Patten_View {
         
         let containerSize = optionContainerView.loadLeftAlignedItems(optionsViewArray, containerInset: containerInset, spaceX: spaceX, spaceY: spaceY)
         optionContainerView.snp.remakeConstraints { (make) in
-            make.top.equalTo(self.backView).offset(5)
-            make.left.equalTo(self.backView).offset(5)
-            make.right.equalTo(self.backView).offset(-5)
+            make.top.equalTo(self.headerView.snp.bottom)
+            make.left.right.equalTo(self.contentBgView)
             make.height.equalTo(containerSize.height)
+            make.bottom.equalTo(self.contentBgView).offset(-10)
         }
     }
     

@@ -15,11 +15,13 @@ import UIKit
 
 class Ass_Patten_Style1_View: Ass_Patten_View {
 
+    var contentBgView: UIView!
+    var headerView: UIView!
     var titleLabel: UILabel!
     var optionContainerView: ItemContainerView!
     
-    let defaultContainerHeight: CGFloat = 50
-    let defaultOptionHeight: CGFloat = 40
+    let defaultContainerHeight: CGFloat = 54
+    let defaultOptionHeight: CGFloat = 44
     
     var curCase: AssCase?
     var optionsDataArray = [AssCaseOption]()
@@ -43,15 +45,27 @@ class Ass_Patten_Style1_View: Ass_Patten_View {
     
     override func initViews() {
         
+        //bg view
+        contentBgView = UIView()
+        contentBgView.backgroundColor = UIColor.colorFromRGBA(254, 252, 235)
+        contentBgView.layer.cornerRadius = 16
+        contentBgView.layer.masksToBounds = true
+        addSubview(contentBgView)
+        
+        //header view
+        headerView = UIView()
+        headerView.backgroundColor = UIColor.colorFromRGBA(255, 244, 198)
+        contentBgView.addSubview(headerView)
+        
         //title label
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
         titleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
         titleLabel.lineBreakMode = .byTruncatingTail
         titleLabel.numberOfLines = 0
         titleLabel.setContentHuggingPriority(.required, for: .vertical)
         titleLabel.setContentCompressionResistancePriority(.required, for: .vertical)
-        addSubview(titleLabel)
+        headerView.addSubview(titleLabel)
         
         //container view
         optionContainerView = ItemContainerView(frame: CGRect(x: 0, y: 0, width: frame.width, height: defaultContainerHeight))
@@ -60,24 +74,39 @@ class Ass_Patten_Style1_View: Ass_Patten_View {
     
     override func layoutViews() {
         
-        //title
-        titleLabel.snp.makeConstraints { (make) in
+        //content bg view
+        contentBgView.snp.makeConstraints { (make) in
             make.top.equalTo(self)
             make.left.equalTo(self).offset(20)
             make.right.equalTo(self).offset(-20)
+            make.bottom.equalTo(self)
+        }
+        
+        //header view
+        headerView.snp.makeConstraints { (make) in
+            make.top.left.right.equalTo(self.contentBgView)
+        }
+        
+        //title
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(self.headerView).offset(30)
+            make.right.equalTo(self.headerView).offset(-30)
+            make.top.equalTo(self.headerView).offset(12)
+            make.bottom.equalTo(self.headerView).offset(-12)
         }
         
         //options
         optionContainerView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(10)
-            make.left.right.equalTo(self)
+            make.top.equalTo(self.headerView.snp.bottom).offset(10)
+            make.left.right.equalTo(self.contentBgView)
             make.height.equalTo(defaultContainerHeight)
+            make.bottom.equalTo(self.contentBgView).offset(-10)
         }
 
-        self.snp.makeConstraints { (maker) in
-            maker.top.equalTo(self.titleLabel.snp.top)
-            maker.bottom.equalTo(optionContainerView.snp.bottom)
-        }
+//        self.snp.makeConstraints { (maker) in
+//            maker.top.equalTo(self.titleLabel.snp.top)
+//            maker.bottom.equalTo(optionContainerView.snp.bottom)
+//        }
     }
     
     func reloadView(withData caseData: AssCase, columnCount: Int, containerInset: UIEdgeInsets, spaceX: CGFloat, spaceY: CGFloat) {
@@ -95,10 +124,10 @@ class Ass_Patten_Style1_View: Ass_Patten_View {
         let colCount = columnCount > 0 ? columnCount : 1
         
         //options
-        let contentWidth: CGFloat = frame.width - containerInset.left - containerInset.right
+        let contentWidth: CGFloat = frame.width - 20 * 2 - containerInset.left - containerInset.right
         let itemWidth: CGFloat = (contentWidth - (CGFloat(colCount - 1)) * spaceX) / CGFloat(colCount)
         let itemFont = UIFont.systemFont(ofSize: 16)
-        let itemInset = UIEdgeInsets(top: 9, left: 5, bottom: 9, right: 5)
+        let itemInset = UIEdgeInsets(top: 9, left: 22, bottom: 9, right: 22)
         
         for (idx, itemData) in optionsDataArray.enumerated() {
             
@@ -114,9 +143,10 @@ class Ass_Patten_Style1_View: Ass_Patten_View {
         
         let containerSize = optionContainerView.loadGridItems(optionsViewArray, columnCount: colCount, containerInset: containerInset, spaceX: spaceX, spaceY: spaceY)
         optionContainerView.snp.remakeConstraints { (make) in
-            make.top.equalTo(self.titleLabel.snp.bottom).offset(10)
-            make.left.right.equalTo(self)
+            make.top.equalTo(self.headerView.snp.bottom).offset(10)
+            make.left.right.equalTo(self.contentBgView)
             make.height.equalTo(containerSize.height)
+            make.bottom.equalTo(self.contentBgView).offset(-10)
         }
     }
     
@@ -182,7 +212,6 @@ class Ass_Patten_Style1_Cell: AssPatternStyleCell {
     }
     
     override func layoutViews() {
-
 
         patternView.snp.makeConstraints { (maker) in
             maker.top.equalTo(self.contentView.snp.top).offset(20)
