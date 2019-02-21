@@ -187,6 +187,9 @@ class TeacherTrialViewController: BaseViewController {
             make.top.equalTo(self.roundedContainerView).offset(31)
             make.left.width.bottom.equalTo(self.roundedContainerView)
         }
+        
+//        roundedContainerView.layoutIfNeeded()
+//        trialTableView.layer.mask = generateRoundedPathLayer(withBounds: trialTableView.bounds, radius: 20)
     }
     
     
@@ -253,11 +256,9 @@ class TeacherTrialViewController: BaseViewController {
         //trial table
         trialTableView = UITableView()
         trialTableView.tableFooterView = UIView()
+        trialTableView.layer.cornerRadius = 20 //因为上角留白所以这种处理不影响效果
         trialTableView.delegate = self
         trialTableView.dataSource = self
-//        trialTableView.register(Ass_Patten_Style1_Cell.self, forCellReuseIdentifier: NSStringFromClass(Ass_Patten_Style1_Cell.self))
-//        trialTableView.register(Ass_Patten_Style2_Cell.self, forCellReuseIdentifier: NSStringFromClass(Ass_Patten_Style2_Cell.self))
-//        trialTableView.register(Ass_Patten_Style9_Cell.self, forCellReuseIdentifier: NSStringFromClass(Ass_Patten_Style9_Cell.self))
         trialTableView.separatorStyle = .none
         trialTableView.estimatedRowHeight = 100
         trialTableView.rowHeight = UITableView.automaticDimension
@@ -267,7 +268,7 @@ class TeacherTrialViewController: BaseViewController {
         roundedContainerView.addSubview(trialTableView)
     }
     
-    func createTabelFooterView() -> UIView {
+    private func createTabelFooterView() -> UIView {
         let footView = UIView()
         
         submitButton = UIButton()
@@ -292,6 +293,16 @@ class TeacherTrialViewController: BaseViewController {
         footView.frame.size = size
         
         return footView
+    }
+    
+    //MARK: Utility
+    
+    func generateRoundedPathLayer(withBounds bounds: CGRect, radius: CGFloat) -> CAShapeLayer {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight], cornerRadii: CGSize(width: radius, height: radius))
+        let pathLayer = CAShapeLayer()
+        pathLayer.frame = bounds
+        pathLayer.path = path.cgPath
+        return pathLayer
     }
 }
 
