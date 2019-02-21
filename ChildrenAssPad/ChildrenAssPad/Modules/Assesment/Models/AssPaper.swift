@@ -12,9 +12,11 @@ import SwiftyJSON
 class AssPaper: NSObject, Mappable {
 
     let paperId: String
+    let curBranch: Int
     let paperName : String
     let examId: String
     let branchArray: [AssBranch]
+    let total: Int
     
     required init?(jsonData: JSON) {
         paperId = jsonData["id"].stringValue
@@ -25,6 +27,9 @@ class AssPaper: NSObject, Mappable {
         } else {
             branchArray = [AssBranch]()
         }
+
+        curBranch = jsonData["curBranch"].intValue
+        total = jsonData["total"].intValue
         
         super.init()
     }

@@ -10,21 +10,13 @@
 //测评引导语
 
 import UIKit
-import Kingfisher
+import Lottie
 
 class TrialGuideViewController: BaseViewController {
 
-    var titleLabel: UILabel!
-    var trialLabel: UILabel!
-    var containerCard: UIView!
-    var topIconImageView: UIImageView!
-    var userNameLabel: UILabel!
-    var lineView: UIView!
-    var guideTitleLabel: UILabel!
-    var guideContentLabel: UILabel!
-    var readyLabel: UILabel!
-    var startButton: UIButton!
-    var playButton: UIButton!
+    var topView: LOTAnimationView!
+    var playView: LOTAnimationView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +29,11 @@ class TrialGuideViewController: BaseViewController {
 
     }
 
-    @objc func startButtonTapped() {
+    @objc func goButtonTapped() {
+
+        let vc = StudentTrialViewController()
+
+        self.navigationController?.pushViewController(vc, animated: true)
 
     }
 
@@ -46,183 +42,153 @@ class TrialGuideViewController: BaseViewController {
 
     func initViews() {
 
-        let navView = UIView()
-        navView.backgroundColor = UIColor.colorFromRGBA(6, 148, 121)
-        self.view.addSubview(navView)
+        self.view.backgroundColor = UIColor.colorFromRGBA(255, 222, 64)
 
-        let backButton = UIButton()
-        backButton.setImage(UIImage.init(named: "common_back"), for: .normal)
-        backButton.addTarget(self, action: #selector(backbuttonTapped), for: .touchUpInside)
-        navView.addSubview(backButton)
-
-        titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 18)
-        titleLabel.textColor = UIColor.white
-        titleLabel.text = "2019秋季测评"
-        navView.addSubview(titleLabel)
-
-        trialLabel = UILabel()
-        trialLabel.font = UIFont.systemFont(ofSize: 14)
-        trialLabel.textColor = UIColor.white
-        trialLabel.backgroundColor = UIColor.colorFromRGBA(255, 255, 255, alpha: 0.2)
-        trialLabel.layer.cornerRadius = 12
-        trialLabel.layer.masksToBounds = true
-        trialLabel.text = "  正在为王点测评 — 儿童测评  "
-        navView.addSubview(trialLabel)
-
-        let bgView = UIControl()
-        bgView.layer.masksToBounds = false
-        bgView.layer.shadowColor = UIColor.colorFromRGBA(5, 0, 54).cgColor
-        bgView.layer.shadowOffset = CGSize(width: 0, height: 0.15)
-        bgView.layer.shadowOpacity = 0.15;
-        self.view.addSubview(bgView)
-
-
-        containerCard = UIView()
-        containerCard.backgroundColor = UIColor.white.withAlphaComponent(1)
-        containerCard.layer.masksToBounds = true
+        let containerCard = UIView()
+        containerCard.backgroundColor = UIColor.white
         containerCard.layer.cornerRadius = 8
-        containerCard.isUserInteractionEnabled = false
-        bgView.addSubview(containerCard)
+        containerCard.layer.masksToBounds = true
+        self.view.addSubview(containerCard)
 
-        playButton = UIButton()
-        playButton.setImage(UIImage.init(named: "trial_play"), for: .normal)
-        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
-        containerCard.addSubview(playButton)
+        topView = LOTAnimationView.init(name: "welcome")
+        topView.loopAnimation = false
+        containerCard.addSubview(topView)
 
-        topIconImageView = UIImageView()
 
-        let path = Bundle.main.path(forResource: "animation", ofType: "gif")
-        let url = URL.init(fileURLWithPath: path ?? "")
-        topIconImageView.kf.setImage(with:ImageResource.init(downloadURL: url), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
-        containerCard.addSubview(topIconImageView)
+        playView = LOTAnimationView.init(name: "playAnimation")
+        playView.loopAnimation = true
+        playView.isUserInteractionEnabled = true
+        containerCard.addSubview(playView)
 
-        userNameLabel = UILabel()
-        userNameLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        userNameLabel.textColor = UIColor.colorFromRGBA(34, 34, 34, alpha: 1)
-        userNameLabel.text = "王点"
-        containerCard.addSubview(userNameLabel)
+        let tap = UIGestureRecognizer.init(target: self, action: #selector(playButtonTapped))
+        playView.addGestureRecognizer(tap)
 
-        guideTitleLabel = UILabel()
-        guideTitleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        guideTitleLabel.textColor = UIColor.colorFromRGBA(34, 34, 34, alpha: 1)
-        guideTitleLabel.text = "小朋友们好，下面的测评游戏需要与你共同来完成："
-        containerCard.addSubview(guideTitleLabel)
+        let guideLabel = UILabel.init()
+        guideLabel.text = "小朋友们好：我叫小鹿，现在我邀请你和我一起完成一个游戏。\n 在做游戏前呢，小鹿想要与小朋友讲一下游戏规则"
+        guideLabel.numberOfLines = 0
+        guideLabel.textAlignment = .center
+        guideLabel.textColor = UIColor.colorFromRGBA(34, 34, 34)
+        guideLabel.font = UIFont.systemFont(ofSize: 18)
+        containerCard.addSubview(guideLabel)
 
-        lineView = UIView()
-        lineView.backgroundColor = UIColor.colorFromRGBA(6, 148, 121)
-        containerCard.addSubview(lineView)
+        let round1 = UIView()
+        round1.backgroundColor = UIColor.colorFromRGBA(255, 222, 64)
+        round1.layer.cornerRadius = 10
+        round1.layer.masksToBounds = true
+        containerCard.addSubview(round1)
 
-        guideContentLabel = UILabel()
-        guideContentLabel.font = UIFont.systemFont(ofSize: 15)
-        guideContentLabel.textColor = UIColor.colorFromRGBA(15, 15, 15)
-        guideContentLabel.text = "在做之前，先说几点游戏规则\n1、我们要有耐心完成所有的测评哦\n2、在测评游戏的过程中，我们要听老师的话\n3、我们的游戏共7关哦\n4、在所有游戏完成后，我们将会对表现好的小朋友，赠送小贴画"
-        guideContentLabel.numberOfLines = 0
-        guideContentLabel.setContentHuggingPriority(.required, for:.vertical)
-        guideContentLabel.setContentCompressionResistancePriority(.required, for:.vertical)
-        guideContentLabel.translatesAutoresizingMaskIntoConstraints = false;
-        containerCard.addSubview(guideContentLabel)
 
-        readyLabel = UILabel()
-        readyLabel.text = localStringForKey(key: "trial_guide_ready")
-        readyLabel.font = UIFont.systemFont(ofSize: 16)
-        readyLabel.textColor = UIColor.colorFromRGBA(153, 153, 153)
-        containerCard.addSubview(readyLabel)
+        let round2 = UIView()
+        round2.backgroundColor = UIColor.colorFromRGBA(255, 222, 64)
+        round2.layer.cornerRadius = 10
+        round2.layer.masksToBounds = true
+        containerCard.addSubview(round2)
 
-        startButton  = UIButton()
-        startButton.setBackgroundImage(UIImage.init(named: "trial_start"), for: .normal)
-        startButton.setTitle(localStringForKey(key: "trial_guide_start"), for: .normal)
-        startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-        startButton.titleLabel?.textColor = UIColor.white
-        startButton.titleLabel?.font = UIFont.systemFont(ofSize: 22)
-        containerCard.addSubview(startButton)
 
-        navView.snp.makeConstraints { (maker) in
-            maker.top.equalTo(self.view)
-            maker.left.width.equalTo(self.view)
-            maker.height.equalTo(navBarHeight())
-        }
+        let rule1 = UILabel()
 
-        backButton.snp.makeConstraints { (maker) in
-            maker.centerY.equalTo(navView).offset(10)
-            maker.width.height.equalTo(20)
-            maker.left.equalTo(navView.snp.left).offset(20)
-        }
+        let pre = "1、在玩游戏时，我们需要把"
+        let attPre = NSMutableAttributedString(string: pre)
+        attPre.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16), range: NSRange(location: 0, length: pre.count))
+        attPre.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.colorFromRGBA(34, 34, 34), range: NSRange(location: 0, length: pre.count))
 
-        titleLabel.snp.makeConstraints { (maker) in
-            maker.centerX.equalTo(navView)
-            maker.height.equalTo(20)
-            maker.centerY.equalTo(navView)
-        }
+        let mid = "所有的关卡一起做完"
+        let attMid = NSMutableAttributedString(string: mid)
+        attMid.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16), range: NSRange(location: 0, length: mid.count))
+        attMid.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.colorFromRGBA(235, 96, 41), range: NSRange(location: 0, length: mid.count))
 
-        trialLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(titleLabel.snp.right).offset(10)
-            maker.height.equalTo(24)
-            maker.centerY.equalTo(titleLabel)
-        }
+        let suff = "哦，做完的小同学会看到页面上小鹿奖励的小红花"
+        let attSuff = NSMutableAttributedString(string: suff)
+        attSuff.addAttribute(NSAttributedString.Key.font, value: UIFont.systemFont(ofSize: 16), range: NSRange(location: 0, length: suff.count))
+        attSuff.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.colorFromRGBA(34, 34, 34), range: NSRange(location: 0, length: suff.count))
 
-        bgView.snp.makeConstraints { (maker) in
+        attPre.append(attMid)
+        attPre.append(attSuff)
+
+        rule1.attributedText = attPre
+        containerCard.addSubview(rule1)
+
+
+        let rule2 = UILabel()
+        rule2.font = UIFont.systemFont(ofSize: 16)
+        rule2.textColor = UIColor.colorFromRGBA(34, 34, 34)
+        rule2.text = "2、在没有听清楚的地方，可以找小鹿的喇叭哦，会为你再次播放，或举起小手，问问老师"
+        containerCard.addSubview(rule2)
+
+        let promptLabel = UILabel()
+        promptLabel.font = UIFont.systemFont(ofSize: 16)
+        promptLabel.textColor = UIColor.colorFromRGBA(85, 85, 85)
+        promptLabel.textAlignment = .center
+        promptLabel.text = "准备好了吗？"
+        containerCard.addSubview(promptLabel)
+
+
+        let goButton = UIButton()
+        goButton.setImage(UIImage.init(named: "trial_go@2x"), for: .normal)
+        goButton.setImage(UIImage.init(named: "trial_go_select@2x"), for: .highlighted)
+        goButton.addTarget(self, action: #selector(goButtonTapped), for: .touchUpInside)
+        containerCard.addSubview(goButton)
+
+        containerCard.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.view.snp.top).offset(20)
             maker.left.equalTo(self.view.snp.left).offset(20)
-            maker.top.equalTo(navView.snp.bottom).offset(20)
             maker.right.equalTo(self.view.snp.right).offset(-20)
             maker.bottom.equalTo(self.view.snp.bottom).offset(-20)
         }
 
-        containerCard.snp.makeConstraints { (maker) in
-            maker.edges.equalTo(bgView.snp.edges).inset(UIEdgeInsets.init(top: 4, left: 4, bottom: -4, right: -4))
-        }
-
-        topIconImageView.snp.makeConstraints { (maker) in
-            maker.centerX.equalTo(containerCard)
-            maker.top.equalTo(containerCard.snp.top).offset(40)
-            maker.width.height.equalTo(240)
-        }
-
-        playButton.snp.makeConstraints { (maker) in
-            maker.top.equalTo(containerCard.snp.top).offset(42)
-            maker.width.height.equalTo(36)
+        playView.snp.makeConstraints { (maker) in
             maker.right.equalTo(containerCard.snp.right).offset(-42)
+            maker.width.height.equalTo(48)
+            maker.top.equalTo(containerCard.snp.top).offset(46)
         }
 
-        userNameLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(containerCard.snp.left).offset(274)
-            maker.height.equalTo(30)
-            maker.top.equalTo(topIconImageView.snp.bottom).offset(30)
-        }
-
-        lineView.snp.makeConstraints { (maker) in
-            maker.right.equalTo(userNameLabel).offset(6)
-            maker.left.equalTo(userNameLabel).offset(-6)
-            maker.height.equalTo(4)
-            maker.top.equalTo(userNameLabel.snp.bottom)
-        }
-
-        guideTitleLabel.snp.makeConstraints { (maker) in
-            maker.height.centerY.equalTo(userNameLabel)
-            maker.left.equalTo(userNameLabel.snp.right)
-        }
-
-        guideContentLabel.snp.makeConstraints { (maker) in
-            maker.left.equalTo(userNameLabel)
-            maker.right.equalTo(guideTitleLabel)
-            maker.top.equalTo(lineView.snp.bottom).offset(10)
-        }
-
-        startButton.snp.makeConstraints { (maker) in
-            maker.bottom.equalTo(containerCard.snp.bottom).offset(-70)
-            maker.height.equalTo(60)
-            maker.width.equalTo(120)
+        topView.snp.makeConstraints { (maker) in
             maker.centerX.equalTo(containerCard)
+            maker.width.equalTo(300)
+            maker.height.equalTo(300)
+            maker.top.equalTo(containerCard.snp.top).offset(70)
         }
 
-        readyLabel.snp.makeConstraints { (maker) in
-            maker.bottom.equalTo(startButton.snp.top).offset(-5)
+        guideLabel.snp.makeConstraints { (maker) in
+            maker.top.equalTo(topView.snp.bottom).offset(18)
+            maker.left.equalTo(containerCard.snp.left).offset(42)
+            maker.right.equalTo(containerCard.snp.right).offset(-42)
+            maker.height.equalTo(60)
+        }
+
+        round1.snp.makeConstraints { (maker) in
+            maker.left.equalTo(containerCard.snp.left).offset(130)
+            maker.width.height.equalTo(10)
+            maker.top.equalTo(guideLabel.snp.bottom).offset(20)
+        }
+
+        rule1.snp.makeConstraints { (maker) in
+            maker.left.equalTo(round1.snp.right).offset(20)
             maker.height.equalTo(20)
-            maker.centerX.equalTo(startButton)
+            maker.centerY.equalTo(round1)
         }
 
+        round2.snp.makeConstraints { (maker) in
+            maker.width.height.left.equalTo(round1)
+            maker.top.equalTo(round1.snp.bottom).offset(20)
+        }
 
+        rule2.snp.makeConstraints { (maker) in
+            maker.centerY.equalTo(round2)
+            maker.height.left.equalTo(rule1)
+        }
 
+        promptLabel.snp.makeConstraints { (maker) in
+            maker.centerX.equalTo(containerCard)
+            maker.height.equalTo(20)
+            maker.top.equalTo(rule2.snp.bottom).offset(32)
+        }
+
+        goButton.snp.makeConstraints { (maker) in
+            maker.centerX.equalTo(containerCard)
+            maker.width.height.equalTo(90)
+            maker.top.equalTo(promptLabel.snp.bottom).offset(10)
+        }
 
     }
 

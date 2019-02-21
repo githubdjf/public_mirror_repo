@@ -50,7 +50,7 @@ extension UIViewController{
             
             let lable = UILabel.init()
             lable.tag = 100
-            lable.textColor = UIColor.white
+            lable.textColor = UIColor.colorFromRGBA(34, 34, 34)
             lable.text = title
             lable.font = UIFont.systemFont(ofSize: 18)
             lable.textAlignment = .center
@@ -71,6 +71,7 @@ extension UIViewController{
     func addBackButtonForNavigationBar() -> Void {
         
         let backButton = UIButton()
+        backButton.imageView?.contentMode = .center
         backButton.setImage(UIImage.init(named: "common_back"), for: .normal)
         backButton.addTarget(self, action: #selector(backbuttonTapped), for: .touchUpInside)
         let navView = self.view.viewWithTag(0x3a4b)
@@ -78,7 +79,7 @@ extension UIViewController{
 
         if let nav = navView {
             backButton.snp.makeConstraints { (maker) in
-                maker.left.equalTo((navView?.snp.left)!)
+                maker.left.equalTo(navView!.snp.left).offset(42)
                 maker.centerY.equalTo(nav.snp.centerY).offset(10)
                 maker.width.height.equalTo(50)
             }

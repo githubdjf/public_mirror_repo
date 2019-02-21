@@ -110,3 +110,6 @@
 "teacher_trial_nav_info_format_for_tec_observe" = "正在为%@观测";
 "teacher_trial_submit_button_title" = "提交";
 
+//RecruitEvaluationRecordController
+"recruit_eval_record_nav_title" = "招生测评记录";
+"recruit_eval_record_total_count_format" = "共%d条";

@@ -51,16 +51,27 @@ class AVPlayerHelper: NSObject {
 
 
     //开始加载音频
-    func loadAudio(audioUrl: String) -> Void {
+    func loadAudio(audioUrl: String, isLocal: Bool = false) -> Void {
 
-        if let url = URL.init(string: audioUrl){
+        var audioURL = URL.init(string: "")
+
+        if !isLocal {
+            audioURL = URL.init(string: audioUrl)
+
+        }else{
+            let audioPath = Bundle.main.path(forResource: audioUrl, ofType: ".mp3")
+            audioURL = URL.init(fileURLWithPath: audioPath ?? "")
+        }
+
+        if let url = audioURL {
 
             let audioItem = AVPlayerItem.init(url: url)
-
             if avPlayer == nil {
                 avPlayer = AVPlayer.init(playerItem: audioItem)
-            }
 
+            } else {
+                avPlayer?.replaceCurrentItem(with: audioItem)
+            }
         }
 
         //给当前音频添加监控
@@ -95,9 +106,16 @@ class AVPlayerHelper: NSObject {
                     weakSelf.progress = current / total
                     weakSelf.playTime = String.init(format: "%.f", current)
                     weakSelf.playDuration = String.init(format: "%.2f", total)
+
+                    print("weakSelf.playDuration \(String(describing: weakSelf.playDuration))")
+                    print("weakSelf.playTime \(String(describing: weakSelf.playTime))")
                 }
             }
         })
+
+
+        NotificationCenter.default.addObserver(self, selector: #selector(becomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(becomeDeth), name:UIApplication.willResignActiveNotification, object: nil)
     }
 
     //移除观察者
@@ -120,18 +138,22 @@ class AVPlayerHelper: NSObject {
 
         self.status = PlayerStatus.Finished
         NotificationCenter.default.post(name: Notification.Name.init(notifyChange), object: nil)
+        print("播放完毕")
+
     }
 
 
     //MARK: 开始播放
     func startPlay() {
 
-        if (self.status == PlayerStatus.Pause) {
+        if (self.status == PlayerStatus.Pause || self.status == PlayerStatus.Replay) {
             self.status = PlayerStatus.Play
             NotificationCenter.default.post(name: Notification.Name.init(notifyChange), object: nil)
         }
 
         avPlayer?.play()
+
+        print("正在播放")
     }
 
 
@@ -139,6 +161,8 @@ class AVPlayerHelper: NSObject {
     func pausePlay() {
 
         if let player = avPlayer {
+
+            print("暂停播放")
 
             self.status = PlayerStatus.Pause
             player.pause()
@@ -149,6 +173,8 @@ class AVPlayerHelper: NSObject {
     //MARK: 重新播放
     func replay() {
 
+        print("重新播放")
+
         let curItem = avPlayer?.currentItem
         curItem?.seek(to: CMTime.init(value: CMTimeValue.init(1.0), timescale: CMTimeScale.init(1.0)), completionHandler: {[weak self] (finished) in
 
@@ -156,7 +182,10 @@ class AVPlayerHelper: NSObject {
 
                 weakSelf.status = PlayerStatus.Replay
                 NotificationCenter.default.post(name: Notification.Name.init(weakSelf.notifyChange), object: nil)
+
+                weakSelf.startPlay()
             }
+
         })
     }
 
@@ -186,8 +215,21 @@ class AVPlayerHelper: NSObject {
         }
     }
 
+    //进入前台
+    @objc func becomeActive() {
+
+        startPlay()
+
+    }
+
+    //进入后台
+    @objc func becomeDeth(){
+
+        pausePlay()
+    }
 
     deinit {
+        print("AVPlayerHelper释放了")
         removeObserver()
     }
 

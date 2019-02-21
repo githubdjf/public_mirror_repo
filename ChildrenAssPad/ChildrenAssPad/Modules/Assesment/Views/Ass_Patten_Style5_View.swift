@@ -20,12 +20,16 @@
 
 
 import UIKit
+import Kingfisher
+import Lottie
 
 class Ass_Patten_Style5_View: Ass_Patten_View {
 
     var titleLabel: UILabel!
-    var playButton: UIButton!
+    var playView: LOTAnimationView!
     var optionViews: UIView!
+    var caseDataObj: AssCase!
+    var senderArray = [OptionViewByImage]()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,28 +43,45 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false;
         self.addSubview(titleLabel)
 
-        playButton = UIButton()
-        playButton.setImage(UIImage.init(named: "trial_play"), for: .normal)
-        playButton.addTarget(self, action: #selector(playButtonTapped), for: .touchUpInside)
-        self.addSubview(playButton)
+        let iconImageView = UIImageView()
+        iconImageView.image = UIImage.init(named: "trial_logo")
+        self.addSubview(iconImageView)
+
+        playView = LOTAnimationView.init(name: "playAnimation")
+        playView.loopAnimation = true
+        playView.isUserInteractionEnabled = true
+        self.addSubview(playView)
+
+        let tap = UIGestureRecognizer.init(target: self, action: #selector(playButtonTapped))
+        playView.addGestureRecognizer(tap)
+
 
 
         titleLabel.snp.makeConstraints { (maker) in
             maker.top.equalTo(self.snp.top).offset(50)
             maker.left.equalTo(self.snp.left).offset(42)
-            maker.right.equalTo(playButton.snp.left).offset(124)
+            maker.right.equalTo(iconImageView.snp.left).offset(-30)
         }
 
-        playButton.snp.makeConstraints { (maker) in
-            maker.top.equalTo(self.snp.top).offset(42)
-            maker.width.height.equalTo(36)
+        iconImageView.snp.makeConstraints { (maker) in
+            maker.width.height.equalTo(80)
+            maker.top.equalTo(self.snp.top).offset(24)
+            maker.right.equalTo(playView.snp.left).offset(-2)
+        }
+
+        playView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.snp.top).offset(45)
+            maker.width.height.equalTo(48)
             maker.right.equalTo(self.snp.right).offset(-42)
         }
+
 
     }
 
 
-    override func reloadView(withData caseData: AssCase?) {
+    override func reloadView(withData caseData: AssCase) {
+
+        caseDataObj = caseData
 
         optionViews = loadCardView(withCase: caseData)
 
@@ -79,18 +100,17 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
     }
 
 
-    func loadCardView(withCase caseData: AssCase?) -> UIView {
+    func loadCardView(withCase caseData: AssCase) -> UIView {
 
         let containerView = UIView()
 
-        titleLabel.text = "1、仔细看下面两张图，找一找一共有几处不同？\n（第二行)\n（最多三行文字）"
+        titleLabel.text = caseData.caseTitle
 
         var topView : OptionViewByImage?
         var leftView: OptionViewByImage?
         var firstLevelView: OptionViewByImage?
 
-        //        let count = caseData.optionsArray.count
-        let count = 4
+        let count = caseData.optionsArray.count
 
         var hasTopView = false
         var hasLeftView = false
@@ -99,8 +119,17 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
 
         for i in 0 ..< count {
 
-            let optionView = OptionViewByImage()
-            optionView.imageView.backgroundColor = UIColor.randomColor
+            let optionView = OptionViewByImage.init(caseOption: caseData.optionsArray[i])
+
+            optionView.tag = 201 + i
+            senderArray.append(optionView)
+            optionView.addTarget(self, action: #selector(selectedOption(sender:)), for: .touchUpInside)
+
+            if let url = URL.init(string: caseData.optionsArray[i].image){
+
+            optionView.imageView.kf.setImage(with: ImageResource.init(downloadURL:url), placeholder: UIImage.imageFromColor(fillColor: UIColor.randomColor), options: nil, progressBlock: nil, completionHandler: nil)
+            }
+
             containerView.addSubview(optionView)
 
             if let _ = topView {
@@ -118,7 +147,7 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
 
             if i % 4 == 0 {
 
-                optionView.snp.makeConstraints { (maker) in
+                optionView.snp.remakeConstraints { (maker) in
                     if hasTopView {
                         maker.top.equalTo(topView!.snp.bottom).offset(20)
                     }else {
@@ -134,7 +163,7 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
             }else{
 
                 if let _ = leftView {
-                    optionView.snp.makeConstraints { (maker) in
+                    optionView.snp.remakeConstraints { (maker) in
                         maker.top.equalTo(leftView!.snp.top)
                         maker.left.equalTo(leftView!.snp.right).offset(20)
                         maker.width.equalTo(leftView!.snp.width)
@@ -155,7 +184,7 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
 
         if hasFirsetLevelView && hasLeftView {
 
-            containerView.snp.makeConstraints { (maker) in
+            containerView.snp.remakeConstraints { (maker) in
                 maker.top.equalTo(firstLevelView!.snp.top)
                 maker.bottom.equalTo(leftView!.snp.bottom)
             }
@@ -166,8 +195,39 @@ class Ass_Patten_Style5_View: Ass_Patten_View {
 
     }
 
-    @objc func playButtonTapped() {
 
+    @objc func selectedOption(sender: OptionViewByText) {
+
+        for i in 0 ..< caseDataObj.optionsArray.count {
+
+            if i == sender.tag - 201 {
+
+                caseDataObj.optionsArray[i].isSelected = !caseDataObj.optionsArray[i].isSelected
+                senderArray[i].isSelected = caseDataObj.optionsArray[i].isSelected
+
+            }else {
+                caseDataObj.optionsArray[i].isSelected = false
+                senderArray[i].isSelected = false
+            }
+
+        }
+
+        for optionObj in caseDataObj.optionsArray {
+
+            if optionObj.isSelected {
+
+                self.isValid = true
+                return
+
+            }else {
+                self.isValid = false
+            }
+        }
+    }
+
+
+    @objc func playButtonTapped() {
+        AVPlayerHelper.default.replay()
     }
 
 

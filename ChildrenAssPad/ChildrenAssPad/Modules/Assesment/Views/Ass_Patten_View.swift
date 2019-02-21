@@ -11,6 +11,7 @@ import UIKit
 class Ass_Patten_View: UIView {
 
     var assCase: AssCase?
+    var isValid = false
     var assCaseType: AssCaseType {
         return assCase?.caseType ?? .unknow
     }

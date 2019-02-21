@@ -85,7 +85,7 @@ extension UIColor {
     
     //主色调
     class var mainColor: UIColor {
-        return colorFromDecimalRGB(24, 147, 121)
+        return colorFromDecimalRGB(255, 222, 64)
     }
 
     //控制器默认底色

@@ -1,0 +1,1515 @@
+{
+    "id": 10,
+    "paperList": [
+        {
+            "id": 1,
+            "name": "paper1",
+            "examId": 10,
+            "total": 6,
+            "curBranch": 0,
+            "branchList": [
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://192.168.10.188:8081/attention.gif",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://192.168.10.188:8081/attention.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://192.168.10.188:8081/attention.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/GZXY-SXSY-T-01-J8-I-1-P.jpg",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/gif/01/01/RZ-CSTL-T-02-P-I-10-GIF.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/GZXY-SXSY-T-01-J8-I-1-P.jpg",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/gif/01/01/RZ-CSTL-T-02-P-I-10-GIF.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/GZXY-SXSY-T-01-J8-I-1-P.jpg",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/gif/01/01/RZ-CSTL-T-02-P-I-10-GIF.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/GZXY-SXSY-T-01-J8-I-1-P.jpg",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/gif/01/01/RZ-CSTL-T-02-P-I-10-GIF.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "基础信息",
+                    "paperId": 1,
+                    "type": 0,
+                    "isFinished": 0,
+                    "paperCaseList": [
+                        {
+                            "id": 178,
+                            "title": "一、我很少用行动或语言表达对宝宝的爱，如亲亲他，抱抱他，对宝宝说“我爱你,发多了几分附件啊方杰拉德康师傅骄傲附件啊了的咖啡机放大镜附件打开了手机发放假阿达冷风机啊法律大口径放大镜法第三方就按发就发”。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg",
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 4,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 925,
+                                    "type": "A",
+                                    "text": "1处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 0,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 926,
+                                    "type": "B",
+                                    "text": "2处不同",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 927,
+                                    "type": "C",
+                                    "text": "否防静电困死了就",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                },
+                                {
+                                    "id": 928,
+                                    "type": "D",
+                                    "text": "可借款人",
+                                    "dimen": "亲子互动",
+                                    "score": 1,
+                                    "caseId": 178
+                                }
+                            ]
+                        },
+                        {
+                            "id": 179,
+                            "title": "二、宝宝说话时我会耐心倾听，即使无法清晰的表达我也不会催促或打断他。",
+                            "type": 5,
+                            "image": null,
+                            "vedio": null,
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 5,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1138,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/AG-P.jpg"
+                                },
+                                {
+                                    "id": 1146,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/BG-P.jpg"
+                                },
+                                {
+                                    "id": 1154,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/CG-P.jpg"
+                                },
+                                {
+                                    "id": 1162,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 253,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 180,
+                            "title": "三、宝宝做不好的事情我会替他做（不考虑赶时间的因素），如宝宝吃饭会弄脏衣服，我就会喂他吃饭。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/img/01/01/GZXY-SXSY-T-01-J8-I-1-P.jpg",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P4-I-3-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 6,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1170,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1178,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1186,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1194,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 261,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": "http://res.yujingceping.com/res/gif/01/01/RZ-CSTL-T-02-P-I-10-GIF.gif",
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-1-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 7,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1202,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1210,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1218,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                },
+                                {
+                                    "id": 1226,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 269,
+                                    "image": "http://res.yujingceping.com/res/img/01/01/DG-P.jpg"
+                                }
+                            ]
+                        },
+                        {
+                            "id": 181,
+                            "title": "四、和宝宝相处时，我通常会和他玩儿互动游戏，如为他读书或陪他玩儿积木。",
+                            "type": 4,
+                            "image": null,
+                            "vedio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "audio": "http://res.yujingceping.com/res/audio/01/01/GZXY-YYSY-T-01-P5-G2-I-5-V.mp3",
+                            "parten": 8,
+                            "branchId": 10,
+                            "selId": null,
+                            "selectionList": [
+                                {
+                                    "id": 1234,
+                                    "type": "A",
+                                    "text": "1",
+                                    "dimen": "A",
+                                    "score": 1,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1242,
+                                    "type": "B",
+                                    "text": "2",
+                                    "dimen": "B",
+                                    "score": 2,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1250,
+                                    "type": "C",
+                                    "text": "3",
+                                    "dimen": "C",
+                                    "score": 3,
+                                    "caseId": 277,
+                                    "image": null
+                                },
+                                {
+                                    "id": 1258,
+                                    "type": "D",
+                                    "text": "4",
+                                    "dimen": "A",
+                                    "score": 4,
+                                    "caseId": 277,
+                                    "image": null
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    
+}

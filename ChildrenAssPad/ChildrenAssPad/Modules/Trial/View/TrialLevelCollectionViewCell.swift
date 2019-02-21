@@ -11,18 +11,23 @@ import Lottie
 
 class TrialLevelCollectionViewCell: UICollectionViewCell {
 
+    typealias StartButtonTappedBlock = () -> Void
+
     var imageView: UIImageView!
     var startButton: UIButton!
     var curLevelLable: UILabel!
+    var startTappedBlock: StartButtonTappedBlock?
 
     override init(frame: CGRect) {
 
         super.init(frame: frame)
 
         imageView = UIImageView()
+        imageView.isUserInteractionEnabled = true
         self.contentView.addSubview(imageView)
 
         let animationView = LOTAnimationView(name: "button")
+        animationView.isUserInteractionEnabled = true
         animationView.loopAnimation = true
         animationView.play()
 
@@ -31,7 +36,6 @@ class TrialLevelCollectionViewCell: UICollectionViewCell {
         startButton = UIButton()
         startButton.backgroundColor = UIColor.clear
         startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
-        startButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         animationView.addSubview(startButton)
 
         curLevelLable = UILabel()
@@ -65,6 +69,10 @@ class TrialLevelCollectionViewCell: UICollectionViewCell {
     }
 
     @objc func startButtonTapped() {
+
+        if let block = startTappedBlock {
+            block()
+        }
 
     }
 

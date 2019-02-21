@@ -47,7 +47,7 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
             
             //content label
             countContentView = UIView()
-            countContentView.backgroundColor = UIColor.colorWithHexString(hex: "#37a993")
+            countContentView.backgroundColor = UIColor.colorFromRGBA(85, 85, 85, alpha: 0.4)
             countContentView.layer.cornerRadius = 11
             countContentView.layer.masksToBounds = true
             navi.addSubview(countContentView)
@@ -335,12 +335,12 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         let placeHoldAttr = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.colorWithHexString(hex: "#999999")]
         
         nameField = UITextField.init()
-        nameField.attributedPlaceholder = NSAttributedString(string: "请输入宝贝姓名", attributes: placeHoldAttr)
+        nameField.attributedPlaceholder = NSAttributedString(string: "   请输入宝贝姓名", attributes: placeHoldAttr)
         nameField.delegate = self
         nameField.font = UIFont.systemFont(ofSize: 16)
         nameField.layer.borderWidth = 1
         nameField.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
-        nameField.layer.cornerRadius = 2
+        nameField.layer.cornerRadius = 22.5
         nameField.textColor = UIColor.black
         nameField.leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         nameField.leftViewMode = .always
@@ -363,12 +363,12 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         }
         
         startField = UITextField.init()
-        startField.attributedPlaceholder = NSAttributedString(string: "起始时间", attributes: placeHoldAttr)
+        startField.attributedPlaceholder = NSAttributedString(string: "   起始时间", attributes: placeHoldAttr)
         startField.delegate = self
         startField.font = UIFont.systemFont(ofSize: 16)
         startField.layer.borderWidth = 1
         startField.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
-        startField.layer.cornerRadius = 2
+        startField.layer.cornerRadius = 22.5
         startField.textColor = UIColor.black
         startField.leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         startField.leftViewMode = .always
@@ -393,12 +393,12 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         }
         
         endField = UITextField.init()
-        endField.attributedPlaceholder = NSAttributedString(string: "结束时间", attributes: placeHoldAttr)
+        endField.attributedPlaceholder = NSAttributedString(string: "   结束时间", attributes: placeHoldAttr)
         endField.delegate = self
         endField.font = UIFont.systemFont(ofSize: 16)
         endField.layer.borderWidth = 1
         endField.layer.borderColor = UIColor.colorWithHexString(hex: "#d8d8d8").cgColor
-        endField.layer.cornerRadius = 2
+        endField.layer.cornerRadius = 22.5
         endField.textColor = UIColor.black
         endField.leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         endField.leftViewMode = .always
@@ -416,14 +416,14 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         let queryButton = UIButton.init()
         queryButton.backgroundColor = UIColor.mainColor
         queryButton.setTitle("查询", for: .normal)
-        queryButton.setTitleColor(UIColor.white, for: .normal)
-        queryButton.layer.cornerRadius = 4
+        queryButton.setTitleColor(UIColor.colorFromRGBA(34, 34, 34), for: .normal)
+        queryButton.layer.cornerRadius = 22
         queryButton.addTarget(self, action: #selector(queryClicked), for: .touchUpInside)
         header.addSubview(queryButton)
         queryButton.snp.makeConstraints{ (maker) in
             maker.left.equalTo(endField.snp.right).offset(20)
             maker.centerY.equalTo(header.snp.centerY)
-            maker.size.equalTo(CGSize(width: 110, height: 45))
+            maker.size.equalTo(CGSize(width: 110, height: 44))
         }
         
         allHeader.addSubview(header)
@@ -533,7 +533,7 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         clearButton.tag = clearTag
         clearButton.isHidden = true
         iconButton.snp.makeConstraints{ (maker) in
-            maker.right.equalToSuperview().offset(-10)
+            maker.right.equalToSuperview().offset(-20)
             maker.centerY.equalToSuperview()
         }
 

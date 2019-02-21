@@ -17,6 +17,7 @@ class AssCaseOption: NSObject, Mappable {
     let dimension: String
     let score: Int
     let caseId: String
+    let image: String
     
     var isSelected = false
     
@@ -27,6 +28,7 @@ class AssCaseOption: NSObject, Mappable {
         dimension = jsonData["dimen"].stringValue
         score = jsonData["score"].intValue
         caseId = jsonData["caseId"].stringValue
+        image = jsonData["image"].stringValue
         
         super.init()
     }

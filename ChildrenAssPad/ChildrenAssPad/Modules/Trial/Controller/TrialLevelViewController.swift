@@ -8,13 +8,18 @@
 
 import UIKit
 
-class TrialLevelViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class TrialLevelViewController: BaseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    typealias StartBlock = ()->Void
 
     var bgImageView: UIImageView!
     var titleLabel: UILabel!
     var levelCountLabel: UILabel!
     var cardCollectionView: UICollectionView!
+    var cupCollectionView: UICollectionView!
     var pageControl: UIPageControl!
+    var pageView: PageView!
+    var startBlock: StartBlock?
     
 
     override func viewDidLoad() {
@@ -24,16 +29,44 @@ class TrialLevelViewController: UIViewController, UICollectionViewDelegate, UICo
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 3
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrialLevelCollectionViewCell", for: indexPath) as! TrialLevelCollectionViewCell
-        cell.imageView.image = UIImage.init(named: "trial_curLevel")
-        cell.curLevelLable.text = "第\(indexPath.row)关"
 
-        return cell
+        if collectionView == cardCollectionView {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrialLevelCollectionViewCell", for: indexPath) as! TrialLevelCollectionViewCell
+            cell.imageView.image = UIImage.init(named: "trial_curLevel")
+            cell.curLevelLable.text = "第\(indexPath.row)关"
+
+            cell.startTappedBlock = {[weak self] in
+                
+                if let weakSelf = self {
+
+                    if let block = weakSelf.startBlock {
+                        block()
+                    }
+                }
+
+
+            }
+
+            return cell
+
+        } else {
+
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrialCupCollectionViewCell", for: indexPath) as! TrialCupCollectionViewCell
+
+            cell.imageView.image = UIImage.init(named: "trial_cup_normal")
+
+            return cell
+
+        }
+
+
+
 
     }
 
@@ -72,6 +105,27 @@ class TrialLevelViewController: UIViewController, UICollectionViewDelegate, UICo
         bgImageView.addSubview(cardCollectionView)
 
 
+        let flowLayout1 = UICollectionViewFlowLayout()
+        flowLayout1.scrollDirection = .horizontal
+        flowLayout1.minimumInteritemSpacing = 0
+        flowLayout1.minimumLineSpacing = 6
+        flowLayout1.sectionInset = UIEdgeInsets.init(top:0, left: 0, bottom: 0, right: 0)
+        flowLayout1.itemSize = CGSize.init(width: 55, height:52)
+        cupCollectionView = UICollectionView.init(frame: .zero, collectionViewLayout: flowLayout1)
+        cupCollectionView.delegate = self
+        cupCollectionView.dataSource = self
+        cupCollectionView.isScrollEnabled = false
+        cupCollectionView.register(TrialCupCollectionViewCell.self, forCellWithReuseIdentifier: "TrialCupCollectionViewCell")
+        cupCollectionView.backgroundColor = UIColor.clear
+        bgImageView.addSubview(cupCollectionView)
+
+
+        pageView = PageView()
+
+        pageView.reloadViews(curIndex: 0, count: 3)
+        bgImageView.addSubview(pageView)
+
+
         bgImageView.snp.makeConstraints { (maker) in
             maker.edges.equalTo(self.view)
         }
@@ -96,8 +150,19 @@ class TrialLevelViewController: UIViewController, UICollectionViewDelegate, UICo
             maker.centerY.equalTo(titleLabel)
         }
 
-    }
+        cupCollectionView.snp.makeConstraints { (maker) in
+            maker.left.equalTo(bgImageView.snp.left).offset(59)
+            maker.height.equalTo(52)
+            maker.right.equalTo(bgImageView.snp.right).offset(-350)
+            maker.bottom.equalTo(bgImageView.snp.bottom).offset(-32)
+        }
 
+        pageView.snp.makeConstraints { (maker) in
+            maker.top.equalTo(cardCollectionView.snp.bottom).offset(16)
+            maker.height.equalTo(10)
+            maker.centerX.equalTo(bgImageView)
+        }
+    }
 
 
 }
