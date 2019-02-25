@@ -71,10 +71,10 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     var switchRoleButton: ReverseButton!
     var commitButton: UIButton!
     
-    var loadingView: LoadDataView?
+    var loadingDataView: LoadDataView?
     var baseEmptyView: PromptView?
     var observeEmptyView: PromptView?
-    var errorView: PromptView?
+    var errorPromptView: PromptView?
     
     //switch
     var maskView: UIView!
@@ -623,34 +623,34 @@ class RecruitStudentAssesmentViewController: BaseViewController {
     
     func showLoadingView(isShow: Bool, inset: UIEdgeInsets = .zero) {
         if isShow {
-            cleanViewHierarchy()
-            loadingView = LoadDataView(superView: self.view, insets: inset, title: localStringForKey(key: "message_data_loading"))
-            loadingView?.show()
+            cleanViewHierarchys()
+            loadingDataView = LoadDataView(superView: self.view, insets: inset, title: localStringForKey(key: "message_data_loading"))
+            loadingDataView?.show()
         } else {
-            loadingView?.hide()
+            loadingDataView?.hide()
         }
     }
     
     func showErrorView(isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = .reTryError, retryCallback: (() -> Void)? = nil) {
         if isShow {
-            cleanViewHierarchy()
-            errorView = PromptView(superView: self.view, insets: inset, promptText: text, promptType: type)
-            errorView?.retryBlock = retryCallback
-            errorView?.show()
+            cleanViewHierarchys()
+            errorPromptView = PromptView(superView: self.view, insets: inset, promptText: text, promptType: type)
+            errorPromptView?.retryBlock = retryCallback
+            errorPromptView?.show()
         } else {
-            errorView?.hide()
+            errorPromptView?.hide()
         }
     }
     
-    func cleanViewHierarchy() {
-        loadingView?.hide()
-        loadingView?.removeFromSuperview()
+    func cleanViewHierarchys() {
+        loadingDataView?.hide()
+        loadingDataView?.removeFromSuperview()
         baseEmptyView?.hide()
         baseEmptyView?.removeFromSuperview()
         observeEmptyView?.hide()
         observeEmptyView?.removeFromSuperview()
-        errorView?.hide()
-        errorView?.removeFromSuperview()
+        errorPromptView?.hide()
+        errorPromptView?.removeFromSuperview()
     }
     
     //MARK: Layout views

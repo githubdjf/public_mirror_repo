@@ -24,9 +24,6 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
 
     var pageNo = 1   //后台定义的初始值为1
     let pageSize = 20
-    var emptyView: PromptView?
-    var loadDataView: LoadDataView?
-    var errorView: PromptView?
     var recordArray = [TrialRecordModel]()
     var tableview: UITableView!
     let footer = MJRefreshAutoNormalFooter()
@@ -92,10 +89,10 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
 
             if let weakSelf = self {
 
-                Prompter.hideIndicator(inView: weakSelf.view)
-                weakSelf.removePromptView()
-                let eMsg = APPErrorFactory.unboxAndExtractErrorMessage(from: error)
-                weakSelf.showErrorView(errorMsg: eMsg)
+//                Prompter.hideIndicator(inView: weakSelf.view)
+//                weakSelf.removePromptView()
+//                let eMsg = APPErrorFactory.unboxAndExtractErrorMessage(from: error)
+//                weakSelf.showErrorView(errorMsg: eMsg)
             }
 
             return Observable.empty()
@@ -107,12 +104,12 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
                 if let weakSelf = self {
 
                     Prompter.hideIndicator(inView: weakSelf.view)
-                    weakSelf.removePromptView()
+//                    weakSelf.removePromptView()
 
                     if dataTuple.1.count == 0 && weakSelf.pageNo == 1 {
 
                         weakSelf.mjHeader.endRefreshing()
-                        weakSelf.showEmptyView(insets:UIEdgeInsets(top: 155 + navBarHeight(), left: 30, bottom: 30, right: 30))
+//                        weakSelf.showEmptyView(insets:UIEdgeInsets(top: 155 + navBarHeight(), left: 30, bottom: 30, right: 30))
                         weakSelf.recordArray = dataTuple.1
                         weakSelf.tableview.reloadData()
                         
@@ -148,64 +145,6 @@ class RecruitEvaluationRecordController: BaseViewController,UITableViewDelegate,
         self.recordArray.removeAll()
         loadData()
     }
-
-    //MARK:展示错误页面
-
-    func showErrorView(errorMsg: String){
-
-        removePromptView()
-
-        errorView = PromptView.init(superView: self.view, insets: UIEdgeInsets(top: 155 + navBarHeight(), left: 30, bottom: 30, right: 30), promptText: errorMsg, promptType: .reTryError)
-
-        errorView?.retryBlock = {[weak self] in
-
-            if let weakSelf = self {
-                weakSelf.loadNewData()
-            }
-        }
-
-        errorView?.show()
-    }
-
-    //MARK:展示加载页面
-
-    func showLoadView(){
-
-        removePromptView()
-
-        loadDataView = LoadDataView.init(superView: self.view, insets:UIEdgeInsets(top: 155 + navBarHeight(), left: 30, bottom: 30, right: 30),  title: localStringForKey(key: "message_data_loading"))
-
-        loadDataView?.show()
-
-    }
-
-    //MARK:展示空数据页面
-    func showEmptyView(insets: UIEdgeInsets){
-
-        removePromptView()
-
-        emptyView = PromptView.init(superView: self.view, insets: UIEdgeInsets(top: 155 + navBarHeight(), left: 30, bottom: 30, right: 30), promptText: "暂无数据", promptType: .emptyCommon)
-
-        emptyView?.show()
-    }
-
-
-    //移除提示页面
-    func removePromptView(){
-
-        if let view = loadDataView {
-            view.removeFromSuperview()
-        }
-
-        if let view = errorView {
-            view.removeFromSuperview()
-        }
-
-        if let view = emptyView {
-            view.removeFromSuperview()
-        }
-    }
-    
     
     func addBottomLayout(navi:UIView) -> Void {
         let layout = UIView.init()

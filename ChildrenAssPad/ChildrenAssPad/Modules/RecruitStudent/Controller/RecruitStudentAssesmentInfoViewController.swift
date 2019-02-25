@@ -26,10 +26,6 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
     var closeButton: UIButton!
     var answerTableView: UITableView!
     
-    var loadingView: LoadDataView?
-    var emptyView: PromptView?
-    var errorView: PromptView?
-    
     var answerArray = [AssQuestionAnswer]()
     
     var didCloseCallback: (() -> Void)?
@@ -67,7 +63,7 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
     
     func loadData() {
         
-        showLoadingView(isShow: true, inset: UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0))
+        showLoadingView(inView: nil, isShow: true, text: nil)
         
         RecruitStudentService.fetchRecruitStudentGetAssQuestionAnswerList(withUserId: curAssUserId ?? "")
             .catchError {[weak self] (error) -> Observable<[AssQuestionAnswer]> in
@@ -76,7 +72,7 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
                     //全屏错误页面
                     weakSelf.loadingView?.hide()
                     let eMsg = APPErrorFactory.unboxAndExtractErrorMessage(from: error)
-                    self?.showErrorView(isShow: true, inset: UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0), text: eMsg, type: .reTryError)
+                    weakSelf.showErrorView(inView: weakSelf.infoContainerView, isShow: true, inset: UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0), text: eMsg, type: .normalError)
                 }
                 return Observable.empty()
             }
@@ -91,7 +87,7 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
                     //TODO
                     //显示空页面
                     if answers.count <= 0 {
-                        weakSelf.showEmptyView(isShow: true, inset: UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0), text: localStringForKey(key: "message_no_data"), type: PromptView.PromptType.emptyCommon)
+                        weakSelf.showEmptyView(inView: weakSelf.infoContainerView, isShow: true, inset: UIEdgeInsets(top: 45, left: 0, bottom: 0, right: 0), text: localStringForKey(key: "message_no_data"), type: .emptyCommon)
                     } else {
                         weakSelf.answerArray.append(contentsOf: answers)
                         weakSelf.answerTableView.reloadData()
@@ -113,56 +109,6 @@ class RecruitStudentAssesmentInfoViewController: BaseViewController {
         answerArray.append(contentsOf: infos)
         answerTableView.reloadData()
     }
-    
-    //MARK: Prompt view
-    
-    func showEmptyView(isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = PromptView.PromptType.emptyCommon) {
-        if isShow {
-            cleanViewHierarchy()
-            self.emptyView = PromptView(superView: self.infoContainerView, insets: inset, promptText: text, promptType: type)
-            self.emptyView?.show()
-        } else {
-            self.emptyView?.hide()
-        }
-    }
-    
-    func showLoadingView(isShow: Bool, inset: UIEdgeInsets = .zero) {
-        if isShow {
-            cleanViewHierarchy()
-            self.loadingView = LoadDataView(superView: self.infoContainerView, insets: inset, title: localStringForKey(key: "message_data_loading"))
-            self.loadingView?.show()
-        } else {
-            self.loadingView?.hide()
-        }
-    }
-    
-    func showErrorView(isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = .reTryError) {
-        
-        if isShow {
-            cleanViewHierarchy()
-            let errView = PromptView(superView: self.infoContainerView, insets: inset, promptText: text, promptType: type)
-            errView.retryBlock = {[weak self] in
-                if let weakSelf = self {
-                    weakSelf.cleanViewHierarchy()
-                    weakSelf.loadData()
-                }
-            }
-            self.errorView = errView
-            self.errorView?.show()
-        } else {
-            self.errorView?.hide()
-        }
-    }
-    
-    func cleanViewHierarchy() {
-        self.loadingView?.hide()
-        self.loadingView?.removeFromSuperview()
-        self.emptyView?.hide()
-        self.emptyView?.removeFromSuperview()
-        self.errorView?.hide()
-        self.errorView?.removeFromSuperview()
-    }
-    
     
     //MARK: Layout views
     

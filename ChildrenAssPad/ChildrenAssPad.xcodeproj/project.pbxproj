@@ -202,7 +202,6 @@
 		20D48FBA21F30A2900C7F845 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48EF621F30A2800C7F845 /* LoginManager.swift */; };
 		20D48FBB21F30A2900C7F845 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48EF721F30A2800C7F845 /* Navigator.swift */; };
 		20D48FC021F30A2900C7F845 /* NextGrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F0121F30A2800C7F845 /* NextGrowingTextView.swift */; };
-		20D48FC121F30A2900C7F845 /* ContactSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F0221F30A2800C7F845 /* ContactSelectViewController.swift */; };
 		20D48FC221F30A2900C7F845 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F0321F30A2800C7F845 /* DatePickerViewController.swift */; };
 		20D48FC321F30A2900C7F845 /* ReverseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F0421F30A2800C7F845 /* ReverseButton.swift */; };
 		20D48FC421F30A2900C7F845 /* LoadDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D48F0521F30A2800C7F845 /* LoadDataView.swift */; };
@@ -440,7 +439,6 @@
 		20D48EF621F30A2800C7F845 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		20D48EF721F30A2800C7F845 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		20D48F0121F30A2800C7F845 /* NextGrowingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextGrowingTextView.swift; sourceTree = "<group>"; };
-		20D48F0221F30A2800C7F845 /* ContactSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSelectViewController.swift; sourceTree = "<group>"; };
 		20D48F0321F30A2800C7F845 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		20D48F0421F30A2800C7F845 /* ReverseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseButton.swift; sourceTree = "<group>"; };
 		20D48F0521F30A2800C7F845 /* LoadDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDataView.swift; sourceTree = "<group>"; };
@@ -1000,7 +998,6 @@
 			isa = PBXGroup;
 			children = (
 				20D48F0121F30A2800C7F845 /* NextGrowingTextView.swift */,
-				20D48F0221F30A2800C7F845 /* ContactSelectViewController.swift */,
 				20D48F0321F30A2800C7F845 /* DatePickerViewController.swift */,
 				20D48F0421F30A2800C7F845 /* ReverseButton.swift */,
 				20D48F0521F30A2800C7F845 /* LoadDataView.swift */,
@@ -1446,7 +1443,6 @@
 				20D48F4C21F30A2900C7F845 /* Prompter.swift in Sources */,
 				20D48FBA21F30A2900C7F845 /* LoginManager.swift in Sources */,
 				20D48F7021F30A2900C7F845 /* AssExam.swift in Sources */,
-				20D48FC121F30A2900C7F845 /* ContactSelectViewController.swift in Sources */,
 				1CA5ED60221D4F4900479A1E /* Ass_Patten_View.swift in Sources */,
 				1CFC69B4221D509200DEE5CB /* OptionViewByText.swift in Sources */,
 				20D48F4E21F30A2900C7F845 /* ActivityIndicator.swift in Sources */,

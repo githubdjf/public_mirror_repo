@@ -12,6 +12,10 @@ import NSObject_Rx
 
 class BaseViewController: UIViewController {
     
+    var loadingView: LoadDataView?
+    var emptyView: PromptView?
+    var errorView: PromptView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -97,4 +101,49 @@ extension UIViewController{
 }
 
 
+//MARK: Prompt view
+
+extension BaseViewController {
+    
+    //MARK: Prompt view
+    
+    func showEmptyView(inView: UIView?, isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = PromptView.PromptType.emptyCommon) {
+        if isShow {
+            cleanViewHierarchy()
+            self.emptyView = PromptView(superView: inView ?? self.view, insets: inset, promptText: text, promptType: type)
+            self.emptyView?.show()
+        } else {
+            self.emptyView?.hide()
+        }
+    }
+    
+    func showLoadingView(inView: UIView?, isShow: Bool, inset: UIEdgeInsets = .zero,  text: String?) {
+        if isShow {
+            cleanViewHierarchy()
+            self.loadingView = LoadDataView(superView: inView ?? self.view, insets: inset, title: text ?? localStringForKey(key: "message_data_loading"))
+            self.loadingView?.show()
+        } else {
+            self.loadingView?.hide()
+        }
+    }
+    
+    func showErrorView(inView: UIView?, isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = .normalError) {
+        if isShow {
+            cleanViewHierarchy()
+            self.errorView = PromptView(superView: inView ?? self.view, insets: inset, promptText: text, promptType: type)
+            self.errorView?.show()
+        } else {
+            self.errorView?.hide()
+        }
+    }
+    
+    func cleanViewHierarchy() {
+        self.loadingView?.hide()
+        self.loadingView?.removeFromSuperview()
+        self.emptyView?.hide()
+        self.emptyView?.removeFromSuperview()
+        self.errorView?.hide()
+        self.errorView?.removeFromSuperview()
+    }
+}
 

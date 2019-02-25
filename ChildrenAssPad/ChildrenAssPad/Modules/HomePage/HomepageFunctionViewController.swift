@@ -14,11 +14,7 @@ import Moya
 
 
 class HomepageFunctionViewController: BaseViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
-    var loadingView: LoadDataView?
-    var emptyView: PromptView?
-    var errorView: PromptView?
-    
+        
     var navi: UIView!
     
     var dataArray = [HomePageFunctionModel]()
@@ -71,12 +67,11 @@ class HomepageFunctionViewController: BaseViewController, UICollectionViewDelega
     }
     
     func loadData() -> Void {
-        self.showLoadingView(isShow: true)
+        showLoadingView(inView: nil, isShow: true, text: nil)
         HomeService.displayHomeFunction()
             .catchError { [weak self] (error) -> Observable<[HomePageFunctionModel]> in
                 if let ws = self {
-                    ws.showErrorView(isShow: true, inset: UIEdgeInsets(top: navBarHeight(), left: 0, bottom: 0, right: 0), text: APPErrorFactory.unboxAndExtractErrorMessage(from: error), type: .reTryError)
-
+                    ws.showErrorView(inView: nil, isShow: true, inset: UIEdgeInsets(top: navBarHeight(), left: 0, bottom: 0, right: 0), text: APPErrorFactory.unboxAndExtractErrorMessage(from: error), type: .reTryError)
                     ws.errorView?.retryBlock = { () in
                         ws.loadData()
                     }
@@ -88,7 +83,7 @@ class HomepageFunctionViewController: BaseViewController, UICollectionViewDelega
                 if let ws = self {
                     ws.cleanViewHierarchy()
                     guard funcList.count > 0 else {
-                        ws.showEmptyView(isShow: true, inset: UIEdgeInsets(top: navBarHeight(), left: 0, bottom: 0, right: 0), text: localStringForKey(key: "message_no_data"), type: .emptyCommon)
+                        ws.showEmptyView(inView: nil, isShow: true, inset: UIEdgeInsets(top: navBarHeight(), left: 0, bottom: 0, right: 0), text: localStringForKey(key: "message_no_data"), type: .emptyCommon)                        
                         return
                     }
                     ws.dataArray = funcList
@@ -161,57 +156,4 @@ class HomepageFunctionViewController: BaseViewController, UICollectionViewDelega
         }
         
     }
-    
-    
-    //MARK: Prompt view
-    
-    func showEmptyView(isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = PromptView.PromptType.emptyCommon) {
-        if isShow {
-            cleanViewHierarchy()
-            self.emptyView = PromptView(superView: self.view, insets: inset, promptText: text, promptType: type)
-            self.emptyView?.show()
-        } else {
-            self.emptyView?.hide()
-        }
-    }
-    
-    func showLoadingView(isShow: Bool, inset: UIEdgeInsets = .zero) {
-        if isShow {
-            cleanViewHierarchy()
-            self.loadingView = LoadDataView(superView: self.view, insets: inset, title: localStringForKey(key: "message_data_loading"))
-            self.loadingView?.show()
-        } else {
-            self.loadingView?.hide()
-        }
-    }
-    
-    func showErrorView(isShow: Bool, inset: UIEdgeInsets = .zero, text: String = "", type: PromptView.PromptType = .reTryError) {
-        if isShow {
-            cleanViewHierarchy()
-            self.errorView = PromptView(superView: self.view, insets: inset, promptText: text, promptType: type)
-            self.errorView?.show()
-        } else {
-            self.errorView?.hide()
-        }
-    }
-    
-    func cleanViewHierarchy() {
-        self.loadingView?.hide()
-        self.loadingView?.removeFromSuperview()
-        self.emptyView?.hide()
-        self.emptyView?.removeFromSuperview()
-        self.errorView?.hide()
-        self.errorView?.removeFromSuperview()
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
